@@ -59,7 +59,7 @@ public class Enemy : Body
                     if (delta.sqrMagnitude < data.SightRange * data.SightRange)
                     {
 
-                        FireWeapon(1, target.transform.position,true);
+                        FireWeapon(1, target.transform.position);
                         if (data.AI == EnemyData.Behavior.kamikaze)
                             Die();
                         else
@@ -67,10 +67,9 @@ public class Enemy : Body
                     }
                     else
                     {
-                        FireWeapon(0, target.transform.position,false);
-                        SlowDown = 1;
+                        FireWeapon(0, target.transform.position);
                     }
-                    velocity = delta.normalized * data.Speed * SlowDown;
+                    velocity = delta.normalized * data.Speed ;
 
                 }
                 break;
@@ -87,7 +86,7 @@ public class Enemy : Body
     }
     public override void Die()
     {
-        FireWeapon(2, velocity,false);
+        FireWeapon(2, velocity);
         base.Die();
     }
 }

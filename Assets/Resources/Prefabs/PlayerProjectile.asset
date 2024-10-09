@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 0, a: 0}
   directionAligned: 0
-  ForwardSpeed: 20
-  RightSpeed: 0
+  ForwardSpeed: 2
+  RightSpeed: 12
   LifeTime: 10
   Scale: 0
   Damage: 0
-  Behavior: 0
+  Behavior: 1
   prefab: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
   oosBounce: 1
-  bounces: 13
-  targets: 999
+  bounces: 1
+  targets: 1
   bounceBehavior: 1
   contactBehavior: 2
   expireBehavior: 2

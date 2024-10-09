@@ -42,7 +42,7 @@ public class PlayerController : Body
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         if (!dashing || direction.sqrMagnitude > 0) { 
-        velocity = (direction).normalized * realSpeed * SlowDown;
+        velocity = (direction).normalized * realSpeed ;
         }
     }
     public enum FireState
@@ -66,7 +66,8 @@ public class PlayerController : Body
                 if (Input.GetAxis("Fire1") == 0)
                 {
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    FireWeapon(0, mousePos, true);
+                    FireWeapon(0, mousePos);
+                    fireState = FireState.fired;
                 }
                 break;
         }
@@ -98,5 +99,42 @@ public class PlayerController : Body
     public override bool IsPlayerControlled()
     {
         return true;
+    }
+    public BonusTable collectedBonuses ;
+    protected override void ShootWeapon(WeaponData w, Vector3 center, Vector2 firedir)
+    {
+        if (collectedBonuses == null)
+        {
+            base.ShootWeapon(w, center, firedir);
+            return;
+        }
+
+        foreach (var p in Projectile.LaunchMultiple(
+               w.projectile,
+               this,
+               w,
+              center,
+               firedir,
+                w.projectile.ForwardSpeed + collectedBonuses.pSpeed,
+               w.ProjectileCount + collectedBonuses.pProjectiles,
+               w.ProjectileArc,
+               w.BarrelAccuracy,
+               IsPlayerControlled() ? Projectile.ProjectileAlignment.player : Projectile.ProjectileAlignment.enemy
+               ))
+        {
+            p.GiveDuration(collectedBonuses.pLifeTime);
+            p.GiveBounces(collectedBonuses.pBounces);
+            p.GiveHits(collectedBonuses.pHits);
+        }
+    }
+    public class BonusTable
+    {
+        public float pLifeTime = 0;
+        public float pSpeed = 0;
+
+        public int pBounces = 0;
+        public int pHits = 0;
+        public int pProjectiles = 0;
+
     }
 }

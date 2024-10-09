@@ -12,6 +12,7 @@ public class Projectile : Mob
     }
     protected float birthtime = 0;
     protected float deathtime = 0;
+
     ProjectileData data;
     WeaponData wdata;
     Body shooter;
@@ -37,8 +38,9 @@ public class Projectile : Mob
 
         base.Awake();
     }
-    public static void LaunchMultiple(ProjectileData projectileData, Body owner, WeaponData weapon, Vector3 origin, Vector3 direction, float launchSpeed, int amount, float arc, float accuracy, ProjectileAlignment alignment)
+    public static Projectile[] LaunchMultiple(ProjectileData projectileData, Body owner, WeaponData weapon, Vector3 origin, Vector3 direction, float launchSpeed, int amount, float arc, float accuracy, ProjectileAlignment alignment)
     {
+        List<Projectile> fired = new();
         float baseAng = -amount / 2f * arc;
         for (int shot = 0; shot < amount; shot++)
         {
@@ -46,11 +48,11 @@ public class Projectile : Mob
             if (pooled.TryGetComponent(out Projectile other))
             {
                 other.data = projectileData;
-    //            other.scale = data.Scale;
-      //          SpriteRenderer.color = data.color;
                 other.Launch(origin, direction, launchSpeed, owner, weapon, accuracy, baseAng + arc * shot, alignment);
+                fired.Add(other);
             }
         }
+        return fired.ToArray();
     }
     public void Launch(Vector2 center, Vector2 direction, float launchPower, Body launcher, WeaponData weapon, float accuracy, float deltaAngle, ProjectileAlignment a)
     {
@@ -108,6 +110,7 @@ public class Projectile : Mob
     public void Fire(Vector2 direction, float gunangle, float accuracy)
     {
         Scale(data.Scale);
+        maxTargets = data.targets;
         deathtime = Level.main.gameTime + data.LifeTime;
         SetForwardVector(direction);
         if (gunangle != 0)
@@ -183,6 +186,7 @@ public class Projectile : Mob
         hitEntities.Clear();
         dead = false;
         numBounces = 0;
+        maxTargets = 0;
         birthtime = Time.time;
     }
     public virtual void Move(Vector2 pos, float interval)
@@ -268,6 +272,7 @@ public class Projectile : Mob
         if (data.directionAligned)
             transform.right = velocity;
     }
+    int maxTargets = 0 ;
     void ContactEntity(Body hit, Vector2 dir)
     {
         if (!hitEntities.Contains(hit))
@@ -275,7 +280,7 @@ public class Projectile : Mob
             hit.TakeDamage(data.Damage);
             hitEntities.Add(hit);
         }
-        if (hitEntities.Count >= data.targets + 1)
+        if (hitEntities.Count >= maxTargets+1)
         {
             Debug.Log("CRITTER " + name);
             HandleBehavior(data.contactBehavior);
@@ -363,5 +368,17 @@ public class Projectile : Mob
     protected override void OnDisable()
     {
         ScoreCounter.main.nBullets--;
+    }
+    public void GiveBounces(int value)
+    {
+        numBounces -= value;
+    }
+    public void GiveDuration(float value)
+    {
+        deathtime += value;
+    }
+    public void GiveHits(int value)
+    {
+        maxTargets += value;
     }
 }
