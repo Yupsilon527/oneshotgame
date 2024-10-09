@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using static PlayerController;
 
 public class PlayerController : Body
 {
@@ -14,8 +16,6 @@ public class PlayerController : Body
     }
 
     bool dashing = false;
-    public float lastfireTime = 0f;
-    public float Slomo = 1 / 5f;
     public float Speed = 15;
 
     public float DashTime = 1f;
@@ -31,7 +31,6 @@ public class PlayerController : Body
         HandleMovement();
         if (!dashing)
         {
-        HandleBulletTime();
         HandleFire();
         }
         base.FixedUpdate();
@@ -46,41 +45,30 @@ public class PlayerController : Body
         velocity = (direction).normalized * realSpeed * SlowDown;
         }
     }
-
-    public void HandleBulletTime()
+    public enum FireState
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Level.main.timeScale = Slomo;
-            float orthoSize = Level.main.camOriginalSize * .66f;
-            Vector2 zoomPosition = new Vector2(transform.position.x, transform.position.y);
-            Level.main.IssueCameraOrder(new Vector3(zoomPosition.x, zoomPosition.y, orthoSize));
-            DashCooldown = Level.main.gameTime + 1;
-        }
-        else
-        {
-            Level.main.timeScale = 1;
-            Level.main.IssueCameraOrder(new Vector3(0, 0, Level.main.camOriginalSize));
-            //DashCooldown = Level.main.gameTime + .66f;
-        }
+        notFired,
+        charging,
+        fired
     }
+    FireState fireState;
     public void HandleFire()
     {
-        while (lastfireTime < Level.main.gameTime)
+        switch (fireState)
         {
-            lastfireTime = Level.main.gameTime + .01f;
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            if (Input.GetAxis("Fire1") != 0)
-            {
-                FireWeapon(0, mousePos,true);
-            }
-            else if (Input.GetAxis("Fire2") != 0)
-            {
-                FireWeapon(1, mousePos, true);
-                SlowDown = weapons[1].FireSlowDown;
-            }
-            SlowDown = 1;
+            case FireState.notFired:
+                if (Input.GetAxis("Fire1") != 0)
+                {
+                    fireState = FireState.charging;
+                }
+                break;
+            case FireState.charging:
+                if (Input.GetAxis("Fire1") == 0)
+                {
+                    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    FireWeapon(0, mousePos, true);
+                }
+                break;
         }
     }
     public void HandleDashing()
@@ -90,7 +78,6 @@ public class PlayerController : Body
             if (DashTime < Level.main.gameTime)
             {
                 dashing = false;
-                invulnerable = false;
                 print("dash end");
             }
         }
@@ -99,23 +86,17 @@ public class PlayerController : Body
             print("dash!");
             dashing = true;
 
-            invulnerable = true;
             DashTime = Level.main.gameTime + DashDuration;
             DashCooldown = Level.main.gameTime + DashRefresh;
 
         }
     }
+    public override bool IsInvulnerable()
+    {
+        return dashing || fireState == FireState.fired;
+    }
     public override bool IsPlayerControlled()
     {
         return true;
     }
-    /*public override void CheckCollision()
-    {
-        base.CheckCollision();
-        Body otherB = CheckBodyCollision();
-         if (otherB != null)
-         {
-            otherB.Die();
-         }
-    }*/
 }

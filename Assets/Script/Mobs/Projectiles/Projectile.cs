@@ -209,7 +209,7 @@ public class Projectile : Mob
         {
             foreach (Body b in Level.main.players)
             {
-                if (!b.invulnerable && IsInRangeOfOther(b))
+                if (!b.IsInvulnerable() && IsInRangeOfOther(b))
                 {
                     return b;
                 }
@@ -219,7 +219,7 @@ public class Projectile : Mob
         {
             foreach (Body b in Level.main.bodies)
             {
-                if (!b.invulnerable && IsInRangeOfOther(b))
+                if (!b.IsInvulnerable() && IsInRangeOfOther(b))
                 {
                     return b;
                 }
@@ -336,6 +336,11 @@ public class Projectile : Mob
             }
             Die();
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Terrain"))
+            OnBounceTerrain(collision);
     }
     public override void Die()
     {

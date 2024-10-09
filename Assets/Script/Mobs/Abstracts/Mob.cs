@@ -68,7 +68,10 @@ public abstract class Mob : MonoBehaviour
     }
     #endregion
     #region collision
-    public bool invulnerable;
+    public virtual bool IsInvulnerable()
+    {
+        return false;
+    }
     public Body CollidesWithAnotherBody()
     {
             foreach (Body b in Level.main.GetAllBodies())
@@ -83,7 +86,7 @@ public abstract class Mob : MonoBehaviour
     }
     public virtual bool CollideBullet(Projectile other)
 {
-    if (!invulnerable)
+    if (!IsInvulnerable())
     {
         other.Die();
         return true;
