@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2158328114290720274, guid: 60e404016cf23ab4d9759e640001aa9f, type: 3}
   AI: 0
-  SightRange: 0
+  SightRange: 3
   Scale: 1
   Speed: 1
   HarassWeapon: {fileID: 0}

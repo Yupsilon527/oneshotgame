@@ -169,7 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastSpawn: 3
   enemypool: {fileID: 227539457}
-  enemiesSpawned: []
+  enemiesSpawned:
+  - {fileID: 11400000, guid: 39228325ffd22ad4e90493e6630b4959, type: 2}
 --- !u!4 &227539459
 Transform:
   m_ObjectHideFlags: 0
