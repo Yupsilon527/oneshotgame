@@ -16,7 +16,7 @@ public class ScoreCounter : MonoBehaviour
         set
         {
             bullets = value;
-            bulletsText.text = "Bullets: " + bullets;
+        //    bulletsText.text = "Bullets: " + bullets;
         }
     }
     int enemies = 0;
@@ -29,7 +29,7 @@ public class ScoreCounter : MonoBehaviour
         set
         {
             enemies = value;
-            baddiesText.text = "Baddies: " + enemies;
+        //    baddiesText.text = "Baddies: " + enemies;
         }
     }
     Text bulletsText;
@@ -37,7 +37,7 @@ public class ScoreCounter : MonoBehaviour
     private void Awake()
     {
         main = this;
-        bulletsText = transform.Find("Bullets").GetComponent<Text>();
-        baddiesText = transform.Find("Enemies").GetComponent<Text>();
+       // bulletsText = transform.Find("Bullets").GetComponent<Text>();
+        //baddiesText = transform.Find("Enemies").GetComponent<Text>();
     }
 }

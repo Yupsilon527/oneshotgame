@@ -10,6 +10,7 @@ public partial class Level : MonoBehaviour
 
     public ObjectPool bulletpool;
     public GameObject bulletPrefab;
+    public GameObject playerPrefab;
 
     #region Unity Calls
     public static Level main;
@@ -17,6 +18,10 @@ public partial class Level : MonoBehaviour
     {
         main = this;
         InitializeBounds();
+    }
+    private void Start()
+    {
+        Instantiate(playerPrefab);
     }
     private void Update()
     {
@@ -69,7 +74,7 @@ public partial class Level : MonoBehaviour
     #endregion
     #region Camera
 
-    Camera cam { get => gameObject.GetComponent<Camera>(); }
+    public Camera cam;
     public Vector3 CameraOrder = Vector3.zero;
     public Vector3 CameraOrigin = Vector3.zero;
     public Vector2 CameraTime = Vector2.zero;
