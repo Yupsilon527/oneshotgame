@@ -8,10 +8,6 @@ public class Enemy : Body
     protected bool DieOffscreen = true;
     public float NextUpdateTime = 0f;
     EnemyData data;
-    public static Enemy FromData(string EnemyID)
-    {
-       return FromData(Resources.Load<EnemyData>("BulletHell/GameData/" + EnemyID));
-    }
         public static Enemy FromData(EnemyData eData)
     {
         Enemy e = EnemyController.main.enemypool.PoolItem(eData.enemyPrefab).GetComponent<Enemy>();

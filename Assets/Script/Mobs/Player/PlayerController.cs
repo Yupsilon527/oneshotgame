@@ -105,7 +105,7 @@ public class PlayerController : Body
 
         }
     }
-    public override bool PlayerOwned()
+    public override bool IsPlayerControlled()
     {
         return true;
     }

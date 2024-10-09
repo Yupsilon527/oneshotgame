@@ -42,7 +42,7 @@ public partial class Level : MonoBehaviour
     public void RegisterBody(Body b)
     {
         ScoreCounter.main.nBadies++;
-        if (!b.PlayerOwned())
+        if (!b.IsPlayerControlled())
             bodies.Add(b);
         else
             players.Add(b);

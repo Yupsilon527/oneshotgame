@@ -13,9 +13,21 @@ MonoBehaviour:
   m_Name: PlayerProjectile
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 0, a: 0}
+  directionAligned: 0
   ForwardSpeed: 0
   RightSpeed: 0
-  Life: 0
+  LifeTime: 0
   Scale: 0
   Damage: 0
   Behavior: 0
+  prefab: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
+  bounces: 0
+  targets: 999
+  bounceBehavior: 1
+  contactBehavior: 2
+  expireBehavior: 2
+  explosion:
+    explodeEffect: {fileID: 0}
+    hitsPlayer: 0
+    hitsEnemies: 0
+    distanceUnits: 1

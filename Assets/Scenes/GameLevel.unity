@@ -221,7 +221,7 @@ MonoBehaviour:
   timeScale: 1
   gameTime: 0
   bulletpool: {fileID: 276644565}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
   playerPrefab: {fileID: 5580676929228978483, guid: ab6430afc724e124d976e4302a96401d, type: 3}
   players: []
   bodies: []
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 1090957471}
   - component: {fileID: 1090957470}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

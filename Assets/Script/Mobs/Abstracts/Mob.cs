@@ -107,7 +107,7 @@ public abstract class Mob : MonoBehaviour
     }
     #endregion
     #region Alignment
-    public virtual bool PlayerOwned()
+    public virtual bool IsPlayerControlled()
     {
         return false;
     }

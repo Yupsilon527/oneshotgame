@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87149f33d0e3ad04a8531d92d16ab8f7, type: 3}
   m_Name: PlayerWeapon
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 11400000, guid: 5db2a32f0e69ec946aad7b5a135a8a58, type: 2}
   FireInterval: 1
   ProjectileCount: 1
   ProjectileArc: 0
@@ -20,3 +20,9 @@ MonoBehaviour:
   BarrelAccuracy: 0
   ProjectileAccuracy: 0
   FireSlowDown: 1
+  clusterData: {fileID: 0}
+  clusterAmount: 0
+  clusterSpeed: 0
+  clusterArc: 0
+  clusterArcDelta: 0
+  clusterDelay: 0
