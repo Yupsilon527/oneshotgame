@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public static class WeightList 
+public static class WeightList
 {
     [System.Serializable]
     public class WeightEntry
@@ -9,7 +9,7 @@ public static class WeightList
 
         public WeightEntry(float weight)
         {
-            Weight = Mathf.Max(1,weight);
+            Weight = Mathf.Max(1, weight);
         }
     }
     [System.Serializable]
@@ -46,12 +46,12 @@ public static class WeightList
     }
     public static witem PickWeightCombined<witem>(witem[] listA, witem[] listB) where witem : WeightEntry
     {
-        if (listA != null && listB!=null)
+        if (listA != null && listB != null)
         {
             float totalA = GetTotal(listA);
             float totalB = GetTotal(listB);
 
-            float total = Random.Range(0, totalA+totalB);
+            float total = Random.Range(0, totalA + totalB);
 
             foreach (witem item in listA)
             {
@@ -68,7 +68,7 @@ public static class WeightList
         }
         return null;
     }
-    public static float GetTotal(WeightEntry[] value) 
+    public static float GetTotal(WeightEntry[] value)
     {
         float total = 0;
         foreach (WeightEntry item in value)

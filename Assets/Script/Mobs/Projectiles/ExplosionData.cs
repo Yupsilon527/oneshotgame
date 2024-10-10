@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -7,7 +5,7 @@ public class ExplosionData
 {
     public GameObject explodeEffect;
     public bool hitsPlayer, hitsEnemies;
-        public float distanceUnits = 1;
+    public float distanceUnits = 1;
     /*
      public void Resolve(Vector2 center, Mob owner)
      {

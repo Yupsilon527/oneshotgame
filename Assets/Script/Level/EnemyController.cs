@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
         if (lastSpawn < Level.main.gameTime)
         {
             lastSpawn += .33f;
-            SpawnWave(enemiesSpawned[Mathf.FloorToInt(Random.value*enemiesSpawned.Length)], 10);
+            SpawnWave(enemiesSpawned[Mathf.FloorToInt(Random.value * enemiesSpawned.Length)], 10);
             //Bullet.FireBullet(new Vector2(UnityEngine.Random.Range(CameraBounds.xMin, CameraBounds.xMax),CameraBounds.yMax), Vector2.down, 10, 4, .25f, 0);
         }
     }

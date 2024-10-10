@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Body
@@ -8,7 +6,7 @@ public class Enemy : Body
     protected bool DieOffscreen = true;
     public float NextUpdateTime = 0f;
     EnemyData data;
-        public static Enemy FromData(EnemyData eData)
+    public static Enemy FromData(EnemyData eData)
     {
         Enemy e = EnemyController.main.enemypool.PoolItem(eData.enemyPrefab).GetComponent<Enemy>();
         e.data = eData;
@@ -30,18 +28,18 @@ public class Enemy : Body
     {
         Scale(data.Scale);
         float angle = Random.Range(0, 360) * Mathf.Deg2Rad;
-        Vector2 center = (Vector2)Camera.main.transform.position + new Vector2(Mathf.Sin(angle),Mathf.Cos(angle))* EnemySpawnRange;
+        Vector2 center = (Vector2)Camera.main.transform.position + new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * EnemySpawnRange;
         transform.position = new Vector3(center.x, center.y, transform.position.z);
         NextUpdateTime = 0;
     }
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (DieOffscreen && transform.position.sqrMagnitude> EnemySpawnRange * EnemySpawnRange + 10)
+        if (DieOffscreen && transform.position.sqrMagnitude > EnemySpawnRange * EnemySpawnRange + 10)
         {
             Die();
         }
-        if (NextUpdateTime< Level.main.gameTime)
+        if (NextUpdateTime < Level.main.gameTime)
         {
             NextUpdateTime = Level.main.gameTime + AIUpdate();
         }
@@ -69,7 +67,7 @@ public class Enemy : Body
                     {
                         FireWeapon(0, target.transform.position);
                     }
-                    velocity = delta.normalized * data.Speed ;
+                    velocity = delta.normalized * data.Speed;
 
                 }
                 break;
@@ -78,7 +76,7 @@ public class Enemy : Body
     }
     public Body GetTarget()
     {
-        if (Level.main.players.Count>0)
+        if (Level.main.players.Count > 0)
         {
             return Level.main.players[0];
         }

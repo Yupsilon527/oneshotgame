@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 0, a: 0}
   directionAligned: 0
-  ForwardSpeed: 2
-  RightSpeed: 12
+  ForwardSpeed: 12
+  RightSpeed: 0
   LifeTime: 10
-  Scale: 0
-  Damage: 0
-  Behavior: 1
+  Scale: 1
+  Damage: 12
+  Behavior: 0
   prefab: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
   oosBounce: 1
   bounces: 1

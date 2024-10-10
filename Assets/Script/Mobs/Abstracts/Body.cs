@@ -1,18 +1,17 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class Body : Mob
 {
     public Collider2D collider;
-    public Rigidbody2D rigBody;
+    public Rigidbody2D rigidbody;
+
     bool LeftHip = false;
     protected WeaponData[] weapons;
     protected float[] FireTimes;
-    public  void FireWeapon(int weaponID,Vector3 point)
+    public void FireWeapon(int weaponID, Vector3 point)
     {
-        if (weaponID>=weapons.Length || weapons[weaponID] == null )
+        if (weaponID >= weapons.Length || weapons[weaponID] == null)
         {
             return;
         }
@@ -28,7 +27,7 @@ public abstract class Body : Mob
             //   SpecialEffectPool.main.EffectFromPrefab(equiptedWeapon.weapon.launchEffect, center, firePoint.transform.rotation);
             ShootWeapon(w, center, firingDir);
 
-           LeftHip = !LeftHip;
+            LeftHip = !LeftHip;
 
             FireTimes[weaponID] = Time.time + weapons[weaponID].FireInterval;
         }
@@ -47,6 +46,21 @@ public abstract class Body : Mob
             w.BarrelAccuracy,
             IsPlayerControlled() ? Projectile.ProjectileAlignment.player : Projectile.ProjectileAlignment.enemy
             );
+    }
+    public override void Move(Vector2 pos)
+    {
+        if (snaptobounds)
+        {
+            Rect Levelbounds = Level.main.CameraBounds;
+            rigidbody.position = new Vector3(
+                Mathf.Clamp(pos.x, Levelbounds.xMin, Levelbounds.xMax),
+                Mathf.Clamp(pos.y, Levelbounds.yMin, Levelbounds.yMax));
+        }
+        else
+        {
+            rigidbody.position = new Vector2(pos.x, pos.y);
+
+        }
     }
     protected override void OnEnable()
     {

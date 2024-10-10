@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,7 +19,6 @@ public class Projectile : Mob
     bool dead;
 
     Collider2D launcherCollider;
-    public Collider2D collider;
 
     public ProjectileAlignment alignment = ProjectileAlignment.neutral;
     public enum MoveType
@@ -31,12 +29,6 @@ public class Projectile : Mob
     public void AssignProperties(ProjectileData ndata)
     {
         data = ndata;
-    }
-    public override void Awake()
-    {
-        collider = GetComponentInChildren<Collider2D>();
-
-        base.Awake();
     }
     public static Projectile[] LaunchMultiple(ProjectileData projectileData, Body owner, WeaponData weapon, Vector3 origin, Vector3 direction, float launchSpeed, int amount, float arc, float accuracy, ProjectileAlignment alignment)
     {
@@ -63,7 +55,6 @@ public class Projectile : Mob
         this.shooter = launcher;
         wdata = weapon;
         launcherCollider = launcher.collider;
-        Physics2D.IgnoreCollision(collider, launcherCollider, true);
         hitEntities.Add(launcher);
 
         float lifeTime = data.LifeTime;
@@ -135,7 +126,7 @@ public class Projectile : Mob
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (data.oosBounce)
+        if (snaptobounds)
         {
             var VP = Camera.main.WorldToViewportPoint(transform.position);
             if (VP.x < 0 || VP.x > 1)
@@ -143,8 +134,8 @@ public class Projectile : Mob
                 OnBounceScreenEdge();
                 velocity.x *= -1;
             }
-                if (VP.y < 0 || VP.y > 1)
-                {
+            if (VP.y < 0 || VP.y > 1)
+            {
                 OnBounceScreenEdge();
                 velocity.y *= -1;
             }
@@ -272,7 +263,7 @@ public class Projectile : Mob
         if (data.directionAligned)
             transform.right = velocity;
     }
-    int maxTargets = 0 ;
+    int maxTargets = 0;
     void ContactEntity(Body hit, Vector2 dir)
     {
         if (!hitEntities.Contains(hit))
@@ -280,7 +271,7 @@ public class Projectile : Mob
             hit.TakeDamage(data.Damage);
             hitEntities.Add(hit);
         }
-        if (hitEntities.Count >= maxTargets+1)
+        if (hitEntities.Count >= maxTargets + 1)
         {
             Debug.Log("CRITTER " + name);
             HandleBehavior(data.contactBehavior);
@@ -302,11 +293,11 @@ public class Projectile : Mob
                 Explode();
                 break;
             case ProjectileData.ContactBehavior.cluster_forward:
-                Cluster(velocity.normalized);
+                Cluster(GetComponent<Rigidbody>().velocity.normalized);
                 Explode();
                 break;
             case ProjectileData.ContactBehavior.cluster_backward:
-                Cluster(-velocity.normalized);
+                Cluster(-GetComponent<Rigidbody>().velocity.normalized);
                 Explode();
                 break;
         }
@@ -326,10 +317,6 @@ public class Projectile : Mob
     }
     #endregion
 
-    public virtual void SnapToPosition(Vector2 pos)
-    {
-        Move(pos);
-    }
     public void Explode()
     {
         if (!dead)
@@ -352,8 +339,6 @@ public class Projectile : Mob
         if (dead) return;
         dead = true;
         //TODO SpecialEffect(data.expireEffect);
-        if (launcherCollider != null)
-        Physics2D.IgnoreCollision(collider, launcherCollider, false);
         base.Die();
     }
     float GetTimeRemaining()
@@ -365,7 +350,7 @@ public class Projectile : Mob
         base.OnEnable();
         ScoreCounter.main.nBullets++;
     }
-    protected override void OnDisable()
+    protected virtual void OnDisable()
     {
         ScoreCounter.main.nBullets--;
     }

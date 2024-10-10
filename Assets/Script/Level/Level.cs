@@ -4,7 +4,7 @@ using UnityEngine;
 public partial class Level : MonoBehaviour
 {
     #region Time
-    public float timeScale = 1f;
+    public float enemySpeed = 1f;
     public float gameTime = 0f;
     #endregion
 
@@ -25,7 +25,7 @@ public partial class Level : MonoBehaviour
     }
     private void Update()
     {
-        gameTime += Time.deltaTime * timeScale;
+        gameTime += Time.deltaTime * enemySpeed;
         HandleCamera();
 
     }

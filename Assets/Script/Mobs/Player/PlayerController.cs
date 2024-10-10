@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using static PlayerController;
 
 public class PlayerController : Body
 {
@@ -23,16 +21,17 @@ public class PlayerController : Body
     public float DashSpeed = 50;
     public float DashDuration = .2f;
     public float DashRefresh = 1f;
-    protected override void FixedUpdate()
+    private void Update()
     {
-        snaptobounds = true;
-
         HandleDashing();
         HandleMovement();
         if (!dashing)
         {
-        HandleFire();
+            HandleFire();
         }
+    }
+    protected override void FixedUpdate()
+    {
         base.FixedUpdate();
     }
     public void HandleMovement()
@@ -41,8 +40,9 @@ public class PlayerController : Body
 
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        if (!dashing || direction.sqrMagnitude > 0) { 
-        velocity = (direction).normalized * realSpeed ;
+        if (!dashing || direction.sqrMagnitude > 0)
+        {
+            velocity = (direction).normalized * realSpeed;
         }
     }
     public enum FireState
@@ -79,12 +79,10 @@ public class PlayerController : Body
             if (DashTime < Level.main.gameTime)
             {
                 dashing = false;
-                print("dash end");
             }
         }
         else if (DashCooldown < Level.main.gameTime && Input.GetAxis("Fire3") != 0 /*&& (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)*/)
         {
-            print("dash!");
             dashing = true;
 
             DashTime = Level.main.gameTime + DashDuration;
@@ -100,7 +98,7 @@ public class PlayerController : Body
     {
         return true;
     }
-    public BonusTable collectedBonuses ;
+    public BonusTable collectedBonuses;
     protected override void ShootWeapon(WeaponData w, Vector3 center, Vector2 firedir)
     {
         if (collectedBonuses == null)

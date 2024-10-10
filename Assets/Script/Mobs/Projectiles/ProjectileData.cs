@@ -14,13 +14,12 @@ public class ProjectileData : ScriptableObject
         cluster_upwards = 6,
     }
     public Color color;
-    public bool directionAligned; public float ForwardSpeed; public float RightSpeed; public float LifeTime; public float Scale; public float Damage; public Projectile.MoveType Behavior; 
+    public bool directionAligned; public float ForwardSpeed; public float RightSpeed; public float LifeTime; public float Scale; public float Damage; public Projectile.MoveType Behavior;
 
 
     public GameObject prefab;
-    public bool oosBounce;
     public int bounces = 0;
-    public int targets=1;
+    public int targets = 1;
 
 
     public ContactBehavior bounceBehavior = ContactBehavior.detonate;

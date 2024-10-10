@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using UnityEngine.Events;
 
 public class Resource
@@ -14,7 +13,7 @@ public class Resource
     {
         return $"{name} ({values[0]},{values[1]})";
     }
-    public Resource(float limit,string name,bool negative, bool limited)
+    public Resource(float limit, string name, bool negative, bool limited)
     {
         this.name = name;
         hasHardLimit = limited;
@@ -29,8 +28,8 @@ public class Resource
     }
     public float GetValueRounded(int d = 1)
     {
-        d = (int)Mathf.Max(1,Mathf.Pow(10, d) );
-        return Mathf.Round( values[0]*d)/d;
+        d = (int)Mathf.Max(1, Mathf.Pow(10, d));
+        return Mathf.Round(values[0] * d) / d;
     }
     public float GetPercentage()
     {
@@ -42,7 +41,7 @@ public class Resource
 
     public float GetLimit(bool baseLimit = false)
     {
-        return  values[baseLimit ? 2 : 1];
+        return values[baseLimit ? 2 : 1];
     }
     public void ResetLimit(LimitRule rule)
     {
@@ -67,7 +66,7 @@ public class Resource
         float oldlife = values[0];
         if (hasHardLimit)
             values[0] = Mathf.Min(value, values[1]);
-        else 
+        else
             values[0] = value;
 
         if (!canNegative)
@@ -76,7 +75,7 @@ public class Resource
         }
         if (resourceDebug) Debug.Log($"[{name}] Change " + oldlife + " to " + values[0]);
         OnValueChanged.Invoke();
-        
+
     }
 
     public void SetPercentage(float value)
@@ -104,10 +103,10 @@ public class Resource
         SetLimit(value, value < GetLimit(false) ? under : over, false);
     }
 
-    public void SetLimit(float value, LimitRule rule = LimitRule.leave_value,bool hard = false)
+    public void SetLimit(float value, LimitRule rule = LimitRule.leave_value, bool hard = false)
     {
-       // display?.SetMaximum(values[1]);
-       switch (rule)
+        // display?.SetMaximum(values[1]);
+        switch (rule)
         {
             case LimitRule.leave_value:
                 values[1] = value;
@@ -141,7 +140,7 @@ public class Resource
         {
             values[2] = value;
         }
-        if (resourceDebug) Debug.Log($"[{name}]  Set Max to " + value );
+        if (resourceDebug) Debug.Log($"[{name}]  Set Max to " + value);
     }
 
     public bool ChargeValue(float value)
@@ -158,16 +157,16 @@ public class Resource
         GiveValue(-value);
         return true;
     }
-    public bool ChargePercentage(float value,bool total)
+    public bool ChargePercentage(float value, bool total)
     {
-     return ChargeValue((total ? GetLimit(false) : GetValue() )* value);
+        return ChargeValue((total ? GetLimit(false) : GetValue()) * value);
     }
 
     public float SubstractedValue(float value)
     {
         if (resourceDebug) Debug.Log("[" + name + "] Substract " + value);
         value = Mathf.Abs(value);
-        if (!canNegative)  value = Mathf.Min(GetValue(), value);
+        if (!canNegative) value = Mathf.Min(GetValue(), value);
         GiveValue(-value);
         return value;
     }

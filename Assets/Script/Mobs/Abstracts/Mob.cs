@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
@@ -7,9 +5,10 @@ public abstract class Mob : MonoBehaviour
 {
     protected Vector2 velocity = Vector2.zero;
     protected SpriteRenderer SpriteRenderer;
+
     public float scale = 1f;
     public bool snaptobounds = false;
- public    float health = 10;
+    public float health = 10;
 
     #region Unity Calls
     public virtual void Awake()
@@ -18,14 +17,7 @@ public abstract class Mob : MonoBehaviour
     }
     protected virtual void FixedUpdate()
     {
-        MoveDirection((Vector3)velocity * Time.deltaTime * Level.main.timeScale);
-    }
-    protected virtual void OnEnable()
-    {
-        Scale(scale);
-    }
-    protected virtual void OnDisable()
-    {
+        MoveDirection((Vector3)velocity * Time.deltaTime * Level.main.enemySpeed);
     }
     #endregion
     #region Movement
@@ -48,7 +40,12 @@ public abstract class Mob : MonoBehaviour
             transform.position = new Vector3(pos.x, pos.y, transform.position.z);
         }
     }
-
+    protected virtual void OnEnable()
+    {
+        Scale(scale);
+    }
+    #endregion
+    #region Scale
     public void Scale(float newscale)
     {
         scale = newscale;
@@ -59,7 +56,7 @@ public abstract class Mob : MonoBehaviour
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
-        if (health<0)
+        if (health < 0)
             Die();
     }
     public virtual void Die()
@@ -74,24 +71,24 @@ public abstract class Mob : MonoBehaviour
     }
     public Body CollidesWithAnotherBody()
     {
-            foreach (Body b in Level.main.GetAllBodies())
+        foreach (Body b in Level.main.GetAllBodies())
+        {
+            if (IsInRangeOfOther(b))
             {
-                if (IsInRangeOfOther(b))
-                {
-                    return b;
-                }
-            
+                return b;
+            }
+
         }
         return null;
     }
     public virtual bool CollideBullet(Projectile other)
-{
-    if (!IsInvulnerable())
     {
-        other.Die();
-        return true;
-    }
-    return false;
+        if (!IsInvulnerable())
+        {
+            other.Die();
+            return true;
+        }
+        return false;
     }
     public virtual bool CollideBody(Projectile other)
     {
