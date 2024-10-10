@@ -1144,8 +1144,8 @@ ScriptedImporter:
     - name: John_Leg_Left
       guid: 9bcef80d869589740bebafe22300e84a
       position: {x: 99.73364, y: 293.95825, z: 0}
-      rotation: {x: 0, y: 0, z: 0.79506844, w: -0.60651976}
-      length: 280.19733
+      rotation: {x: 0, y: 0, z: 0.7950684, w: -0.60651976}
+      length: 280.19745
       parentId: -1
       color:
         serializedVersion: 2
@@ -1218,7 +1218,7 @@ ScriptedImporter:
     - name: John_Leg_Right
       guid: 600c0df02b33f9143a7e661eb11dfa22
       position: {x: 99.367676, y: 302.54272, z: 0}
-      rotation: {x: 0, y: 0, z: 0.7918572, w: -0.61070645}
+      rotation: {x: 0, y: 0, z: 0.7918571, w: -0.6107064}
       length: 290.70706
       parentId: -1
       color:
@@ -1408,19 +1408,19 @@ ScriptedImporter:
         rgba: 4294902015
     - name: John_Leg_Right
       guid: 600c0df02b33f9143a7e661eb11dfa22
-      position: {x: 88.6599, y: 245.13235, z: 0}
-      rotation: {x: 0, y: -0, z: 0.9898696, w: 0.14197952}
+      position: {x: 333.22028, y: 229.34721, z: 0}
+      rotation: {x: 0, y: 0, z: 0.98856604, w: 0.15078844}
       length: 290.7071
-      parentId: 1
+      parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278223103
     - name: John_Leg_Left
       guid: 9bcef80d869589740bebafe22300e84a
-      position: {x: 89.34519, y: -280.45932, z: 0}
-      rotation: {x: 0, y: -0, z: 0.9891067, w: 0.14720051}
+      position: {x: 324.54526, y: -296.17322, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9877567, w: 0.15600242}
       length: 280.19733
-      parentId: 1
+      parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278255488
