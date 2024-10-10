@@ -38,9 +38,9 @@ public class Enemy : Body
         {
             Die();
         }
-        if (NextUpdateTime < Level.main.gameTime)
+        if (NextUpdateTime < Time.time)
         {
-            NextUpdateTime = Level.main.gameTime + AIUpdate();
+            NextUpdateTime = Time.time + AIUpdate();
         }
     }
     public virtual float AIUpdate()
@@ -75,9 +75,9 @@ public class Enemy : Body
     }
     public Body GetTarget()
     {
-        if (Level.main.players.Count > 0)
+        if (PlayerController.main!=null)
         {
-            return Level.main.players[0];
+            return PlayerController.main;
         }
         return null;
     }

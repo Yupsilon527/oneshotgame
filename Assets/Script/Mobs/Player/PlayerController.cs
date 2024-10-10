@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class PlayerController : Body
 {
+    public static PlayerController main;
     public WeaponData startingWeapon;
+    private void Awake()
+    {
+        main = this;
+    }
     public void Start()
     {
-        Level.main.players.Add(this);
+        main = this;
         weapons = new WeaponData[]{
             startingWeapon
         };
@@ -14,12 +19,19 @@ public class PlayerController : Body
 
     bool dashing = false;
     public float Speed = 15;
+    public float SprintSpeed = 2;
 
     public float DashTime = 1f;
     public float DashCooldown = 1f;
     public float DashSpeed = 50;
     public float DashDuration = .2f;
     public float DashRefresh = 1f;
+    public void Restart()
+    {
+        dashing = false;
+        fireState = FireState.notFired;
+        collectedBonuses = new();
+    }
     private void Update()
     {
         HandleDashing();
@@ -35,7 +47,7 @@ public class PlayerController : Body
     }
     public void HandleMovement()
     {
-        float realSpeed = (dashing ? DashSpeed : Speed);
+        float realSpeed = (dashing ? DashSpeed : (fireState == FireState.notFired ? Speed : SprintSpeed)) ;
 
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
@@ -50,7 +62,7 @@ public class PlayerController : Body
         charging,
         fired
     }
-    FireState fireState;
+    public FireState fireState;
     public void HandleFire()
     {
         switch (fireState)
@@ -75,17 +87,17 @@ public class PlayerController : Body
     {
         if (dashing)
         {
-            if (DashTime < Level.main.gameTime)
+            if (DashTime < Time.time)
             {
                 dashing = false;
             }
         }
-        else if (DashCooldown < Level.main.gameTime && Input.GetAxis("Fire3") != 0 /*&& (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)*/)
+        else if (DashCooldown < Time.time && Input.GetAxis("Fire3") != 0 /*&& (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)*/)
         {
             dashing = true;
 
-            DashTime = Level.main.gameTime + DashDuration;
-            DashCooldown = Level.main.gameTime + DashRefresh;
+            DashTime = Time.time + DashDuration;
+            DashCooldown = Time.time + DashRefresh;
 
         }
     }

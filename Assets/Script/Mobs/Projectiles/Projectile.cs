@@ -94,7 +94,7 @@ public class Projectile : Mob
     }
     public void Fire(Vector2 direction, float gunangle, float accuracy)
     {
-        deathtime = Level.main.gameTime + data.LifeTime;
+        deathtime = Time.time + data.LifeTime;
         SetForwardVector(direction);
         if (gunangle != 0)
         {
@@ -150,11 +150,6 @@ public class Projectile : Mob
         maxTargets = 0;
         birthtime = Time.time;
     }
-    public virtual void Move(Vector2 pos, float interval)
-    {
-        CheckCollision();
-        transform.position = new Vector3(pos.x, pos.y, transform.position.z);
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out Body other) )
@@ -162,9 +157,6 @@ public class Projectile : Mob
             Debug.Log("[Bullet] " + name + " collides with " + other.name);
             CollideBody(other);
         }
-    }
-    public void CheckCollision()
-    {
     }
     public override bool IsPlayerControlled()
     {
@@ -174,13 +166,10 @@ public class Projectile : Mob
     {
         if (!IsPlayerControlled())
         {
-            foreach (Body b in Level.main.players)
-            {
-                if (!b.IsInvulnerable() && IsInRangeOfOther(b))
+                if (!PlayerController.main.IsInvulnerable() && IsInRangeOfOther(PlayerController.main))
                 {
-                    return b;
+                    return PlayerController.main;
                 }
-            }
         }
         else
         {
@@ -307,7 +296,7 @@ public class Projectile : Mob
         if (launcherCollider != null)
             Physics2D.IgnoreCollision(collider, launcherCollider, false);
         base.Die();
-        ScoreCounter.main.nBullets--;
+        Level.main.UnregisterBody(this);
     }
     float GetTimeRemaining()
     {
@@ -315,7 +304,7 @@ public class Projectile : Mob
     }
     protected  void OnEnable()
     {
-        ScoreCounter.main.nBullets++;
+        Level.main.RegisterBody(this);
     }
     public void GiveBounces(int value)
     {

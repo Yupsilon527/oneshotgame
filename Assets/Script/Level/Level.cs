@@ -3,10 +3,6 @@ using UnityEngine;
 
 public partial class Level : MonoBehaviour
 {
-    #region Time
-    public float enemySpeed = 1f;
-    public float gameTime = 0f;
-    #endregion
     public enum GameState
     {
         pregame,
@@ -14,9 +10,10 @@ public partial class Level : MonoBehaviour
         victorious,
         defeated
     }
-    GameState state = GameState.pregame;
+   public GameState state = GameState.pregame;
     int cRound = 0;
     public int secondsPerRound = 60;
+    float roundBeginTime = 0;
 
     public ObjectPool bulletpool;
     public GameObject bulletPrefab;
@@ -36,9 +33,8 @@ public partial class Level : MonoBehaviour
     }
     private void Update()
     {
-        gameTime += Time.deltaTime * enemySpeed;
         HandleCamera();
-
+        HandleState();
     }
     #endregion
     #region Rounds
@@ -46,33 +42,61 @@ public partial class Level : MonoBehaviour
     {
         state = GameState.running;
         ScoreCounter.main.StartCountdown(secondsPerRound);
+        roundBeginTime = Time.time;
+        PlayerController.main.Restart();
+    }
+     void RoundEnd()
+    {
+        cRound++;
+        state = GameState.pregame;
+    }
+    public void RoundProgress()
+    {
+        state = GameState.victorious;
+        EnemyController.main.ClearEnemies();
+    }
+    void GameEnded()
+    {
+        state = GameState.defeated;
+    }
+    void HandleState()
+    {
+        switch (state)
+        {
+            case GameState.pregame:
+                RoundBegin();
+                break;
+            case GameState.running:
+                if (Time.time - roundBeginTime > secondsPerRound)
+                {
+                    GameEnded();
+                }
+                break;
+            case GameState.victorious:
+                if (PlayerController.main.fireState == PlayerController.FireState.fired && projectiles.Count == 0)
+                {
+                    RoundEnd();
+                }
+                break;
+        }
     }
     #endregion
     #region Bodies
-    public List<Body> players;
-    public List<Body> bodies;
-
-    public void InitBodies()
+    public List<Body> bodies = new();
+    public List<Projectile> projectiles = new();
+    public void RegisterBody(Mob m)
     {
-        bodies = new List<Body>();
-        players = new List<Body>();
-    }
-    public void RegisterBody(Body b)
-    {
-        ScoreCounter.main.nBadies++;
-        if (!b.IsPlayerControlled())
+        if (m is Body b)
             bodies.Add(b);
-        else
-            players.Add(b);
+        else if (m is Projectile p)
+            projectiles.Add(p);
     }
-    public void UnregisterBody(Body b)
+    public void UnregisterBody(Mob m)
     {
-        ScoreCounter.main.nBadies--;
-        bodies.Remove(b);
-    }
-    public Body[] GetAllBodies()
-    {
-        return bodies.ToArray();
+        if (m is Body b)
+            bodies.Remove(b);
+        else if (m is Projectile p)
+            projectiles.Remove(p);
     }
     #endregion
     #region Bounds

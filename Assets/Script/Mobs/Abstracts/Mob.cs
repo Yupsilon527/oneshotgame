@@ -50,7 +50,7 @@ public abstract class Mob : MonoBehaviour
     }
     public Body CollidesWithAnotherBody()
     {
-        foreach (Body b in Level.main.GetAllBodies())
+        foreach (Body b in Level.main.bodies)
         {
             if (IsInRangeOfOther(b))
             {

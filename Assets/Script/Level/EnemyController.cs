@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
 
-        if (lastSpawn < Level.main.gameTime)
+        if (Level.main.state == Level.GameState.running && lastSpawn < Time.time)
         {
             lastSpawn += .33f;
             SpawnWave(enemiesSpawned[Mathf.FloorToInt(Random.value * enemiesSpawned.Length)], 10);
@@ -44,4 +44,14 @@ public class EnemyController : MonoBehaviour
             Enemy.FromData(name);
     }
     #endregion
+    public void ClearEnemies()
+    {
+        foreach (var enemy in Level.main.bodies)
+        {
+            if (!enemy.CompareTag("Player"))
+            {
+                enemypool.DeactivateObject(enemy.gameObject);
+            }
+        }
+    }
 }
