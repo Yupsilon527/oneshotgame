@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 7919935474210726442}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,8 +358,7 @@ MonoBehaviour:
   collider: {fileID: 7919935474210726442}
   rigidbody: {fileID: 7536566452384453673}
   scale: 1
-  snaptobounds: 0
-  health: 10
+  snaptobounds: 1
   startingWeapon: {fileID: 11400000, guid: 752a58fc9c9a38c4e9dd160ca5f48ec5, type: 2}
   Speed: 15
   DashTime: 1
