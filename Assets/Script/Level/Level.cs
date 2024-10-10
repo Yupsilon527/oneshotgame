@@ -7,6 +7,16 @@ public partial class Level : MonoBehaviour
     public float enemySpeed = 1f;
     public float gameTime = 0f;
     #endregion
+    public enum GameState
+    {
+        pregame,
+        running,
+        victorious,
+        defeated
+    }
+    GameState state = GameState.pregame;
+    int cRound = 0;
+    public int secondsPerRound = 60;
 
     public ObjectPool bulletpool;
     public GameObject bulletPrefab;
@@ -22,12 +32,20 @@ public partial class Level : MonoBehaviour
     private void Start()
     {
         Instantiate(playerPrefab);
+        RoundBegin();
     }
     private void Update()
     {
         gameTime += Time.deltaTime * enemySpeed;
         HandleCamera();
 
+    }
+    #endregion
+    #region Rounds
+    void RoundBegin()
+    {
+        state = GameState.running;
+        ScoreCounter.main.StartCountdown(secondsPerRound);
     }
     #endregion
     #region Bodies

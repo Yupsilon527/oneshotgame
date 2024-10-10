@@ -15,7 +15,7 @@ public abstract class Body : Mob
         }
         if (FireTimes[weaponID] < Time.time)
         {
-            FacePoint(point);
+            //FacePoint(point);
             WeaponData w = weapons[weaponID];
             Vector3 firingDir = point - transform.position;
 
