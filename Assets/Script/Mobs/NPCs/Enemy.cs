@@ -26,7 +26,6 @@ public class Enemy : Body
     }
     public void Respawn()
     {
-        Scale(data.Scale);
         float angle = Random.Range(0, 360) * Mathf.Deg2Rad;
         Vector2 center = (Vector2)Camera.main.transform.position + new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * EnemySpawnRange;
         transform.position = new Vector3(center.x, center.y, transform.position.z);
@@ -67,7 +66,7 @@ public class Enemy : Body
                     {
                         FireWeapon(0, target.transform.position);
                     }
-                    velocity = delta.normalized * data.Speed;
+                    rigidbody.velocity = delta.normalized * data.Speed;
 
                 }
                 break;
@@ -84,7 +83,7 @@ public class Enemy : Body
     }
     public override void Die()
     {
-        FireWeapon(2, velocity);
-        base.Die();
+        FireWeapon(2, rigidbody.velocity);
+        EnemyController.main.enemypool.DeactivateObject(gameObject);
     }
 }

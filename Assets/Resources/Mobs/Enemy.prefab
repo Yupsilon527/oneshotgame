@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3340113490963641432}
   - component: {fileID: 4116353662555244496}
   - component: {fileID: 6807129886614323600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,11 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1609657e4eacee4c90d90b82efdeb56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collider: {fileID: 6807129886614323600}
+  rigidbody: {fileID: 4116353662555244496}
   scale: 1
   snaptobounds: 0
   health: 10
-  collider: {fileID: 6807129886614323600}
-  rigidbody: {fileID: 4116353662555244496}
   NextUpdateTime: 0
 --- !u!50 &4116353662555244496
 Rigidbody2D:

@@ -3,12 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public abstract class Mob : MonoBehaviour
 {
-    protected Vector2 velocity = Vector2.zero;
+    public Collider2D collider;
+    public Rigidbody2D rigidbody;
     protected SpriteRenderer SpriteRenderer;
 
     public float scale = 1f;
     public bool snaptobounds = false;
-    public float health = 10;
 
     #region Unity Calls
     public virtual void Awake()
@@ -17,15 +17,11 @@ public abstract class Mob : MonoBehaviour
     }
     protected virtual void FixedUpdate()
     {
-        MoveDirection((Vector3)velocity * Time.deltaTime * Level.main.enemySpeed);
+        SnapToBounds(transform.position);
     }
     #endregion
     #region Movement
-    public virtual void MoveDirection(Vector2 direction)
-    {
-        Move((Vector2)transform.position + direction);
-    }
-    public virtual void Move(Vector2 pos)
+    public virtual void SnapToBounds(Vector2 pos)
     {
         if (snaptobounds)
         {
@@ -35,28 +31,11 @@ public abstract class Mob : MonoBehaviour
                 Mathf.Clamp(pos.y, Levelbounds.yMin, Levelbounds.yMax),
                 transform.position.z);
         }
-        else
-        {
-            transform.position = new Vector3(pos.x, pos.y, transform.position.z);
-        }
-    }
-    protected virtual void OnEnable()
-    {
-        Scale(scale);
-    }
-    #endregion
-    #region Scale
-    public void Scale(float newscale)
-    {
-        scale = newscale;
-        transform.localScale = Vector3.one * scale;
     }
     #endregion
     #region Life Death
     public virtual void TakeDamage(float damage)
     {
-        health -= damage;
-        if (health < 0)
             Die();
     }
     public virtual void Die()

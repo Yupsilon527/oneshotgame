@@ -9,7 +9,6 @@ public class PlayerController : Body
         weapons = new WeaponData[]{
             startingWeapon
         };
-        health = 10000;
         FireTimes = new float[weapons.Length];
     }
 
@@ -42,7 +41,7 @@ public class PlayerController : Body
 
         if (!dashing || direction.sqrMagnitude > 0)
         {
-            velocity = (direction).normalized * realSpeed;
+            rigidbody.velocity = (direction).normalized * realSpeed;
         }
     }
     public enum FireState

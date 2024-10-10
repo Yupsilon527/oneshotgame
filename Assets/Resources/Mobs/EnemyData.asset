@@ -16,7 +16,7 @@ MonoBehaviour:
   AI: 0
   SightRange: 3
   Scale: 1
-  Speed: 1
+  Speed: 3
   HarassWeapon: {fileID: 0}
   AttackWeapon: {fileID: 0}
   SuicideWeapon: {fileID: 0}

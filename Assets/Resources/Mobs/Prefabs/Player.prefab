@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 8904894517064495264}
   - component: {fileID: 7536566452384453673}
   - component: {fileID: 7919935474210726442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,8 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e58d573bd9b914d9b48c435c7a2d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 7536566452384453673}
   collider: {fileID: 7919935474210726442}
+  rigidbody: {fileID: 7536566452384453673}
   scale: 1
   snaptobounds: 0
   health: 10

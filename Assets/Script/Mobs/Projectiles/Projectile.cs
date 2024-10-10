@@ -12,6 +12,9 @@ public class Projectile : Mob
     protected float birthtime = 0;
     protected float deathtime = 0;
 
+    int numBounces = 0;
+    int maxTargets = 0;
+
     ProjectileData data;
     WeaponData wdata;
     Body shooter;
@@ -19,6 +22,8 @@ public class Projectile : Mob
     bool dead;
 
     Collider2D launcherCollider;
+    public Collider2D mobCollider;
+    public Collider2D mobTrigger;
 
     public ProjectileAlignment alignment = ProjectileAlignment.neutral;
     public enum MoveType
@@ -55,7 +60,9 @@ public class Projectile : Mob
         this.shooter = launcher;
         wdata = weapon;
         launcherCollider = launcher.collider;
+        Physics2D.IgnoreCollision(collider, launcherCollider, true);
         hitEntities.Add(launcher);
+        maxTargets = data.targets;
 
         float lifeTime = data.LifeTime;
         if (lifeTime > 0)
@@ -85,23 +92,8 @@ public class Projectile : Mob
         }
         Launch(velocity);
     }
-    public static Projectile FromData(Vector2 position, ProjectileData Data, Body Shooter)
-    {
-        Projectile select = Level.main.bulletpool.PoolItem(Level.main.bulletPrefab).GetComponent<Projectile>();
-        select.data = Data;
-        select.shooter = Shooter;
-        select.transform.position = position;
-        select.gameObject.SetActive(true);
-        return select;
-    }
-    public void Fire(Vector2 direction, float accuracy)
-    {
-        Fire(direction, 0, accuracy);
-    }
     public void Fire(Vector2 direction, float gunangle, float accuracy)
     {
-        Scale(data.Scale);
-        maxTargets = data.targets;
         deathtime = Level.main.gameTime + data.LifeTime;
         SetForwardVector(direction);
         if (gunangle != 0)
@@ -113,33 +105,10 @@ public class Projectile : Mob
             transform.rotation *= Quaternion.Euler(0, 0, (Random.value - .5f) * accuracy * 2f);
         }
 
-        AdjustVelocity();
-    }
-    public int VelSteps = 1;
-    public void AdjustVelocity()
-    {
-        velocity = transform.up * data.ForwardSpeed + transform.right * data.RightSpeed;
-        VelSteps = Mathf.Max(1, Mathf.CeilToInt(velocity.magnitude / scale / 50));
-
-
     }
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (snaptobounds)
-        {
-            var VP = Camera.main.WorldToViewportPoint(transform.position);
-            if (VP.x < 0 || VP.x > 1)
-            {
-                OnBounceScreenEdge();
-                velocity.x *= -1;
-            }
-            if (VP.y < 0 || VP.y > 1)
-            {
-                OnBounceScreenEdge();
-                velocity.y *= -1;
-            }
-        }
 
         if (GetTimeRemaining() <= 0)
         {
@@ -147,30 +116,31 @@ public class Projectile : Mob
             Debug.Log("STOP " + name);
         }
     }
-    public override void Move(Vector2 pos)
+    public override void SnapToBounds(Vector2 pos)
     {
-        Move(pos, transform.localScale.x);
-        switch (data.Behavior)
+        if (snaptobounds)
         {
-            case MoveType.arc:
-                AdjustVelocity();
-                RotateAgainst(shooter);
-                break;
+            var VP = Camera.main.WorldToViewportPoint(transform.position);
+            Vector2 v = rigidbody.velocity;
+            if (VP.x < 0 || VP.x > 1)
+            {
+                OnBounceScreenEdge();
+                v.x *= -1;
+            }
+            if (VP.y < 0 || VP.y > 1)
+            {
+                OnBounceScreenEdge();
+                v.y *= -1;
+            }
+            rigidbody.velocity = v;
         }
     }
 
-    public override void MoveDirection(Vector2 direction)
-    {
-        for (int step = 0; step < VelSteps; step++)
-        {
-            Move(direction / VelSteps + (Vector2)transform.position);
-        }
-    }
     protected virtual void Launch(Vector2 v)
     {
-        velocity = v;
+        rigidbody.velocity = v;
         if (data.directionAligned)
-            transform.right = velocity;
+            transform.right = v;
     }
     private void Refresh()
     {
@@ -185,14 +155,16 @@ public class Projectile : Mob
         CheckCollision();
         transform.position = new Vector3(pos.x, pos.y, transform.position.z);
     }
-    public void CheckCollision()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Body other = CheckBodyCollision();
-        if (other != null)
+        if (collision.TryGetComponent(out Body other) )
         {
             Debug.Log("[Bullet] " + name + " collides with " + other.name);
             CollideBody(other);
         }
+    }
+    public void CheckCollision()
+    {
     }
     public override bool IsPlayerControlled()
     {
@@ -224,22 +196,17 @@ public class Projectile : Mob
     }
     public void CollideBody(Body other)
     {
-        CollideBody(other, velocity.normalized);
-    }
-    public void CollideBody(Body other, Vector2 dir)
-    {
         if (other == shooter) return;
         if ((alignment == ProjectileAlignment.enemy && other.IsPlayerControlled()) ||
           (alignment == ProjectileAlignment.player && !other.IsPlayerControlled()) ||
             alignment == ProjectileAlignment.neutral)
         {
-            ContactEntity(other, dir);
+            ContactEntity(other);
             Debug.Log("CONTACT " + other);
         }
 
     }
     #region Bounces and water
-    int numBounces = 0;
     void OnBounceTerrain(Collision2D collision)
     {
         numBounces++;
@@ -247,10 +214,9 @@ public class Projectile : Mob
         {
             transform.position = collision.contacts[0].point;
             HandleBehavior(data.bounceBehavior);
-            Debug.Log("WALL " + name);
         }
         if (data.directionAligned)
-            transform.right = velocity;
+            transform.right = rigidbody.velocity;
     }
     void OnBounceScreenEdge()
     {
@@ -261,10 +227,9 @@ public class Projectile : Mob
             Debug.Log("WALL " + name);
         }
         if (data.directionAligned)
-            transform.right = velocity;
+            transform.right = rigidbody.velocity;
     }
-    int maxTargets = 0;
-    void ContactEntity(Body hit, Vector2 dir)
+    void ContactEntity(Body hit)
     {
         if (!hitEntities.Contains(hit))
         {
@@ -339,20 +304,18 @@ public class Projectile : Mob
         if (dead) return;
         dead = true;
         //TODO SpecialEffect(data.expireEffect);
+        if (launcherCollider != null)
+            Physics2D.IgnoreCollision(collider, launcherCollider, false);
         base.Die();
+        ScoreCounter.main.nBullets--;
     }
     float GetTimeRemaining()
     {
         return deathtime - Time.time;
     }
-    protected override void OnEnable()
+    protected  void OnEnable()
     {
-        base.OnEnable();
         ScoreCounter.main.nBullets++;
-    }
-    protected virtual void OnDisable()
-    {
-        ScoreCounter.main.nBullets--;
     }
     public void GiveBounces(int value)
     {

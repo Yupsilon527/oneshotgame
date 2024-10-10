@@ -3,8 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class Body : Mob
 {
-    public Collider2D collider;
-    public Rigidbody2D rigidbody;
 
     bool LeftHip = false;
     protected WeaponData[] weapons;
@@ -47,7 +45,7 @@ public abstract class Body : Mob
             IsPlayerControlled() ? Projectile.ProjectileAlignment.player : Projectile.ProjectileAlignment.enemy
             );
     }
-    public override void Move(Vector2 pos)
+    public override void SnapToBounds(Vector2 pos)
     {
         if (snaptobounds)
         {
@@ -62,9 +60,8 @@ public abstract class Body : Mob
 
         }
     }
-    protected override void OnEnable()
+    protected  void OnEnable()
     {
-        base.OnEnable();
         Level.main.RegisterBody(this);
     }
     private void OnDisable()
