@@ -11,14 +11,17 @@ public partial class Level : MonoBehaviour
         victorious,
         defeated
     }
-   public GameState state = GameState.pregame;
+    public GameState state = GameState.pregame;
     int cRound = 0;
     public int secondsPerRound = 60;
+    public int maxExecutives = 20;
     float roundBeginTime = 0;
 
     public ObjectPool bulletpool;
     public GameObject bulletPrefab;
     public GameObject playerPrefab;
+    public float cameraDefaultSize = 5f;
+    public float cameraZoomedinSize = 1.5f;
 
     #region Unity Calls
     public static Level main;
@@ -40,23 +43,33 @@ public partial class Level : MonoBehaviour
     void RoundBegin()
     {
         state = GameState.running;
-        ScoreCounter.main.StartCountdown(secondsPerRound);
         roundBeginTime = Time.time;
         PlayerController.main.Restart();
         cam.transform.position = Vector3.zero;
-        InitializeBounds();
+        UpdateLevelBounds();
+
+        ScoreCounter.main.StartCountdown(secondsPerRound);
+        ScoreCounter.main.SetTimerVisible(true);
     }
-     void RoundEnd()
+    void RoundEnd()
     {
         cRound++;
         state = GameState.pregame;
     }
-    public void RoundProgress()
+    public void RoundProgress(bool triggeredByEvent)
     {
         state = GameState.victorious;
-        EnemyController.main.ClearEnemies();
-        StartCoroutine(SmoothMoveCamera(cam.transform.position,executiveSpawnArea.transform.position, 1));
-        InitializeBounds();
+
+        ScoreCounter.main.StopCountdown();
+        ScoreCounter.main.SetTimerVisible(false);
+
+        if (triggeredByEvent)
+        {
+            EnemyController.main.ClearEnemies();
+            SpawnExecs();
+            StartCoroutine(SmoothMoveCamera(cam.transform.position, executiveSpawnArea.transform.position, cameraDefaultSize, cameraZoomedinSize, 1));
+            UpdateLevelBounds();
+        }
     }
     void GameEnded()
     {
@@ -105,7 +118,7 @@ public partial class Level : MonoBehaviour
     #region Bounds
     public Rect CameraBounds;
     public float camOriginalSize = 20;
-    public void InitializeBounds()
+    public void UpdateLevelBounds()
     {
         camOriginalSize = Camera.main.orthographicSize;
 
@@ -120,8 +133,8 @@ public partial class Level : MonoBehaviour
         }
         else
         {
-            Vector2 dims =  executiveSpawnArea.transform.localScale;
-            CameraBounds =  new Rect((Vector2)executiveSpawnArea.transform.localPosition -dims, (Vector2)executiveSpawnArea.transform.localPosition + dims * 2);
+            Vector2 dims = executiveSpawnArea.transform.localScale / 2;
+            CameraBounds = new Rect((Vector2)executiveSpawnArea.transform.localPosition - dims, (Vector2)executiveSpawnArea.transform.localPosition + dims * 2);
         }
     }
     #endregion
@@ -129,11 +142,12 @@ public partial class Level : MonoBehaviour
 
     public Camera cam;
 
-    IEnumerator SmoothMoveCamera(Vector3 start, Vector3 end, float time)
+    IEnumerator SmoothMoveCamera(Vector3 start, Vector3 end, float startSize, float endSize, float time)
     {
-        for (float t = 0; t< time; t+= Time.fixedDeltaTime / time)
+        for (float t = 0; t < time; t += Time.fixedDeltaTime / time)
         {
             cam.transform.position = Vector3.Lerp(start, end, t);
+            cam.orthographicSize = startSize + (endSize - startSize) * t;
             yield return new WaitForEndOfFrame();
         }
     }
@@ -143,9 +157,14 @@ public partial class Level : MonoBehaviour
     public GameObject executiveSpawnArea;
     public EnemyData executiveEnemy;
 
+    void SpawnExecs()
+    {
+        Vector2 area = executiveSpawnArea.transform.localScale / 2;
+        EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, (Vector2)executiveSpawnArea.transform.localPosition + area * 2), GetNumExecutives(), executiveEnemy);
+    }
     public int GetNumExecutives()
     {
-        return Mathf.FloorToInt( (Time.time - roundBeginTime) / secondsPerRound * 5);
+        return Mathf.FloorToInt((Time.time - roundBeginTime) / secondsPerRound * maxExecutives);
     }
 
     #endregion

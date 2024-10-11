@@ -19,7 +19,6 @@ public class PlayerController : Body
 
     bool dashing = false;
     public float Speed = 15;
-    public float SprintSpeed = 2;
 
     public float DashTime = 1f;
     public float DashCooldown = 1f;
@@ -48,7 +47,8 @@ public class PlayerController : Body
     }
     public void HandleMovement()
     {
-        float realSpeed = (dashing ? DashSpeed : (fireState == FireState.notFired ? Speed : SprintSpeed)) ;
+        //float realSpeed = (dashing ? DashSpeed : (fireState == FireState.notFired ? Speed : SprintSpeed)) ;
+        float realSpeed = (dashing ? DashSpeed : Speed) ;
 
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
@@ -69,7 +69,7 @@ public class PlayerController : Body
         switch (fireState)
         {
             case FireState.notFired:
-                if (Input.GetAxis("Fire1") != 0)
+                if (Level.main.state == Level.GameState.victorious && Input.GetAxis("Fire1") != 0)
                 {
                     fireState = FireState.charging;
                 }
@@ -80,6 +80,7 @@ public class PlayerController : Body
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     FireWeapon(0, mousePos);
                     fireState = FireState.fired;
+                    Level.main.RoundProgress(false);
                 }
                 break;
         }

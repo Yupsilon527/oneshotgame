@@ -16,9 +16,13 @@ public class ScoreCounter : MonoBehaviour
     Coroutine timerCoroutine;
     public void StartCountdown(int seconds)
     {
-        if (timerCoroutine!=null)
-            StopCoroutine(timerCoroutine);
+        StopCountdown();
         StartCoroutine( CountdownTimer(seconds));
+    }
+    public void StopCountdown()
+    {
+        if (timerCoroutine != null)
+            StopCoroutine(timerCoroutine);
     }
     IEnumerator CountdownTimer(int dur)
     {
@@ -28,9 +32,15 @@ public class ScoreCounter : MonoBehaviour
                 countdownTimer.text = Mathf.FloorToInt(remaining / 60) + ":" + (remaining % 60);
             else
                 countdownTimer.text = remaining + "";
-                yield return new WaitForSeconds(1);
-            countdownTimer.text = Level.main.GetNumExecutives() + "";
+
+            executiveCount.text = Level.main.GetNumExecutives() + "";
+            yield return new WaitForSeconds(1);
         }
         timerCoroutine = null;
+    }
+    public void SetTimerVisible(bool visible)
+    {
+        countdownTimer.gameObject.SetActive(visible);
+        executiveCount.gameObject.SetActive(visible);
     }
 }

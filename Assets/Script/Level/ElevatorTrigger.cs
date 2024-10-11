@@ -8,7 +8,7 @@ public class ElevatorTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player") && collision.TryGetComponent(out PlayerController player))
         {
-            Level.main.RoundProgress();
+            Level.main.RoundProgress(true);
         }
     }
 }

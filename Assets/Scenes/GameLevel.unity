@@ -645,9 +645,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   secondsPerRound: 60
+  maxExecutives: 20
   bulletpool: {fileID: 276644565}
   bulletPrefab: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
   playerPrefab: {fileID: 5580676929228978483, guid: ab6430afc724e124d976e4302a96401d, type: 3}
+  cameraDefaultSize: 5
+  cameraZoomedinSize: 1.75
   bodies: []
   projectiles: []
   CameraBounds:
@@ -658,9 +661,6 @@ MonoBehaviour:
     height: 0
   camOriginalSize: 20
   cam: {fileID: 1862060208}
-  CameraOrder: {x: 0, y: 0, z: 0}
-  CameraOrigin: {x: 0, y: 0, z: 0}
-  CameraTime: {x: 0, y: 0}
   executiveSpawnArea: {fileID: 222734408}
   executiveEnemy: {fileID: 11400000, guid: 39228325ffd22ad4e90493e6630b4959, type: 2}
 --- !u!4 &276644564

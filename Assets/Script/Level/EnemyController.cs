@@ -23,11 +23,11 @@ public class EnemyController : MonoBehaviour
     }
     #region Spawn Enemies
 
-    public void SpawnWave(EnemyData name, int amount)
+    public void SpawnWave(EnemyData data, int amount)
     {
         for (int I = 0; I < amount; I++)
         {
-            SpawnEnemy(name);
+            SpawnEnemy(data);
         }
     }
 
@@ -38,10 +38,18 @@ public class EnemyController : MonoBehaviour
             SpawnEnemy(name);
         }
     }
-    public void SpawnEnemy(EnemyData name)
+    public void SpawnEnemy(EnemyData data)
     {
         if (enemypool.activeObjs.childCount < 50)
-            Enemy.FromData(name);
+            Enemy.FromData(data);
+    }
+    public void SpawnEnemiesInArea(Rect area, int count, EnemyData data)
+    {
+        for (int I = 0; I < count; I++)
+        {
+            var e = Enemy.FromData(data);
+            e.transform.position = new Vector3(area.xMin + Random.value * area.width, area.yMin + Random.value * area.height);
+        }
     }
     #endregion
     public void ClearEnemies()
