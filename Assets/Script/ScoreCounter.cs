@@ -11,6 +11,7 @@ public class ScoreCounter : MonoBehaviour
         main = this;
     }
     public TMPro.TextMeshProUGUI countdownTimer;
+    public TMPro.TextMeshProUGUI executiveCount;
 
     Coroutine timerCoroutine;
     public void StartCountdown(int seconds)
@@ -28,7 +29,8 @@ public class ScoreCounter : MonoBehaviour
             else
                 countdownTimer.text = remaining + "";
                 yield return new WaitForSeconds(1);
-    }
+            countdownTimer.text = Level.main.GetNumExecutives() + "";
+        }
         timerCoroutine = null;
     }
 }

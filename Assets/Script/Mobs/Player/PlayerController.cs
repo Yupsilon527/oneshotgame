@@ -31,6 +31,7 @@ public class PlayerController : Body
         dashing = false;
         fireState = FireState.notFired;
         collectedBonuses = new();
+        transform.position = Vector3.zero;
     }
     private void Update()
     {
@@ -138,6 +139,7 @@ public class PlayerController : Body
     }
     public class BonusTable
     {
+        public float scoreMult = 1;
         public float pLifeTime = 0;
         public float pSpeed = 0;
 

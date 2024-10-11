@@ -6,6 +6,7 @@ public class PowerupData : ScriptableObject
 {
     public enum Bonus
     {
+        multiplier,
         duration,
         speed,
         bounces,
@@ -20,6 +21,9 @@ public class PowerupData : ScriptableObject
     public void GiveBonus(PlayerController player)
     {
         switch (bonus) { 
+            case Bonus.multiplier: 
+                player.collectedBonuses.scoreMult += amount;
+                break; 
             case Bonus.duration: 
                 player.collectedBonuses.pLifeTime += amount;
                 break; 

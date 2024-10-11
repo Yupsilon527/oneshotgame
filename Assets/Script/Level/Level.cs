@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +25,6 @@ public partial class Level : MonoBehaviour
     private void Awake()
     {
         main = this;
-        InitializeBounds();
     }
     private void Start()
     {
@@ -33,7 +33,6 @@ public partial class Level : MonoBehaviour
     }
     private void Update()
     {
-        HandleCamera();
         HandleState();
     }
     #endregion
@@ -44,6 +43,8 @@ public partial class Level : MonoBehaviour
         ScoreCounter.main.StartCountdown(secondsPerRound);
         roundBeginTime = Time.time;
         PlayerController.main.Restart();
+        cam.transform.position = Vector3.zero;
+        InitializeBounds();
     }
      void RoundEnd()
     {
@@ -54,6 +55,8 @@ public partial class Level : MonoBehaviour
     {
         state = GameState.victorious;
         EnemyController.main.ClearEnemies();
+        StartCoroutine(SmoothMoveCamera(cam.transform.position,executiveSpawnArea.transform.position, 1));
+        InitializeBounds();
     }
     void GameEnded()
     {
@@ -73,7 +76,7 @@ public partial class Level : MonoBehaviour
                 }
                 break;
             case GameState.victorious:
-                if (PlayerController.main.fireState == PlayerController.FireState.fired && projectiles.Count == 0)
+                if (PlayerController.main.fireState >= PlayerController.FireState.fired && projectiles.Count == 0)
                 {
                     RoundEnd();
                 }
@@ -105,105 +108,45 @@ public partial class Level : MonoBehaviour
     public void InitializeBounds()
     {
         camOriginalSize = Camera.main.orthographicSize;
-        Vector2 dims = new Vector2(
 
-            Camera.main.aspect * camOriginalSize,
-            camOriginalSize
-            );
-        CameraBounds = new Rect(-dims, dims * 2);
-        IssueCameraOrder(new Vector3(0, 0, camOriginalSize), -1);
+        if (state == GameState.running)
+        {
+            Vector2 dims = new Vector2(
+
+                Camera.main.aspect * camOriginalSize,
+                camOriginalSize
+                );
+            CameraBounds = new Rect(-dims, dims * 2);
+        }
+        else
+        {
+            Vector2 dims =  executiveSpawnArea.transform.localScale;
+            CameraBounds =  new Rect((Vector2)executiveSpawnArea.transform.localPosition -dims, (Vector2)executiveSpawnArea.transform.localPosition + dims * 2);
+        }
     }
     #endregion
     #region Camera
 
     public Camera cam;
-    public Vector3 CameraOrder = Vector3.zero;
-    public Vector3 CameraOrigin = Vector3.zero;
-    public Vector2 CameraTime = Vector2.zero;
 
-
-    void ClearOrder()
+    IEnumerator SmoothMoveCamera(Vector3 start, Vector3 end, float time)
     {
-        CameraOrder = new Vector3(-1, 1, -1);
-        CameraTime = Vector2.zero;
-    }
-
-    public void HandleCamera()
-    {
-        if (CameraTime.x + CameraTime.y > Time.time)
+        for (float t = 0; t< time; t+= Time.fixedDeltaTime / time)
         {
-            float delta = 1f / (CameraTime.x) * Time.deltaTime;
-            if (CameraOrder.x != -1 && CameraOrder.y != 1)
-            {
-                cam.transform.position = new Vector3(
-                    cam.transform.position.x + (CameraOrder.x - CameraOrigin.x) * delta,
-                    cam.transform.position.y + (CameraOrder.y - CameraOrigin.y) * delta,
-                    cam.transform.position.z);
-            }
-            if (CameraOrder.z != -1)
-            {
-                cam.orthographicSize = cam.orthographicSize + (CameraOrder.z - CameraOrigin.z) * delta;
-            }
-        }
-        else
-        {
-            SnapCamera();
+            cam.transform.position = Vector3.Lerp(start, end, t);
+            yield return new WaitForEndOfFrame();
         }
     }
+    #endregion
+    #region Executive Area
 
-    public float GetCameraTime()
+    public GameObject executiveSpawnArea;
+    public EnemyData executiveEnemy;
+
+    public int GetNumExecutives()
     {
-        return .2f;
+        return Mathf.FloorToInt( (Time.time - roundBeginTime) / secondsPerRound * 5);
     }
 
-    public void SnapCamera()
-    {
-        if (CameraOrder.x != -1 && CameraOrder.y != 1)
-        {
-            cam.transform.position = new Vector3(CameraOrder.x, CameraOrder.y, cam.transform.position.z);
-        }
-
-        if (CameraOrder.z != -1)
-        {
-            cam.orthographicSize = CameraOrder.z;
-        }
-        ClearOrder();
-    }
-
-    public void ScaleCamera(float Size)
-    {
-        IssueCameraOrder(new Vector3(CameraOrder.x, CameraOrder.y, Size), GetCameraTime());
-    }
-
-    public void IssueCameraOrder(Vector3 position)
-    {
-        IssueCameraOrder(position, GetCameraTime());
-    }
-
-    public void IssueCameraOrder(Vector3 position, float time)
-    {
-        CameraOrigin = new Vector3(transform.position.x, transform.position.y, cam.orthographicSize);
-        CameraOrder = position;
-        CameraTime = new Vector2(time, Time.time);
-
-        float H = 1;
-        if (CameraOrder.z > 0)
-        {
-            CameraOrder.z = Mathf.Min(Mathf.Max(CameraOrder.z, 5), Mathf.Min(CameraBounds.width, CameraBounds.height));
-            H *= CameraOrder.z;
-        }
-        else
-        {
-            H *= cam.orthographicSize;
-        }
-        float W = H * cam.aspect;
-
-
-        CameraOrder.x = Mathf.Clamp(CameraOrder.x, CameraBounds.xMin + W, CameraBounds.xMax - W);
-        CameraOrder.y = Mathf.Clamp(CameraOrder.y, CameraBounds.yMin + H, CameraBounds.yMax - H);
-
-        if (time < 0)
-        { SnapCamera(); }
-    }
     #endregion
 }

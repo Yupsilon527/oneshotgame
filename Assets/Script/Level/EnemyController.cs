@@ -46,7 +46,7 @@ public class EnemyController : MonoBehaviour
     #endregion
     public void ClearEnemies()
     {
-        foreach (var enemy in Level.main.bodies)
+        foreach (var enemy in Level.main.bodies.ToArray())
         {
             if (!enemy.CompareTag("Player"))
             {

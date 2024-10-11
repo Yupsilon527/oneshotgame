@@ -46,8 +46,8 @@ public class PupController : MonoBehaviour
         {
             foreach (var existingPowerup in powerups)
             {
-                float distance = Vector3.Distance(existingPowerup.transform.position, selectedSpawnPoint.position);
-                return (distance < 1);
+                float distance = (existingPowerup.transform.position- selectedSpawnPoint.position).sqrMagnitude;
+                if  (distance < 5)return true;
             }
             return false;
         });
