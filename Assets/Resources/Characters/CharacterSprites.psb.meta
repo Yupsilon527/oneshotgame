@@ -1172,13 +1172,3515 @@ ScriptedImporter:
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  sharedRigSpriteImportData: []
+  sharedRigSpriteImportData:
+  - name: NPCrighthand6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 3089
+      width: 466
+      height: 409
+    spriteID: c5e84daaf0d163d46ac9d2c97ba65c14
+    spriteBone:
+    - name: John_Hand_Right
+      guid: 8021f96d93f2bce43ad60d49829e1d0a
+      position: {x: 241.38696, y: 356.67627, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8077886, w: -0.5894724}
+      length: 211.3652
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 3089}
+    spritePosition: {x: 284, y: 332}
+  - name: NPCrighthand5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 3506
+      width: 466
+      height: 409
+    spriteID: 41d20d34df030b648820e720f8089f51
+    spriteBone:
+    - name: John_Hand_Right
+      guid: 8021f96d93f2bce43ad60d49829e1d0a
+      position: {x: 241.38696, y: 356.67627, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8077886, w: -0.5894724}
+      length: 211.3652
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 3506}
+    spritePosition: {x: 284, y: 332}
+  - name: NPCrighthand4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 3923
+      width: 466
+      height: 409
+    spriteID: 44de5e502d1cef04f9699a1592572351
+    spriteBone:
+    - name: John_Hand_Right
+      guid: 8021f96d93f2bce43ad60d49829e1d0a
+      position: {x: 241.38696, y: 356.67627, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8077886, w: -0.5894724}
+      length: 211.3652
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 3923}
+    spritePosition: {x: 284, y: 332}
+  - name: NPCrighthand3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 4340
+      width: 466
+      height: 409
+    spriteID: d6bc01e91e998ff4a93d1e79c4de6bf3
+    spriteBone:
+    - name: John_Hand_Right
+      guid: 8021f96d93f2bce43ad60d49829e1d0a
+      position: {x: 241.38696, y: 356.67627, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8077886, w: -0.5894724}
+      length: 211.3652
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 4340}
+    spritePosition: {x: 284, y: 332}
+  - name: NPCrighthand2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 4757
+      width: 466
+      height: 409
+    spriteID: 593290f86eded8143a1f57a9371147ce
+    spriteBone:
+    - name: John_Hand_Right
+      guid: 8021f96d93f2bce43ad60d49829e1d0a
+      position: {x: 241.38696, y: 356.67627, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8077886, w: -0.5894724}
+      length: 211.3652
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 4757}
+    spritePosition: {x: 284, y: 332}
+  - name: NPCrighthand1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 5174
+      width: 466
+      height: 409
+    spriteID: 4788356f6c75125419884c607c422c19
+    spriteBone:
+    - name: John_Hand_Right
+      guid: 8021f96d93f2bce43ad60d49829e1d0a
+      position: {x: 241.38696, y: 356.67627, z: 0}
+      rotation: {x: 0, y: 0, z: 0.8077886, w: -0.5894724}
+      length: 211.3652
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 466, y: 409}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 5174}
+    spritePosition: {x: 284, y: 332}
+  - name: NPCface
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 2656
+      width: 588
+      height: 425
+    spriteID: 9f2d8f71a25dbd34092b5e4d5084bc51
+    spriteBone:
+    - name: John_Face
+      guid: 65022ce6b9b8bae4394a78b6c2065fe8
+      position: {x: 347.0791, y: -52.31787, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7069821, w: 0.7072316}
+      length: 475.49127
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901760
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 0
+        weight1: 1
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 588, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 425}
+      boneWeight:
+        weight0: 0
+        weight1: 1
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 588, y: 425}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 2656}
+    spritePosition: {x: 854, y: 1106}
+  - name: Hair8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 4
+      width: 1414
+      height: 886
+    spriteID: 762e655ace291854999fcdb0afe8da13
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 646.8157, y: 619.3424, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1414, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 886}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1414, y: 886}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 4}
+    spritePosition: {x: 267, y: 1167}
+  - name: Hair7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 1881
+      width: 1059
+      height: 767
+    spriteID: 75def58f59022884ea20e0778a36209a
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 552.8157, y: 573.3423, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1059, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 767}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1059, y: 767}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 1881}
+    spritePosition: {x: 361, y: 1213}
+  - name: Hair6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 7434
+      width: 1137
+      height: 735
+    spriteID: 70bd209a193290643978af1015244b95
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 509.81567, y: 626.3423, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1137, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 735}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1137, y: 735}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 7434}
+    spritePosition: {x: 404, y: 1160}
+  - name: Hair5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 898
+      width: 1425
+      height: 870
+    spriteID: 5b9efed1c422ea54aaa1946c3a299beb
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 706.8157, y: 595.3424, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1425, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 870}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1425, y: 870}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 898}
+    spritePosition: {x: 207, y: 1191}
+  - name: Hair4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2729
+      y: 4
+      width: 1181
+      height: 883
+    spriteID: d276ac146a58d9e40b3530ce3543105f
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 538.8157, y: 644.3424, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1181, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 883}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1181, y: 883}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2729, y: 4}
+    spritePosition: {x: 375, y: 1142}
+  - name: Hair3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1295
+      height: 1230
+    spriteID: 29ecbcb9d2798a44f8bf158e602964c8
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 545.8157, y: 1094.3424, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1295, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 1230}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1295, y: 1230}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 368, y: 692}
+  - name: Hair2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 1776
+      width: 1305
+      height: 940
+    spriteID: 61a704c235d04284abbcb03b278f6d2a
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 579.8157, y: 786.3423, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1305, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 940}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1305, y: 940}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 1776}
+    spritePosition: {x: 334, y: 1000}
+  - name: Hair1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 7821
+      width: 371
+      height: 362
+    spriteID: 2b7e6d3333fe3ca49a142509f209f07c
+    spriteBone:
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 588.8157, y: 569.3428, z: 0}
+      rotation: {x: 0, y: 0, z: 0.0058493163, w: 0.9999829}
+      length: 268.93048
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 371, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 362}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 371, y: 362}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 7821}
+    spritePosition: {x: 325, y: 1217}
+  - name: HeadNPC6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 2724
+      width: 1163
+      height: 934
+    spriteID: 9181448112dc8254fbf8048c453ddce8
+    spriteBone:
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 672.9049, y: 93.64697, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 2724}
+    spritePosition: {x: 419, y: 937}
+  - name: HeadNPC5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 3666
+      width: 1163
+      height: 934
+    spriteID: eaad5d51f1c837645b275d59f3039acc
+    spriteBone:
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 672.9049, y: 93.64697, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 3666}
+    spritePosition: {x: 419, y: 937}
+  - name: HeadNPC4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 4608
+      width: 1163
+      height: 934
+    spriteID: decd28f83867fcf43bafa02ab0a82f31
+    spriteBone:
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 672.9049, y: 93.64697, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 4608}
+    spritePosition: {x: 419, y: 937}
+  - name: HeadNPC3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 5550
+      width: 1163
+      height: 934
+    spriteID: 9844d88a4ac9ee94899225fcfb120350
+    spriteBone:
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 672.9049, y: 93.64697, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 5550}
+    spritePosition: {x: 419, y: 937}
+  - name: HeadNPC2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1307
+      y: 6492
+      width: 1163
+      height: 934
+    spriteID: b8b7ffa9be711334daad7de009946264
+    spriteBone:
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 672.9049, y: 93.64697, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 1307, y: 6492}
+    spritePosition: {x: 419, y: 937}
+  - name: HeadNPC1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1242
+      width: 1163
+      height: 934
+    spriteID: a0ab9ae655c279d4aa7ddec919f82297
+    spriteBone:
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 672.9049, y: 93.64697, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1163, y: 934}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1242}
+    spritePosition: {x: 419, y: 937}
+  - name: WhiteTits
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2184
+      width: 1061
+      height: 975
+    spriteID: 6bc9f9778545c8f4787de88b97ef5f46
+    spriteBone:
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 546.88855, y: 61.78784, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7169472, w: 0.6971275}
+      length: 673.3312
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2184}
+    spritePosition: {x: 466, y: 196}
+  - name: RedTits
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3167
+      width: 1061
+      height: 975
+    spriteID: baba1c1114f85fc4fb620bba18a2c361
+    spriteBone:
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 546.88855, y: 61.78784, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7169472, w: 0.6971275}
+      length: 673.3312
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3167}
+    spritePosition: {x: 466, y: 196}
+  - name: YellowTits
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4150
+      width: 1061
+      height: 975
+    spriteID: 68c7b3e3efa213847b49fac889eb647c
+    spriteBone:
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 546.88855, y: 61.787598, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7169472, w: 0.6971275}
+      length: 673.3312
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4150}
+    spritePosition: {x: 466, y: 196}
+  - name: BlueTits
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5133
+      width: 1061
+      height: 975
+    spriteID: 4fcad55422a60b343a90fda36d438d20
+    spriteBone:
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 546.88855, y: 61.787598, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7169472, w: 0.6971275}
+      length: 673.3312
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5133}
+    spritePosition: {x: 466, y: 196}
+  - name: Tie5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3336
+      y: 3102
+      width: 292
+      height: 533
+    spriteID: ef9663f127c49c2449bc064198eb77f3
+    spriteBone:
+    - name: John_Tie_0
+      guid: 819ba77a7448adb49905658e47f20467
+      position: {x: 97.28296, y: 504.1958, z: 0}
+      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
+      length: 176.01924
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3336, y: 3102}
+    spritePosition: {x: 996, y: 490}
+  - name: Tie4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3336
+      y: 3643
+      width: 292
+      height: 533
+    spriteID: a76c36ad50c39dc4a8eb11542ec88671
+    spriteBone:
+    - name: John_Tie_0
+      guid: 819ba77a7448adb49905658e47f20467
+      position: {x: 97.28296, y: 504.1958, z: 0}
+      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
+      length: 176.01924
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3336, y: 3643}
+    spritePosition: {x: 996, y: 490}
+  - name: Tie3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3336
+      y: 4184
+      width: 292
+      height: 533
+    spriteID: 0a6ea06f0d44d374b96d8dc6f4103ee0
+    spriteBone:
+    - name: John_Tie_0
+      guid: 819ba77a7448adb49905658e47f20467
+      position: {x: 97.28296, y: 504.1958, z: 0}
+      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
+      length: 176.01924
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3336, y: 4184}
+    spritePosition: {x: 996, y: 490}
+  - name: Tie2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3336
+      y: 4725
+      width: 292
+      height: 533
+    spriteID: 6b5860da8a688c34eb0a836fc1ebf25a
+    spriteBone:
+    - name: John_Tie_0
+      guid: 819ba77a7448adb49905658e47f20467
+      position: {x: 97.28296, y: 504.1958, z: 0}
+      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
+      length: 176.01924
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3336, y: 4725}
+    spritePosition: {x: 996, y: 490}
+  - name: Tie1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3336
+      y: 5266
+      width: 292
+      height: 533
+    spriteID: 301c148d670983945b86f7ff4cdb626e
+    spriteBone:
+    - name: John_Tie_0
+      guid: 819ba77a7448adb49905658e47f20467
+      position: {x: 97.28296, y: 504.1958, z: 0}
+      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
+      length: 176.01924
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 292, y: 533}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3336, y: 5266}
+    spritePosition: {x: 996, y: 490}
+  - name: ShirtRed
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6116
+      width: 1061
+      height: 975
+    spriteID: 50b048add821b2948aaf8b44b270615c
+    spriteBone:
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 546.88855, y: 61.787598, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7169472, w: 0.6971275}
+      length: 673.3312
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 6116}
+    spritePosition: {x: 466, y: 196}
+  - name: ShirtYellow
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7099
+      width: 1061
+      height: 975
+    spriteID: 279787a2b3bb69a45a090ff8892791b2
+    spriteBone:
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 546.88855, y: 61.787598, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7169472, w: 0.6971275}
+      length: 673.3312
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7099}
+    spritePosition: {x: 466, y: 196}
+  - name: ShirtBlue
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 898
+      width: 1061
+      height: 975
+    spriteID: e98e0305b4e92694c80d457b43699c86
+    spriteBone:
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 546.8887, y: 61.78784, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7169472, w: 0.6971275}
+      length: 673.3312
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1061, y: 975}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 898}
+    spritePosition: {x: 466, y: 196}
+  - name: Left
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3119
+      y: 7821
+      width: 168
+      height: 329
+    spriteID: 7e994ff81efb291439c1012d1e47d3d7
+    spriteBone:
+    - name: John_Leg_Left
+      guid: 9bcef80d869589740bebafe22300e84a
+      position: {x: 99.73364, y: 293.958, z: 0}
+      rotation: {x: 0, y: 0, z: 0.79506844, w: -0.6065198}
+      length: 280.19745
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255488
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 168, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 329}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 168, y: 329}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3119, y: 7821}
+    spritePosition: {x: 1191, y: 61}
+  - name: Right
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3125
+      y: 5591
+      width: 168
+      height: 329
+    spriteID: 01d8e8c50747a0a4b98e676d7f178d76
+    spriteBone:
+    - name: John_Leg_Right
+      guid: 600c0df02b33f9143a7e661eb11dfa22
+      position: {x: 99.367676, y: 302.54248, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7918571, w: -0.6107064}
+      length: 290.70706
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278223103
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 168, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 329}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 168, y: 329}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3125, y: 5591}
+    spritePosition: {x: 666, y: 37}
+  - name: NPClefthand6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 5591
+      width: 377
+      height: 438
+    spriteID: 64173f53f85d40d469dc8bc1802e8580
+    spriteBone:
+    - name: John_Hand_Left
+      guid: 4a96936be692f814dbef9aa029a9099b
+      position: {x: 73.01123, y: 358.54736, z: 0}
+      rotation: {x: 0, y: 0, z: -0.40904135, w: 0.91251594}
+      length: 193.80486
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 5591}
+    spritePosition: {x: 1300, y: 349}
+  - name: NPClefthand5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 6037
+      width: 377
+      height: 438
+    spriteID: f275ddf50d926c147aa4183e84072b97
+    spriteBone:
+    - name: John_Hand_Left
+      guid: 4a96936be692f814dbef9aa029a9099b
+      position: {x: 73.01123, y: 358.54736, z: 0}
+      rotation: {x: 0, y: 0, z: -0.40904135, w: 0.91251594}
+      length: 193.80486
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 6037}
+    spritePosition: {x: 1300, y: 349}
+  - name: NPClefthand4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 6483
+      width: 377
+      height: 438
+    spriteID: 8afc37f5895dc624dbd6c63ef59dc96d
+    spriteBone:
+    - name: John_Hand_Left
+      guid: 4a96936be692f814dbef9aa029a9099b
+      position: {x: 73.01123, y: 358.54736, z: 0}
+      rotation: {x: 0, y: 0, z: -0.40904135, w: 0.91251594}
+      length: 193.80486
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 6483}
+    spritePosition: {x: 1300, y: 349}
+  - name: NPClefthand3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 6929
+      width: 377
+      height: 438
+    spriteID: dc735b6eb04002f47b69218f758532ec
+    spriteBone:
+    - name: John_Hand_Left
+      guid: 4a96936be692f814dbef9aa029a9099b
+      position: {x: 73.01123, y: 358.54736, z: 0}
+      rotation: {x: 0, y: 0, z: -0.40904135, w: 0.91251594}
+      length: 193.80486
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 6929}
+    spritePosition: {x: 1300, y: 349}
+  - name: NPClefthand2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2740
+      y: 7375
+      width: 377
+      height: 438
+    spriteID: 3f9fe97805dc0d24b900c7adfa1c07d8
+    spriteBone:
+    - name: John_Hand_Left
+      guid: 4a96936be692f814dbef9aa029a9099b
+      position: {x: 73.01123, y: 358.54736, z: 0}
+      rotation: {x: 0, y: 0, z: -0.40904135, w: 0.91251594}
+      length: 193.80486
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 2740, y: 7375}
+    spritePosition: {x: 1300, y: 349}
+  - name: NPClefthand1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3336
+      y: 2656
+      width: 377
+      height: 438
+    spriteID: e5a78c4033ec4af46a7c19eda03fa6de
+    spriteBone:
+    - name: John_Hand_Left
+      guid: 4a96936be692f814dbef9aa029a9099b
+      position: {x: 73.01123, y: 358.54736, z: 0}
+      rotation: {x: 0, y: 0, z: -0.40904135, w: 0.91251594}
+      length: 193.80486
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    spriteOutline: []
+    vertices:
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 377, y: 438}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000010000000200000003000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 2}
+    - {x: 1, y: 3}
+    - {x: 2, y: 3}
+    tessellationDetail: 0
+    uvTransform: {x: 3336, y: 2656}
+    spritePosition: {x: 1300, y: 349}
   sharedRigCharacterData:
-    bones: []
-    parts: []
+    bones:
+    - name: John_Root
+      guid: c2a4470f08614c5489432b44e211c4f7
+      position: {x: 1009.74347, y: 17.182037, z: 0}
+      rotation: {x: 0, y: 0, z: 0.72312653, w: 0.6907156}
+      length: 171.59206
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278190335
+    - name: John_Body
+      guid: 76927d7c761420e43b51455f32be074d
+      position: {x: 240.20888, y: -14.1672945, z: 0}
+      rotation: {x: 0, y: 0, z: -0.008904784, w: 0.9999604}
+      length: 673.3312
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    - name: John_Hand_Right
+      guid: 8021f96d93f2bce43ad60d49829e1d0a
+      position: {x: 444.38223, y: 475.23383, z: 0}
+      rotation: {x: 0, y: -0, z: 0.98575217, w: 0.16820431}
+      length: 211.36522
+      parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 4278255360
+    - name: John_Hand_Left
+      guid: 4a96936be692f814dbef9aa029a9099b
+      position: {x: 439.48978, y: -372.5862, z: 0}
+      rotation: {x: 0, y: -0, z: -0.93937963, w: 0.34287888}
+      length: 193.80484
+      parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 4294967040
+    - name: John_Face
+      guid: 65022ce6b9b8bae4394a78b6c2065fe8
+      position: {x: 3.7861378, y: -111.51357, z: 0}
+      rotation: {x: 0, y: 0, z: -0.087068, w: 0.9962024}
+      length: 475.4914
+      parentId: 10
+      color:
+        serializedVersion: 2
+        rgba: 4294901760
+    - name: John_Hair
+      guid: 720370c36fe9de1469e2286a607cb137
+      position: {x: 775.11615, y: 44.56857, z: 0}
+      rotation: {x: 0, y: 0, z: -0.7621002, w: 0.6474591}
+      length: 268.93045
+      parentId: 10
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    - name: John_Leg_Right
+      guid: 600c0df02b33f9143a7e661eb11dfa22
+      position: {x: 333.22028, y: 229.34721, z: 0}
+      rotation: {x: 0, y: 0, z: 0.98856604, w: 0.15078844}
+      length: 290.7071
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4278223103
+    - name: John_Leg_Left
+      guid: 9bcef80d869589740bebafe22300e84a
+      position: {x: 324.54526, y: -296.17322, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9877567, w: 0.15600242}
+      length: 280.19733
+      parentId: 0
+      color:
+        serializedVersion: 2
+        rgba: 4278255488
+    - name: John_Tie_0
+      guid: 819ba77a7448adb49905658e47f20467
+      position: {x: 733.8655, y: -101.001724, z: 0}
+      rotation: {x: 0, y: -0, z: -0.9967742, w: 0.08025715}
+      length: 176.01923
+      parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 4286643968
+    - name: John_Tie_1
+      guid: 65de47185a5df084b9cf4a1518259c95
+      position: {x: 176.01926, y: -0.00008622149, z: 0}
+      rotation: {x: 0, y: 0, z: 0.015263487, w: 0.9998836}
+      length: 320.51566
+      parentId: 8
+      color:
+        serializedVersion: 2
+        rgba: 4294934528
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 770.341, y: -100.64587, z: 0}
+      rotation: {x: 0, y: 0, z: 0.07292208, w: 0.99733764}
+      length: 481.70746
+      parentId: 1
+      color:
+        serializedVersion: 2
+        rgba: 4294901888
+    parts:
+    - spritePosition:
+        x: 284
+        y: 332
+        width: 466
+        height: 409
+      spriteId: c5e84daaf0d163d46ac9d2c97ba65c14
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 284
+        y: 332
+        width: 466
+        height: 409
+      spriteId: 41d20d34df030b648820e720f8089f51
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 284
+        y: 332
+        width: 466
+        height: 409
+      spriteId: 44de5e502d1cef04f9699a1592572351
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 284
+        y: 332
+        width: 466
+        height: 409
+      spriteId: d6bc01e91e998ff4a93d1e79c4de6bf3
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 284
+        y: 332
+        width: 466
+        height: 409
+      spriteId: 593290f86eded8143a1f57a9371147ce
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 284
+        y: 332
+        width: 466
+        height: 409
+      spriteId: 4788356f6c75125419884c607c422c19
+      bones: 02000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 854
+        y: 1106
+        width: 588
+        height: 425
+      spriteId: 9f2d8f71a25dbd34092b5e4d5084bc51
+      bones: 04000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 267
+        y: 1167
+        width: 1414
+        height: 886
+      spriteId: 762e655ace291854999fcdb0afe8da13
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 361
+        y: 1213
+        width: 1059
+        height: 767
+      spriteId: 75def58f59022884ea20e0778a36209a
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 404
+        y: 1160
+        width: 1137
+        height: 735
+      spriteId: 70bd209a193290643978af1015244b95
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 207
+        y: 1191
+        width: 1425
+        height: 870
+      spriteId: 5b9efed1c422ea54aaa1946c3a299beb
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 375
+        y: 1142
+        width: 1181
+        height: 883
+      spriteId: d276ac146a58d9e40b3530ce3543105f
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 368
+        y: 692
+        width: 1295
+        height: 1230
+      spriteId: 29ecbcb9d2798a44f8bf158e602964c8
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 334
+        y: 1000
+        width: 1305
+        height: 940
+      spriteId: 61a704c235d04284abbcb03b278f6d2a
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 325
+        y: 1217
+        width: 371
+        height: 362
+      spriteId: 2b7e6d3333fe3ca49a142509f209f07c
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 419
+        y: 937
+        width: 1163
+        height: 934
+      spriteId: 9181448112dc8254fbf8048c453ddce8
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 419
+        y: 937
+        width: 1163
+        height: 934
+      spriteId: eaad5d51f1c837645b275d59f3039acc
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 419
+        y: 937
+        width: 1163
+        height: 934
+      spriteId: decd28f83867fcf43bafa02ab0a82f31
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 419
+        y: 937
+        width: 1163
+        height: 934
+      spriteId: 9844d88a4ac9ee94899225fcfb120350
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 419
+        y: 937
+        width: 1163
+        height: 934
+      spriteId: b8b7ffa9be711334daad7de009946264
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 419
+        y: 937
+        width: 1163
+        height: 934
+      spriteId: a0ab9ae655c279d4aa7ddec919f82297
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 466
+        y: 196
+        width: 1061
+        height: 975
+      spriteId: 6bc9f9778545c8f4787de88b97ef5f46
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 466
+        y: 196
+        width: 1061
+        height: 975
+      spriteId: baba1c1114f85fc4fb620bba18a2c361
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 466
+        y: 196
+        width: 1061
+        height: 975
+      spriteId: 68c7b3e3efa213847b49fac889eb647c
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 466
+        y: 196
+        width: 1061
+        height: 975
+      spriteId: 4fcad55422a60b343a90fda36d438d20
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 996
+        y: 490
+        width: 292
+        height: 533
+      spriteId: ef9663f127c49c2449bc064198eb77f3
+      bones: 08000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 996
+        y: 490
+        width: 292
+        height: 533
+      spriteId: a76c36ad50c39dc4a8eb11542ec88671
+      bones: 08000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 996
+        y: 490
+        width: 292
+        height: 533
+      spriteId: 0a6ea06f0d44d374b96d8dc6f4103ee0
+      bones: 08000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 996
+        y: 490
+        width: 292
+        height: 533
+      spriteId: 6b5860da8a688c34eb0a836fc1ebf25a
+      bones: 08000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 996
+        y: 490
+        width: 292
+        height: 533
+      spriteId: 301c148d670983945b86f7ff4cdb626e
+      bones: 08000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 466
+        y: 196
+        width: 1061
+        height: 975
+      spriteId: 50b048add821b2948aaf8b44b270615c
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 466
+        y: 196
+        width: 1061
+        height: 975
+      spriteId: 279787a2b3bb69a45a090ff8892791b2
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 466
+        y: 196
+        width: 1061
+        height: 975
+      spriteId: e98e0305b4e92694c80d457b43699c86
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1191
+        y: 61
+        width: 168
+        height: 329
+      spriteId: 7e994ff81efb291439c1012d1e47d3d7
+      bones: 07000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 666
+        y: 37
+        width: 168
+        height: 329
+      spriteId: 01d8e8c50747a0a4b98e676d7f178d76
+      bones: 06000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1300
+        y: 349
+        width: 377
+        height: 438
+      spriteId: 64173f53f85d40d469dc8bc1802e8580
+      bones: 03000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1300
+        y: 349
+        width: 377
+        height: 438
+      spriteId: f275ddf50d926c147aa4183e84072b97
+      bones: 03000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1300
+        y: 349
+        width: 377
+        height: 438
+      spriteId: 8afc37f5895dc624dbd6c63ef59dc96d
+      bones: 03000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1300
+        y: 349
+        width: 377
+        height: 438
+      spriteId: dc735b6eb04002f47b69218f758532ec
+      bones: 03000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1300
+        y: 349
+        width: 377
+        height: 438
+      spriteId: 3f9fe97805dc0d24b900c7adfa1c07d8
+      bones: 03000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1300
+        y: 349
+        width: 377
+        height: 438
+      spriteId: e5a78c4033ec4af46a7c19eda03fa6de
+      bones: 03000000
+      parentGroup: 0
+      order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0}
     boneReadOnly: 0
   platformSettings:
   - name: DefaultTexturePlatform
@@ -1243,14 +4745,14 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   mosaicLayers: 1
   characterMode: 1
-  documentPivot: {x: 0, y: 0}
+  documentPivot: {x: 0.5, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
   layerMappingOption: 2
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
-  skeletonAssetReferenceID: 
+  skeletonAssetReferenceID: 6920e6a6731e30b46999fa4c40c0341f
   pipeline: {instanceID: 0}
   pipelineVersion: 
   padding: 4
@@ -1991,8 +5493,858 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  sharedRigPSDLayers: []
-  pSDLayerImportSetting: []
+  sharedRigPSDLayers:
+  - name: ReadyForExport
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 90e7304940fc7534c8a0b250020216a5
+    layerID: 139
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: NPCrighthands
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 991c72326750b294680b69a8aaed630b
+    layerID: 135
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: NPCrighthand6
+    spriteName: NPCrighthand6
+    isGroup: 0
+    parentIndex: 1
+    spriteID: c5e84daaf0d163d46ac9d2c97ba65c14
+    layerID: 134
+    mosaicPosition: {x: 2740, y: 3089}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPCrighthand5
+    spriteName: NPCrighthand5
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 41d20d34df030b648820e720f8089f51
+    layerID: 133
+    mosaicPosition: {x: 2740, y: 3506}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPCrighthand4
+    spriteName: NPCrighthand4
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 44de5e502d1cef04f9699a1592572351
+    layerID: 132
+    mosaicPosition: {x: 2740, y: 3923}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPCrighthand3
+    spriteName: NPCrighthand3
+    isGroup: 0
+    parentIndex: 1
+    spriteID: d6bc01e91e998ff4a93d1e79c4de6bf3
+    layerID: 131
+    mosaicPosition: {x: 2740, y: 4340}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPCrighthand2
+    spriteName: NPCrighthand2
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 593290f86eded8143a1f57a9371147ce
+    layerID: 130
+    mosaicPosition: {x: 2740, y: 4757}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPCrighthand1
+    spriteName: NPCrighthand1
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 4788356f6c75125419884c607c422c19
+    layerID: 129
+    mosaicPosition: {x: 2740, y: 5174}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HandRight
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 1a2f7e778cea69b4c9ae676903956571
+    layerID: 78
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: MainRightHand
+    spriteName: MainRightHand
+    isGroup: 0
+    parentIndex: 8
+    spriteID: f6ecbf530d8a8834994ec27ddb2730f3
+    layerID: 82
+    mosaicPosition: {x: 5247, y: 2829}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: NPCface
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 22f0fc0f32f32064fb25b67d022adb97
+    layerID: 87
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: NPCface
+    spriteName: NPCface
+    isGroup: 0
+    parentIndex: 10
+    spriteID: 9f2d8f71a25dbd34092b5e4d5084bc51
+    layerID: 89
+    mosaicPosition: {x: 2740, y: 2656}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: FacesMain
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: bf5c8853cc755174786ed3f2ad50d671
+    layerID: 11
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Eat2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 12
+    spriteID: 44325d292e78d9a4992d4195dd845751
+    layerID: 64
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Eat2
+    spriteName: Eat2
+    isGroup: 0
+    parentIndex: 13
+    spriteID: ccee376cea6e6ef4b8a23c3feb635c92
+    layerID: 74
+    mosaicPosition: {x: 7304, y: 898}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Eat1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 12
+    spriteID: fc18443a4d46fee4e96333725879c9da
+    layerID: 62
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Eat1
+    spriteName: Eat1
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 3a8f66f084ca4af45ba69745b346d0e6
+    layerID: 73
+    mosaicPosition: {x: 6854, y: 4}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: React
+    spriteName: 
+    isGroup: 1
+    parentIndex: 12
+    spriteID: 1bcd534829a8f14409aeddac1c970c1a
+    layerID: 60
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: React
+    spriteName: React
+    isGroup: 0
+    parentIndex: 17
+    spriteID: a54b12c84bf31ab4c8832d07d3905569
+    layerID: 68
+    mosaicPosition: {x: 5351, y: 4}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Idle
+    spriteName: 
+    isGroup: 1
+    parentIndex: 12
+    spriteID: a9e05e32703825849a5fe67e78f5c784
+    layerID: 66
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Idle
+    spriteName: Idle
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 3e8597e2924ad4644a7b31592e674dc2
+    layerID: 75
+    mosaicPosition: {x: 1307, y: 2829}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Moving
+    spriteName: 
+    isGroup: 1
+    parentIndex: 12
+    spriteID: 5f440040bf747784780eec0e9d6c8554
+    layerID: 58
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Moving
+    spriteName: Moving
+    isGroup: 0
+    parentIndex: 21
+    spriteID: af997ef21eec3be4dbea9206cabbe06e
+    layerID: 13
+    mosaicPosition: {x: 6094, y: 4}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Head
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: da5701cb23c099349b2b161280bb64c4
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: HairVariations
+    spriteName: 
+    isGroup: 1
+    parentIndex: 23
+    spriteID: 67dc919fd31389345a8619177524845d
+    layerID: 47
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Hair8
+    spriteName: Hair8
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 762e655ace291854999fcdb0afe8da13
+    layerID: 101
+    mosaicPosition: {x: 1307, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hair7
+    spriteName: Hair7
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 75def58f59022884ea20e0778a36209a
+    layerID: 99
+    mosaicPosition: {x: 2740, y: 1881}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hair6
+    spriteName: Hair6
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 70bd209a193290643978af1015244b95
+    layerID: 98
+    mosaicPosition: {x: 1307, y: 7434}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hair5
+    spriteName: Hair5
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 5b9efed1c422ea54aaa1946c3a299beb
+    layerID: 97
+    mosaicPosition: {x: 1307, y: 898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hair4
+    spriteName: Hair4
+    isGroup: 0
+    parentIndex: 24
+    spriteID: d276ac146a58d9e40b3530ce3543105f
+    layerID: 96
+    mosaicPosition: {x: 2729, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hair3
+    spriteName: Hair3
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 29ecbcb9d2798a44f8bf158e602964c8
+    layerID: 95
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hair2
+    spriteName: Hair2
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 61a704c235d04284abbcb03b278f6d2a
+    layerID: 94
+    mosaicPosition: {x: 1307, y: 1776}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Hair1
+    spriteName: Hair1
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 2b7e6d3333fe3ca49a142509f209f07c
+    layerID: 49
+    mosaicPosition: {x: 2740, y: 7821}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HairMain
+    spriteName: 
+    isGroup: 1
+    parentIndex: 23
+    spriteID: da6502fa48eba2742bf4a768f519253c
+    layerID: 17
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: HairMain
+    spriteName: HairMain
+    isGroup: 0
+    parentIndex: 33
+    spriteID: f1f34d3fe812c5044a43883ec246137d
+    layerID: 15
+    mosaicPosition: {x: 2123, y: 2829}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: OtherHeads
+    spriteName: 
+    isGroup: 1
+    parentIndex: 23
+    spriteID: 1cdc3df8bb281294d918c176ebf29d85
+    layerID: 91
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: HeadNPC6
+    spriteName: HeadNPC6
+    isGroup: 0
+    parentIndex: 35
+    spriteID: 9181448112dc8254fbf8048c453ddce8
+    layerID: 113
+    mosaicPosition: {x: 1307, y: 2724}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HeadNPC5
+    spriteName: HeadNPC5
+    isGroup: 0
+    parentIndex: 35
+    spriteID: eaad5d51f1c837645b275d59f3039acc
+    layerID: 112
+    mosaicPosition: {x: 1307, y: 3666}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HeadNPC4
+    spriteName: HeadNPC4
+    isGroup: 0
+    parentIndex: 35
+    spriteID: decd28f83867fcf43bafa02ab0a82f31
+    layerID: 111
+    mosaicPosition: {x: 1307, y: 4608}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HeadNPC3
+    spriteName: HeadNPC3
+    isGroup: 0
+    parentIndex: 35
+    spriteID: 9844d88a4ac9ee94899225fcfb120350
+    layerID: 110
+    mosaicPosition: {x: 1307, y: 5550}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HeadNPC2
+    spriteName: HeadNPC2
+    isGroup: 0
+    parentIndex: 35
+    spriteID: b8b7ffa9be711334daad7de009946264
+    layerID: 109
+    mosaicPosition: {x: 1307, y: 6492}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HeadNPC1
+    spriteName: HeadNPC1
+    isGroup: 0
+    parentIndex: 35
+    spriteID: a0ab9ae655c279d4aa7ddec919f82297
+    layerID: 108
+    mosaicPosition: {x: 4, y: 1242}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HeadShape
+    spriteName: 
+    isGroup: 1
+    parentIndex: 23
+    spriteID: 70980241aea2c8e45af8748c37b373b6
+    layerID: 56
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: HeadMain
+    spriteName: HeadMain
+    isGroup: 0
+    parentIndex: 42
+    spriteID: 862e385f35cb0974f8b6b245d2adf1b6
+    layerID: 6
+    mosaicPosition: {x: 4, y: 3126}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Body
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 4675b59983120e94980fe63ce0b760a9
+    layerID: 19
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Tits
+    spriteName: 
+    isGroup: 1
+    parentIndex: 44
+    spriteID: c6009e8b05c3a364581e3a394bd47753
+    layerID: 37
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: WhiteTits
+    spriteName: WhiteTits
+    isGroup: 0
+    parentIndex: 45
+    spriteID: 6bc9f9778545c8f4787de88b97ef5f46
+    layerID: 269
+    mosaicPosition: {x: 4, y: 2184}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: RedTits
+    spriteName: RedTits
+    isGroup: 0
+    parentIndex: 45
+    spriteID: baba1c1114f85fc4fb620bba18a2c361
+    layerID: 268
+    mosaicPosition: {x: 4, y: 3167}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: YellowTits
+    spriteName: YellowTits
+    isGroup: 0
+    parentIndex: 45
+    spriteID: 68c7b3e3efa213847b49fac889eb647c
+    layerID: 267
+    mosaicPosition: {x: 4, y: 4150}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BlueTits
+    spriteName: BlueTits
+    isGroup: 0
+    parentIndex: 45
+    spriteID: 4fcad55422a60b343a90fda36d438d20
+    layerID: 36
+    mosaicPosition: {x: 4, y: 5133}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tie
+    spriteName: 
+    isGroup: 1
+    parentIndex: 44
+    spriteID: 20baf06745ccd974cb51470bf29f6bab
+    layerID: 29
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Tie5
+    spriteName: Tie5
+    isGroup: 0
+    parentIndex: 50
+    spriteID: ef9663f127c49c2449bc064198eb77f3
+    layerID: 31
+    mosaicPosition: {x: 3336, y: 3102}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tie4
+    spriteName: Tie4
+    isGroup: 0
+    parentIndex: 50
+    spriteID: a76c36ad50c39dc4a8eb11542ec88671
+    layerID: 254
+    mosaicPosition: {x: 3336, y: 3643}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tie3
+    spriteName: Tie3
+    isGroup: 0
+    parentIndex: 50
+    spriteID: 0a6ea06f0d44d374b96d8dc6f4103ee0
+    layerID: 255
+    mosaicPosition: {x: 3336, y: 4184}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tie2
+    spriteName: Tie2
+    isGroup: 0
+    parentIndex: 50
+    spriteID: 6b5860da8a688c34eb0a836fc1ebf25a
+    layerID: 256
+    mosaicPosition: {x: 3336, y: 4725}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Tie1
+    spriteName: Tie1
+    isGroup: 0
+    parentIndex: 50
+    spriteID: 301c148d670983945b86f7ff4cdb626e
+    layerID: 257
+    mosaicPosition: {x: 3336, y: 5266}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Shirt
+    spriteName: 
+    isGroup: 1
+    parentIndex: 44
+    spriteID: f340bde09b594f542a4ac696094bff01
+    layerID: 42
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ShirtWhite
+    spriteName: ShirtWhite
+    isGroup: 0
+    parentIndex: 56
+    spriteID: 26182fd04c86d7b459c19d29cccc5aa6
+    layerID: 253
+    mosaicPosition: {x: 1307, y: 1846}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ShirtRed
+    spriteName: ShirtRed
+    isGroup: 0
+    parentIndex: 56
+    spriteID: 50b048add821b2948aaf8b44b270615c
+    layerID: 252
+    mosaicPosition: {x: 4, y: 6116}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ShirtYellow
+    spriteName: ShirtYellow
+    isGroup: 0
+    parentIndex: 56
+    spriteID: 279787a2b3bb69a45a090ff8892791b2
+    layerID: 250
+    mosaicPosition: {x: 4, y: 7099}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ShirtBlue
+    spriteName: ShirtBlue
+    isGroup: 0
+    parentIndex: 56
+    spriteID: e98e0305b4e92694c80d457b43699c86
+    layerID: 21
+    mosaicPosition: {x: 2740, y: 898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Legs
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: c226a0f6350a2c84ca3f3405d0a268e4
+    layerID: 44
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Left
+    spriteName: Left
+    isGroup: 0
+    parentIndex: 61
+    spriteID: 7e994ff81efb291439c1012d1e47d3d7
+    layerID: 77
+    mosaicPosition: {x: 3119, y: 7821}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Right
+    spriteName: Right
+    isGroup: 0
+    parentIndex: 61
+    spriteID: 01d8e8c50747a0a4b98e676d7f178d76
+    layerID: 76
+    mosaicPosition: {x: 3125, y: 5591}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPClefthands
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 1eb4f12bc697fe444a7ac4b03511fb3c
+    layerID: 116
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: NPClefthand6
+    spriteName: NPClefthand6
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 64173f53f85d40d469dc8bc1802e8580
+    layerID: 127
+    mosaicPosition: {x: 2740, y: 5591}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPClefthand5
+    spriteName: NPClefthand5
+    isGroup: 0
+    parentIndex: 64
+    spriteID: f275ddf50d926c147aa4183e84072b97
+    layerID: 125
+    mosaicPosition: {x: 2740, y: 6037}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPClefthand4
+    spriteName: NPClefthand4
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 8afc37f5895dc624dbd6c63ef59dc96d
+    layerID: 123
+    mosaicPosition: {x: 2740, y: 6483}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPClefthand3
+    spriteName: NPClefthand3
+    isGroup: 0
+    parentIndex: 64
+    spriteID: dc735b6eb04002f47b69218f758532ec
+    layerID: 121
+    mosaicPosition: {x: 2740, y: 6929}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPClefthand2
+    spriteName: NPClefthand2
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 3f9fe97805dc0d24b900c7adfa1c07d8
+    layerID: 119
+    mosaicPosition: {x: 2740, y: 7375}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NPClefthand1
+    spriteName: NPClefthand1
+    isGroup: 0
+    parentIndex: 64
+    spriteID: e5a78c4033ec4af46a7c19eda03fa6de
+    layerID: 115
+    mosaicPosition: {x: 3336, y: 2656}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: HandLeft
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 9d69e20dfc583ab45b5b87b85ee4670a
+    layerID: 80
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: MainHandLeft
+    spriteName: MainHandLeft
+    isGroup: 0
+    parentIndex: 71
+    spriteID: 1d3159a81ff6d5d4abe85bee49812666
+    layerID: 86
+    mosaicPosition: {x: 7252, y: 2829}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  pSDLayerImportSetting:
+  - spriteId: bf5c8853cc755174786ed3f2ad50d671
+    name: FacesMain
+    layerId: 11
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: 44325d292e78d9a4992d4195dd845751
+    name: Eat2
+    layerId: 64
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: ccee376cea6e6ef4b8a23c3feb635c92
+    name: Eat2
+    layerId: 74
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: fc18443a4d46fee4e96333725879c9da
+    name: Eat1
+    layerId: 62
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: 3a8f66f084ca4af45ba69745b346d0e6
+    name: Eat1
+    layerId: 73
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 1bcd534829a8f14409aeddac1c970c1a
+    name: React
+    layerId: 60
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: a54b12c84bf31ab4c8832d07d3905569
+    name: React
+    layerId: 68
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: a9e05e32703825849a5fe67e78f5c784
+    name: Idle
+    layerId: 66
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: 3e8597e2924ad4644a7b31592e674dc2
+    name: Idle
+    layerId: 75
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 5f440040bf747784780eec0e9d6c8554
+    name: Moving
+    layerId: 58
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: af997ef21eec3be4dbea9206cabbe06e
+    name: Moving
+    layerId: 13
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 1a2f7e778cea69b4c9ae676903956571
+    name: HandRight
+    layerId: 78
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: f6ecbf530d8a8834994ec27ddb2730f3
+    name: MainRightHand
+    layerId: 82
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: da6502fa48eba2742bf4a768f519253c
+    name: HairMain
+    layerId: 17
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: f1f34d3fe812c5044a43883ec246137d
+    name: HairMain
+    layerId: 15
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 70980241aea2c8e45af8748c37b373b6
+    name: HeadShape
+    layerId: 56
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: 862e385f35cb0974f8b6b245d2adf1b6
+    name: HeadMain
+    layerId: 6
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 26182fd04c86d7b459c19d29cccc5aa6
+    name: ShirtWhite
+    layerId: 253
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 9d69e20dfc583ab45b5b87b85ee4670a
+    name: HandLeft
+    layerId: 80
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: 1d3159a81ff6d5d4abe85bee49812666
+    name: MainHandLeft
+    layerId: 86
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0
