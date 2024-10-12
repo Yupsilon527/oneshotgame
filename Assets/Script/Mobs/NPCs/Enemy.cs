@@ -48,6 +48,18 @@ public class Enemy : Body
         Body target = GetTarget();
         switch (data.AI)
         {
+            case EnemyData.Behavior.wander:
+                if (rigidbody.velocity.sqrMagnitude > 0)
+                {
+                    rigidbody.velocity *= 0;
+                    return Random.value * 5;
+                }
+                else
+                {
+                    rigidbody.velocity = Random.insideUnitCircle.normalized * data.Speed;
+                    return Random.value ;
+                }
+                break;
             case EnemyData.Behavior.stalker:
             case EnemyData.Behavior.kamikaze:
                 if (target != null)

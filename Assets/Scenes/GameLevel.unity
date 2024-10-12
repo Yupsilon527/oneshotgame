@@ -9276,6 +9276,8 @@ MonoBehaviour:
   enemypool: {fileID: 227539457}
   enemiesSpawned:
   - {fileID: 11400000, guid: 39228325ffd22ad4e90493e6630b4959, type: 2}
+  executivesSpawned:
+  - {fileID: 11400000, guid: 030aabb1a3c04ca4bb0d0a186fac1640, type: 2}
 --- !u!4 &227539459
 Transform:
   m_ObjectHideFlags: 0
@@ -9374,7 +9376,6 @@ MonoBehaviour:
   camOriginalSize: 20
   cam: {fileID: 1862060208}
   executiveSpawnArea: {fileID: 222734408}
-  executiveEnemy: {fileID: 11400000, guid: 39228325ffd22ad4e90493e6630b4959, type: 2}
 --- !u!4 &276644564
 Transform:
   m_ObjectHideFlags: 0

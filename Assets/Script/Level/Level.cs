@@ -159,12 +159,11 @@ public partial class Level : MonoBehaviour
     #region Executive Area
 
     public GameObject executiveSpawnArea;
-    public EnemyData executiveEnemy;
 
     void SpawnExecs()
     {
         Vector2 area = executiveSpawnArea.transform.localScale / 2;
-        EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, (Vector2)executiveSpawnArea.transform.localPosition + area * 2), GetNumExecutives(), executiveEnemy);
+        EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, (Vector2)executiveSpawnArea.transform.localPosition + area * 2), GetNumExecutives());
     }
     public int GetNumExecutives()
     {

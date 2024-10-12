@@ -4,6 +4,7 @@ public class EnemyData : ScriptableObject
 {
     public enum Behavior
     {
+        wander,
         stalker,
         kamikaze,
         passive

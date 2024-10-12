@@ -47,11 +47,7 @@ public class PlayerController : Body
         {
             HandleFire();
         }
-    }
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-    }
+        }
     public void HandleMovement()
     {
         //float realSpeed = (dashing ? DashSpeed : (fireState == FireState.notFired ? Speed : SprintSpeed)) ;
@@ -67,10 +63,9 @@ public class PlayerController : Body
             _playerAnimator.SetBool("IsMoving", false);
         }
 
-
         if (!dashing || direction.sqrMagnitude > 0)
         {
-            rigidbody.velocity = (direction).normalized * realSpeed;        
+            rigidbody.velocity = direction * realSpeed;        
         }
     }
     public enum FireState
