@@ -13,6 +13,7 @@ public class Powerup : MonoBehaviour
             foreach (var b in powerup.bonuses)
             {
                 b.GiveBonus(player);
+                PlayerController.main._playerAnimator.SetBool("IsEating", true);
             }
             Die();
         }

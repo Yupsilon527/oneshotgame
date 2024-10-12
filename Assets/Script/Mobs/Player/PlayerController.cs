@@ -25,6 +25,10 @@ public class PlayerController : Body
     public float DashSpeed = 50;
     public float DashDuration = .2f;
     public float DashRefresh = 1f;
+
+    //Animations
+    public Animator _playerAnimator;
+
     public void Restart()
     {
         dashing = false;
@@ -52,9 +56,18 @@ public class PlayerController : Body
 
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
+        if (direction.sqrMagnitude > 0)
+        {
+            _playerAnimator.SetBool("IsMoving", true);
+        }else
+        {
+            _playerAnimator.SetBool("IsMoving", false);
+        }
+
+
         if (!dashing || direction.sqrMagnitude > 0)
         {
-            rigidbody.velocity = (direction).normalized * realSpeed;
+            rigidbody.velocity = (direction).normalized * realSpeed;        
         }
     }
     public enum FireState
