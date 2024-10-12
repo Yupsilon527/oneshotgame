@@ -55,13 +55,8 @@ public class PlayerController : Body
 
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        if (direction.sqrMagnitude > 0)
-        {
-            _playerAnimator.SetBool("IsMoving", true);
-        }else
-        {
-            _playerAnimator.SetBool("IsMoving", false);
-        }
+        _playerAnimator.SetBool("IsMoving", direction.sqrMagnitude > 0);
+        _playerAnimator.SetBool("FaceRight", direction.x >= 0);
 
         if (!dashing || direction.sqrMagnitude > 0)
         {
