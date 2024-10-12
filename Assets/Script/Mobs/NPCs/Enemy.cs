@@ -84,7 +84,7 @@ public class Enemy : Body
     public override void TakeDamage(float damage)
     {
         PlayerController.main.IncreaseScore(damage);
-        Level.main.TextEffect("+" + damage, transform.position, Color.green, animation: "Hover Up");
+        Level.main.TextEffect("+" + damage, transform.position, Color.green, scale:0.06f, animation: "Hover Up");
     }
     public override void Die()
     {
