@@ -9359,7 +9359,7 @@ MonoBehaviour:
   maxExecutives: 20
   bulletpool: {fileID: 276644565}
   bulletPrefab: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
-  textPrefab: {fileID: 0}
+  textPrefab: {fileID: 4364604175898380635, guid: a5d24b07ad861d647920eb9112f52b53, type: 3}
   playerPrefab: {fileID: 5580676929228978483, guid: ab6430afc724e124d976e4302a96401d, type: 3}
   cameraDefaultSize: 5
   cameraZoomedinSize: 1.75
