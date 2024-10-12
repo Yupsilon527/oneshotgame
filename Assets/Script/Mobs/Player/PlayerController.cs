@@ -28,6 +28,8 @@ public class PlayerController : Body
 
     //Animations
     public Animator _playerAnimator;
+    public ParticleSystem dashParticle;
+    public ParticleSystem fartParticle;
 
     public void Restart()
     {
@@ -35,6 +37,7 @@ public class PlayerController : Body
         fireState = FireState.notFired;
         collectedBonuses = new();
         transform.position = Vector3.zero;
+        dashParticle.Stop();
 
         Score = 0;
         IncreaseScore(0);
@@ -98,11 +101,13 @@ public class PlayerController : Body
             if (DashTime < Time.time)
             {
                 dashing = false;
+                dashParticle.Stop();
             }
         }
         else if (DashCooldown < Time.time && Input.GetAxis("Fire3") != 0 /*&& (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)*/)
         {
             dashing = true;
+            dashParticle.Play();
 
             DashTime = Time.time + DashDuration;
             DashCooldown = Time.time + DashRefresh;
@@ -143,6 +148,7 @@ public class PlayerController : Body
             p.GiveBounces(collectedBonuses.pBounces);
             p.GiveHits(collectedBonuses.pHits);
         }
+        fartParticle.Play();
     }
     public class BonusTable
     {

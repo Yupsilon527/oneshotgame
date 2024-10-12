@@ -16,13 +16,13 @@ MonoBehaviour:
   directionAligned: 0
   ForwardSpeed: 12
   RightSpeed: 0
-  LifeTime: 10
+  LifeTime: 12
   Scale: 1
-  Damage: 12
+  Damage: 10
   Behavior: 0
   prefab: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
-  bounces: 6
-  targets: 6
+  bounces: 1
+  targets: 3
   bounceBehavior: 1
   contactBehavior: 2
   expireBehavior: 2
