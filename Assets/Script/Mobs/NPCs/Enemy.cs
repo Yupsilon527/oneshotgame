@@ -81,6 +81,11 @@ public class Enemy : Body
         }
         return null;
     }
+    public override void TakeDamage(float damage)
+    {
+        PlayerController.main.IncreaseScore(damage);
+        Level.main.TextEffect("+" + damage, transform.position, Color.green, animation: "Hover Up");
+    }
     public override void Die()
     {
         FireWeapon(2, rigidbody.velocity);

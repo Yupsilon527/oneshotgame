@@ -13,6 +13,7 @@ public class PowerupData : ScriptableObject
         hits,
         projectiles
     }
+    public string pickupText = "POWERUP!";
     public PowerupBonus[] bonuses;
     [Serializable]
     public class PowerupBonus { 

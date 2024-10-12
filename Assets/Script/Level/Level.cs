@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VikingParty;
 
 public partial class Level : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public partial class Level : MonoBehaviour
 
     public ObjectPool bulletpool;
     public GameObject bulletPrefab;
+    public GameObject textPrefab;
     public GameObject playerPrefab;
     public float cameraDefaultSize = 5f;
     public float cameraZoomedinSize = 1.5f;
@@ -46,6 +48,7 @@ public partial class Level : MonoBehaviour
         roundBeginTime = Time.time;
         PlayerController.main.Restart();
         cam.transform.position = Vector3.zero;
+        cam.orthographicSize = cameraDefaultSize;
         UpdateLevelBounds();
 
         ScoreCounter.main.StartCountdown(secondsPerRound);
@@ -54,6 +57,7 @@ public partial class Level : MonoBehaviour
     void RoundEnd()
     {
         cRound++;
+
         state = GameState.pregame;
     }
     public void RoundProgress(bool triggeredByEvent)
@@ -168,4 +172,21 @@ public partial class Level : MonoBehaviour
     }
 
     #endregion
+
+    public TextEffectController TextEffect( string text, Vector3 position, Color color, float delay = 0, float scale = .1f, string animation = "Float Up")
+    {
+        GameObject effect = bulletpool.PoolItem(textPrefab);
+
+        if (effect == null)
+            return null;
+        effect.transform.position = position;
+        if (effect.TryGetComponent(out TextEffectController tefX))
+        {
+            tefX.ChangeTextValue(text);
+            tefX.ChangeColor(color);
+            tefX.Emit(animation, delay, scale);
+            return tefX;
+        }
+        return null;
+    }
 }

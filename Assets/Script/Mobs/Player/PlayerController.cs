@@ -31,6 +31,9 @@ public class PlayerController : Body
         fireState = FireState.notFired;
         collectedBonuses = new();
         transform.position = Vector3.zero;
+
+        Score = 0;
+        IncreaseScore(0);
     }
     private void Update()
     {
@@ -69,13 +72,13 @@ public class PlayerController : Body
         switch (fireState)
         {
             case FireState.notFired:
-                if (Level.main.state == Level.GameState.victorious && Input.GetAxis("Fire1") != 0)
+                if (Level.main.state == Level.GameState.victorious && Input.GetKeyDown(KeyCode.F))
                 {
                     fireState = FireState.charging;
                 }
                 break;
             case FireState.charging:
-                if (Input.GetAxis("Fire1") == 0)
+                if (Input.GetKeyUp(KeyCode.F))
                 {
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     FireWeapon(0, mousePos);
@@ -147,5 +150,15 @@ public class PlayerController : Body
         public int pBounces = 0;
         public int pHits = 0;
         public int pProjectiles = 0;
+    }
+    public float Score = 0;
+    public float IncreaseScore(float value)
+    {
+        float total = value * collectedBonuses.scoreMult;
+
+        Score += total;
+        ScoreCounter.main.SetScore(Score);
+        
+        return total;
     }
 }

@@ -11,7 +11,9 @@ public class ScoreCounter : MonoBehaviour
         main = this;
     }
     public TMPro.TextMeshProUGUI countdownTimer;
+    public TMPro.TextMeshProUGUI scoreKeeper;
     public TMPro.TextMeshProUGUI executiveCount;
+    public TMPro.TextMeshProUGUI fartAssistant;
 
     Coroutine timerCoroutine;
     public void StartCountdown(int seconds)
@@ -42,5 +44,10 @@ public class ScoreCounter : MonoBehaviour
     {
         countdownTimer.gameObject.SetActive(visible);
         executiveCount.gameObject.SetActive(visible);
+        fartAssistant.gameObject.SetActive(!visible);
+    }
+    public void SetScore(float v)
+    {
+        scoreKeeper.text = "Score: " + v;
     }
 }

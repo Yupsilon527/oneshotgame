@@ -10,6 +10,7 @@ public class Powerup : MonoBehaviour
     {
         if (collision.CompareTag("Player") && collision.TryGetComponent(out PlayerController player))
         {
+            Level.main.TextEffect(powerup.pickupText, transform.position, Color.green, animation:"Splash");
             foreach (var b in powerup.bonuses)
             {
                 b.GiveBonus(player);

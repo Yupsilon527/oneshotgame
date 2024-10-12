@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca1835b4005bf6429405740511e636a, type: 3}
   m_Name: Bounces Pup
   m_EditorClassIdentifier: 
+  pickupText: +5% Mult
   bonuses:
-  - bonus: 2
-    amount: 1
+  - bonus: 0
+    amount: 0.05
