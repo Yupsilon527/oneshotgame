@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cf7eb93a23da5a45b6c73d8424a83c5, type: 3}
-  m_Name: EnemyData
+  m_Name: Green
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2158328114290720274, guid: 60e404016cf23ab4d9759e640001aa9f, type: 3}
-  AI: 0
-  SightRange: 3
-  Scale: 1
-  Speed: 3
+  moveWhileFiring: 1
+  kamikaze: 1
+  enemyPrefab: {fileID: 4819750900406402002, guid: 52f445c8665c3ca4eadcf0442093a127, type: 3}
+  AI: 1
+  SightRange: 4
+  Scale: 0.3333333
+  Speed: 2
+  ThinkInterval: 0.5
   HarassWeapon: {fileID: 0}
-  AttackWeapon: {fileID: 0}
+  AttackWeapon: {fileID: 11400000, guid: c8e3d1c79c579a046ae0db5c9bec2c46, type: 2}
   SuicideWeapon: {fileID: 0}

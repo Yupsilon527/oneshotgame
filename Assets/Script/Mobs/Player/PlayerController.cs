@@ -70,7 +70,8 @@ public class PlayerController : Body
     {
         notFired,
         charging,
-        fired
+        fired,
+        dud
     }
     public FireState fireState;
     public void HandleFire()
@@ -89,6 +90,7 @@ public class PlayerController : Body
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     FireWeapon(0, mousePos);
                     fireState = FireState.fired;
+                    Level.main.TextEffect("FART!", transform.position, Color.green, scale: 0.2f, animation: "Splash");
                     Level.main.RoundProgress(false);
                 }
                 break;
@@ -169,5 +171,13 @@ public class PlayerController : Body
         ScoreCounter.main.SetScore(Score);
         
         return total;
+    }
+    public override void TakeDamage(float damage)
+    {
+        Level.main.ExtendPenaltyTime(damage);
+    }
+    public override void Die()
+    {
+        fartParticle.Play();
     }
 }

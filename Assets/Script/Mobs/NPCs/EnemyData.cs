@@ -6,14 +6,18 @@ public class EnemyData : ScriptableObject
     {
         wander,
         stalker,
-        kamikaze,
+        horizontal,
+        diagonal,
         passive
     }
+    public bool moveWhileFiring = false;
+    public bool kamikaze = false;
     public GameObject enemyPrefab;
     public Behavior AI;
     public float SightRange;
     public float Scale;
     public float Speed;
+    public float ThinkInterval;
     public WeaponData HarassWeapon;
     public WeaponData AttackWeapon;
     public WeaponData SuicideWeapon;

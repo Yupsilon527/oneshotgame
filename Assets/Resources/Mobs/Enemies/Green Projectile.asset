@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17ca5208141e84942986f9c909ab5be4, type: 3}
-  m_Name: PlayerProjectile
+  m_Name: Green Projectile
   m_EditorClassIdentifier: 
-  color: {r: 0.1693068, g: 0.7283019, b: 0, a: 1}
-  directionAligned: 0
-  ForwardSpeed: 12
+  color: {r: 0, g: 1, b: 0, a: 1}
+  directionAligned: 1
+  ForwardSpeed: 0.5
   RightSpeed: 0
-  LifeTime: 12
-  Scale: 0.25
-  Damage: 10
+  LifeTime: 5
+  Scale: 1
+  Damage: 5
   Behavior: 0
-  prefab: {fileID: 7059377193983400039, guid: 45255d723f876074f917a4dfd81f2929, type: 3}
-  bounces: 1
-  targets: 3
+  prefab: {fileID: 7059377193983400039, guid: 73b54e19c4b84d54fa53ff2c345d8bc0, type: 3}
+  bounces: 0
+  targets: 1
   bounceBehavior: 1
   contactBehavior: 2
   expireBehavior: 2

@@ -5,7 +5,7 @@ public abstract class Mob : MonoBehaviour
 {
     public Collider2D collider;
     public Rigidbody2D rigidbody;
-    protected SpriteRenderer SpriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
     public float scale = 1f;
     public bool snaptobounds = false;
@@ -13,7 +13,7 @@ public abstract class Mob : MonoBehaviour
     #region Unity Calls
     public virtual void Awake()
     {
-        SpriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     protected virtual void FixedUpdate()
     {

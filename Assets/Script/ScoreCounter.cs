@@ -16,7 +16,7 @@ public class ScoreCounter : MonoBehaviour
     public TMPro.TextMeshProUGUI fartAssistant;
 
     Coroutine timerCoroutine;
-    public void StartCountdown(int seconds)
+    public void StartCountdown(float seconds)
     {
         StopCountdown();
         StartCoroutine( CountdownTimer(seconds));
@@ -26,10 +26,10 @@ public class ScoreCounter : MonoBehaviour
         if (timerCoroutine != null)
             StopCoroutine(timerCoroutine);
     }
-    IEnumerator CountdownTimer(int dur)
+    IEnumerator CountdownTimer(float dur)
     {
         for (int i =0;  i < dur; i++) {
-            int remaining = dur - i;
+            int remaining = Mathf.FloorToInt(dur - i);
             if (dur > 60)
                 countdownTimer.text = Mathf.FloorToInt(remaining / 60) + ":" + (remaining % 60);
             else

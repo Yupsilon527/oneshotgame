@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87149f33d0e3ad04a8531d92d16ab8f7, type: 3}
+  m_Name: Pinky Harass
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 11400000, guid: f886bf7084a62ef4c960a95269cba38f, type: 2}
+  FireInterval: 5
+  ProjectileCount: 2
+  ProjectileArc: 33
+  ProjectileDistance: 0
+  BarrelAccuracy: 0
+  ProjectileAccuracy: 0
+  FireSlowDown: 1
+  clusterData: {fileID: 0}
+  clusterAmount: 0
+  clusterSpeed: 0
+  clusterArc: 0
+  clusterArcDelta: 0
+  clusterDelay: 0

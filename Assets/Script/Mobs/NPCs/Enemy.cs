@@ -1,8 +1,8 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : Body
 {
-    public static float EnemySpawnRange = 25;
     protected bool DieOffscreen = true;
     public float NextUpdateTime = 0f;
     EnemyData data;
@@ -27,23 +27,44 @@ public class Enemy : Body
     public void Respawn()
     {
         float angle = Random.Range(0, 360) * Mathf.Deg2Rad;
-        Vector2 center = (Vector2)Camera.main.transform.position + new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * EnemySpawnRange;
+        Vector2 center = (Vector2)Camera.main.transform.position + new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * EnemyController.main. EnemySpawnRange;
         transform.position = new Vector3(center.x, center.y, transform.position.z);
         NextUpdateTime = 0;
     }
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (DieOffscreen && transform.position.sqrMagnitude > EnemySpawnRange * EnemySpawnRange + 10)
+        if (DieOffscreen && transform.position.sqrMagnitude > EnemyController.main.EnemySpawnRange * EnemyController.main.EnemySpawnRange + 10)
         {
             Die();
         }
         if (NextUpdateTime < Time.time)
         {
-            NextUpdateTime = Time.time + AIUpdate();
+            FireAtTarget();
+            NextUpdateTime = Time.time + MoveTowardsTarget();
         }
     }
-    public virtual float AIUpdate()
+    protected virtual void FireAtTarget()
+    {
+        Body target = GetTarget();
+        if (target != null)
+        {
+            Vector2 delta = target.transform.position - transform.position;
+            if (delta.sqrMagnitude < data.SightRange * data.SightRange)
+            {
+                FireWeapon(1, target.transform.position);
+                if (data.kamikaze)
+                {
+                    Die();
+                }
+            }
+            else
+            {
+                FireWeapon(0, target.transform.position);
+            }
+            }
+        }
+    public virtual float MoveTowardsTarget()
     {
         Body target = GetTarget();
         switch (data.AI)
@@ -52,38 +73,56 @@ public class Enemy : Body
                 if (rigidbody.velocity.sqrMagnitude > 0)
                 {
                     rigidbody.velocity *= 0;
-                    return Random.value * 5;
+                    return Random.value * data.ThinkInterval;
                 }
                 else
                 {
                     rigidbody.velocity = Random.insideUnitCircle.normalized * data.Speed;
                     return Random.value ;
                 }
-                break;
             case EnemyData.Behavior.stalker:
-            case EnemyData.Behavior.kamikaze:
+            case EnemyData.Behavior.horizontal:
+            case EnemyData.Behavior.diagonal:
                 if (target != null)
                 {
                     Vector2 delta = target.transform.position - transform.position;
-                    if (delta.sqrMagnitude < data.SightRange * data.SightRange)
+                    if (!HasWeapon(1) || data.moveWhileFiring || CanFireWeapon(1))
                     {
-
-                        FireWeapon(1, target.transform.position);
-                        if (data.AI == EnemyData.Behavior.kamikaze)
-                            Die();
+                        if (data.AI == EnemyData.Behavior.horizontal)
+                        {
+                            if (Mathf.Abs(delta.x) >= Mathf.Abs(delta.y))
+                            {
+                                delta = Vector2.right * Mathf.Sign(delta.x);
+                            }
+                            else
+                            {
+                                delta = Vector2.up * Mathf.Sign(delta.y);
+                            }
+                        }
+                        else if (data.AI == EnemyData.Behavior.diagonal)
+                        {
+                            delta.x = delta.x > 0 ? 1 : -1;
+                            delta.y = delta.y > 0 ? 1 : -1;
+                        }
                         else
-                            return .1f;
+                        {
+                            delta = delta.normalized;
+                        }
+                        rigidbody.velocity = delta * data.Speed;
                     }
                     else
                     {
-                        FireWeapon(0, target.transform.position);
+                        rigidbody.velocity *= 0;
                     }
-                    rigidbody.velocity = delta.normalized * data.Speed;
 
                 }
                 break;
         }
-        return .5f;
+        return data.ThinkInterval;
+    }
+    void PursueTarget(Body target)
+    {
+
     }
     public Body GetTarget()
     {

@@ -11,6 +11,7 @@ public class Projectile : Mob
     }
     protected float birthtime = 0;
     protected float deathtime = 0;
+    protected float deletetime = 0;
 
     int numBounces = 0;
     int maxTargets = 0;
@@ -34,6 +35,18 @@ public class Projectile : Mob
     public void AssignProperties(ProjectileData ndata)
     {
         data = ndata;
+        spriteRenderer.color = data.color;
+        maxTargets = data.targets;
+
+        float lifeTime = data.LifeTime;
+        if (lifeTime > 0)
+        {
+            deathtime = Time.time + lifeTime;
+        }
+        else
+        {
+            deathtime = -1;
+        }
     }
     public static Projectile[] LaunchMultiple(ProjectileData projectileData, Body owner, WeaponData weapon, Vector3 origin, Vector3 direction, float launchSpeed, int amount, float arc, float accuracy, ProjectileAlignment alignment)
     {
@@ -44,7 +57,7 @@ public class Projectile : Mob
             GameObject pooled = Level.main.bulletpool.PoolItem(projectileData.prefab);
             if (pooled.TryGetComponent(out Projectile other))
             {
-                other.data = projectileData;
+                other.AssignProperties( projectileData);
                 other.Launch(origin, direction, launchSpeed, owner, weapon, accuracy, baseAng + arc * shot, alignment);
                 fired.Add(other);
             }
@@ -59,20 +72,10 @@ public class Projectile : Mob
         alignment = a;
         this.shooter = launcher;
         wdata = weapon;
+        rigidbody.bodyType = RigidbodyType2D.Dynamic;
         launcherCollider = launcher.collider;
         Physics2D.IgnoreCollision(collider, launcherCollider, true);
         hitEntities.Add(launcher);
-        maxTargets = data.targets;
-
-        float lifeTime = data.LifeTime;
-        if (lifeTime > 0)
-        {
-            deathtime = Time.time + lifeTime;
-        }
-        else
-        {
-            deathtime = -1;
-        }
         gameObject.SetActive(true);
         LaunchDirection(direction, launchPower, deltaAngle, accuracy);
     }
@@ -115,6 +118,10 @@ public class Projectile : Mob
             HandleBehavior(data.expireBehavior);
             Debug.Log("STOP " + name);
         }
+        else if (dead && Time.time > deletetime)
+        {
+            Delete();
+        }
     }
     public override void SnapToBounds(Vector2 pos)
     {
@@ -152,7 +159,7 @@ public class Projectile : Mob
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Body other) )
+        if (collision.TryGetComponent(out Body other))
         {
             Debug.Log("[Bullet] " + name + " collides with " + other.name);
             CollideBody(other);
@@ -166,10 +173,10 @@ public class Projectile : Mob
     {
         if (!IsPlayerControlled())
         {
-                if (!PlayerController.main.IsInvulnerable() && IsInRangeOfOther(PlayerController.main))
-                {
-                    return PlayerController.main;
-                }
+            if (!PlayerController.main.IsInvulnerable() && IsInRangeOfOther(PlayerController.main))
+            {
+                return PlayerController.main;
+            }
         }
         else
         {
@@ -295,14 +302,28 @@ public class Projectile : Mob
         //TODO SpecialEffect(data.expireEffect);
         if (launcherCollider != null)
             Physics2D.IgnoreCollision(collider, launcherCollider, false);
-        base.Die();
+
+        if (IsPlayerControlled()) { 
+        rigidbody.bodyType =  RigidbodyType2D.Static;
+        deletetime = Time.time + 2;
+        spriteRenderer.color = Color.clear;
+    }
+        else
+        {
+            Delete();
+        }
+    }
+    void Delete()
+    {
+
         Level.main.UnregisterBody(this);
+        Level.main.bulletpool.DeactivateObject(gameObject);
     }
     float GetTimeRemaining()
     {
         return deathtime - Time.time;
     }
-    protected  void OnEnable()
+    protected void OnEnable()
     {
         Level.main.RegisterBody(this);
     }
