@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     public ObjectPool enemypool;
 
     public EnemyData[] enemiesSpawned;
+    public EnemyData[] executivesSpawned;
     private void Update()
     {
 
@@ -42,6 +43,10 @@ public class EnemyController : MonoBehaviour
     {
         if (enemypool.activeObjs.childCount < 50)
             Enemy.FromData(data);
+    }
+    public void SpawnEnemiesInArea(Rect area, int count)
+    {
+        SpawnEnemiesInArea(area, count, executivesSpawned[Mathf.FloorToInt(Random.value*executivesSpawned.Length)]);
     }
     public void SpawnEnemiesInArea(Rect area, int count, EnemyData data)
     {

@@ -28,6 +28,8 @@ public class PlayerController : Body
 
     //Animations
     public Animator _playerAnimator;
+    public ParticleSystem dashParticle;
+    public ParticleSystem fartParticle;
 
     public void Restart()
     {
@@ -35,6 +37,7 @@ public class PlayerController : Body
         fireState = FireState.notFired;
         collectedBonuses = new();
         transform.position = Vector3.zero;
+        dashParticle.Stop();
 
         Score = 0;
         IncreaseScore(0);
@@ -47,11 +50,7 @@ public class PlayerController : Body
         {
             HandleFire();
         }
-    }
-    protected override void FixedUpdate()
-    {
-        base.FixedUpdate();
-    }
+        }
     public void HandleMovement()
     {
         //float realSpeed = (dashing ? DashSpeed : (fireState == FireState.notFired ? Speed : SprintSpeed)) ;
@@ -59,18 +58,12 @@ public class PlayerController : Body
 
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-        if (direction.sqrMagnitude > 0)
-        {
-            _playerAnimator.SetBool("IsMoving", true);
-        }else
-        {
-            _playerAnimator.SetBool("IsMoving", false);
-        }
-
+        _playerAnimator.SetBool("IsMoving", direction.sqrMagnitude > 0);
+        _playerAnimator.SetBool("FaceRight", direction.x >= 0);
 
         if (!dashing || direction.sqrMagnitude > 0)
         {
-            rigidbody.velocity = (direction).normalized * realSpeed;        
+            rigidbody.velocity = direction * realSpeed;        
         }
     }
     public enum FireState
@@ -108,11 +101,13 @@ public class PlayerController : Body
             if (DashTime < Time.time)
             {
                 dashing = false;
+                dashParticle.Stop();
             }
         }
         else if (DashCooldown < Time.time && Input.GetAxis("Fire3") != 0 /*&& (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)*/)
         {
             dashing = true;
+            dashParticle.Play();
 
             DashTime = Time.time + DashDuration;
             DashCooldown = Time.time + DashRefresh;
@@ -153,6 +148,7 @@ public class PlayerController : Body
             p.GiveBounces(collectedBonuses.pBounces);
             p.GiveHits(collectedBonuses.pHits);
         }
+        fartParticle.Play();
     }
     public class BonusTable
     {
