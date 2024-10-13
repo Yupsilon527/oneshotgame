@@ -16,9 +16,9 @@ MonoBehaviour:
   FireInterval: 3
   ProjectileCount: 3
   ProjectileArc: 45
-  ProjectileDistance: 3
-  BarrelAccuracy: 0
-  ProjectileAccuracy: 0
+  ProjectileDistance: 0
+  BarrelAccuracy: 3
+  ProjectileAccuracy: 3
   FireSlowDown: 1
   clusterData: {fileID: 0}
   clusterAmount: 0

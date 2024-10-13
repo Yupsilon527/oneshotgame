@@ -26,6 +26,7 @@ public partial class Level : MonoBehaviour
     public GameObject playerPrefab;
     public float cameraDefaultSize = 5f;
     public float cameraZoomedinSize = 1.5f;
+    public GameObject levelStartPosition;
 
     #region Unity Calls
     public static Level main;
@@ -36,7 +37,6 @@ public partial class Level : MonoBehaviour
     private void Start()
     {
         var player = Instantiate(playerPrefab);
-        player.transform.position = executiveSpawnArea.transform.position;
         PreRound();
     }
     private void Update()
@@ -55,12 +55,12 @@ public partial class Level : MonoBehaviour
         UpdateLevelBounds();
         ResetPenaltyTime();
 
-        ScoreCounter.main.StartCountdown(GetTimeRemaining());
+        ScoreCounter.main.StartCountdown(secondsPerRound - GetRoundTime());
         ScoreCounter.main.SetTimerVisible(true);
     }
-    public float GetTimeRemaining()
+    public float GetRoundTime()
     {
-        return Time.time - roundBeginTime - penaltyTime;
+        return Time.time - roundBeginTime + penaltyTime;
     }
     void RoundEnd()
     {
@@ -70,8 +70,10 @@ public partial class Level : MonoBehaviour
     void PreRound()
     {
         state = GameState.waiting;
+        PlayerController.main.transform.position = executiveSpawnArea.transform.position;
         StartCoroutine(SmoothMoveCamera(cam.transform.position, executiveSpawnArea.transform.position, cameraDefaultSize, cameraZoomedinSize, 0));
         roundBeginTime = Time.time + 3;
+        UpdateLevelBounds();
     }
     public void RoundProgress(bool triggeredByEvent)
     {
@@ -107,7 +109,7 @@ public partial class Level : MonoBehaviour
                 }
                 break;
             case GameState.running:
-                if (GetTimeRemaining() > secondsPerRound)
+                if (GetRoundTime() > secondsPerRound)
                 {
                     GameEnded();
                 }
@@ -215,7 +217,7 @@ public partial class Level : MonoBehaviour
     public void ExtendPenaltyTime(float time)
     {
         penaltyTime += time;
-        ScoreCounter.main.StartCountdown(GetTimeRemaining());
+        ScoreCounter.main.StartCountdown(secondsPerRound - GetRoundTime());
     }
     public void ResetPenaltyTime()
     {

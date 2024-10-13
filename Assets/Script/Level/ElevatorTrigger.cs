@@ -6,7 +6,7 @@ public class ElevatorTrigger : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && collision.TryGetComponent(out PlayerController player))
+        if (collision.CompareTag("Player") && collision.TryGetComponent(out PlayerController player) && Level.main.state == Level.GameState.running)
         {
             Level.main.RoundProgress(true);
         }

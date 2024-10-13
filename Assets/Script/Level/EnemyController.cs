@@ -8,18 +8,24 @@ public class EnemyController : MonoBehaviour
         main = this;
     }
     public float lastSpawn = 3f;
-    public  float EnemySpawnRange = 10;
+    public float EnemySpawnRange = 10;
     public ObjectPool enemypool;
 
     public EnemyData[] enemiesSpawned;
     public EnemyData[] executivesSpawned;
     private void Update()
     {
-
-        if (Level.main.state == Level.GameState.running && lastSpawn < Time.time)
+        if (Level.main.state == Level.GameState.running)
         {
-            lastSpawn += 5 * 5 / (5 + Level.main.currentRound);
-            SpawnEnemy(enemiesSpawned[Mathf.FloorToInt(Random.value * enemiesSpawned.Length)]);
+            if (lastSpawn < Time.time)
+            {
+                lastSpawn += 5 * 5 / (5 + Level.main.currentRound);
+                SpawnEnemy(enemiesSpawned[Mathf.FloorToInt(Random.value * enemiesSpawned.Length)]);
+            }
+        }
+        else
+        {
+            lastSpawn = Time.time + 1;
         }
     }
     #region Spawn Enemies

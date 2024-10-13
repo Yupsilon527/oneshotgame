@@ -36,7 +36,7 @@ public class PlayerController : Body
         dashing = false;
         fireState = FireState.notFired;
         collectedBonuses = new();
-        transform.position = Vector3.zero;
+        transform.position = Level.main.levelStartPosition.transform.position;
         dashParticle.Stop();
 
         Score = 0;
@@ -174,6 +174,7 @@ public class PlayerController : Body
     }
     public override void TakeDamage(float damage)
     {
+        Level.main.TextEffect("-0:0"+damage, transform.position, Color.red); 
         Level.main.ExtendPenaltyTime(damage);
     }
     public override void Die()

@@ -19,7 +19,7 @@ public class ScoreCounter : MonoBehaviour
     public void StartCountdown(float seconds)
     {
         StopCountdown();
-        StartCoroutine( CountdownTimer(seconds));
+        timerCoroutine = StartCoroutine( CountdownTimer(seconds));
     }
     public void StopCountdown()
     {
