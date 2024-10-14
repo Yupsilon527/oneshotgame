@@ -118,6 +118,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
   - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
   - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
   NextUpdateTime: 0
   attackSound: {fileID: 0}
 --- !u!50 &4116353662555244496
@@ -191,7 +199,7 @@ AudioSource:
   m_GameObject: {fileID: 2158328114290720274}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3090300181957308776, guid: 4873a704e00c28349893aa30131fa4bb, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

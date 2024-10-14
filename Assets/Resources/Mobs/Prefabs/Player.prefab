@@ -4998,7 +4998,7 @@ MonoBehaviour:
   snaptobounds: 1
   audioSource: {fileID: 0}
   hurtClips:
-  - {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  - {fileID: 8300000, guid: 32d11e21dba8b1d45bce3a0d2a8a764b, type: 3}
   startingWeapon: {fileID: 11400000, guid: 752a58fc9c9a38c4e9dd160ca5f48ec5, type: 2}
   fartSounds:
   - {fileID: 8300000, guid: 3c4d3ad6647ad1141be3205b15d9f74a, type: 3}
@@ -5010,7 +5010,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 37ab5be888753e342b1891052bc3ff73, type: 3}
   - {fileID: 8300000, guid: 24930a56f0cff584d9f582e560574cc9, type: 3}
   fartSoundFail: {fileID: 8300000, guid: fa7bc4b337da3774da4b9807f3bb3c98, type: 3}
-  powerupSound: {fileID: 8300000, guid: fdbfce9da1a386a4399deca232f3bca0, type: 3}
+  powerupSound: {fileID: 0}
   Speed: 5
   DashTime: 1
   DashCooldown: 1
@@ -5094,7 +5094,7 @@ AudioSource:
   m_GameObject: {fileID: 5580676929228978483}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3464617681399402180, guid: 4873a704e00c28349893aa30131fa4bb, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
