@@ -2,19 +2,24 @@ using UnityEngine;
 
 public class PlayerController : Body
 {
+
     public static PlayerController main;
     public WeaponData startingWeapon;
-    (int, string)[] thing = new(int, string)[] {
+    (int, string)[] Alerts = new(int, string)[] {
         (0, "Fart!"),
-        (100, "Gross!"),
-        (150, "Eww!"),
-        (200, "Disgusting!"),
-        (250, "EWWW!!!"),
-        (300, "RampFART!"),
-        (350, "FARTMAGEDDON!!"),
+        (200, "Gross!"),
+        (300, "Eww!"),
+        (400, "Disgusting!"),
+        (500, "EWWW!!!"),
+        (600, "RampFART!"),
+        (1000, "FARTMAGEDDON!!"),
     };
-    private void Awake()
+    public AudioClip[] fartSounds;
+    public AudioClip fartSoundFail;
+    public AudioClip powerupSound;
+    public override void Awake()
     {
+        base.Awake();
         main = this;
     }
     public void Start()
@@ -105,7 +110,13 @@ public class PlayerController : Body
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     FireWeapon(0, mousePos);
                     fireState = FireState.fired;
-                    Level.main.RoundProgress(false);
+                    //Level.main.RoundProgress(false);
+                    Level.main.musicSource.Stop();
+
+                    if (audioSource != null && fartSounds != null && fartSounds.Length > 0)
+                    {
+                        audioSource.PlayOneShot(fartSounds[Mathf.FloorToInt(fartSounds.Length * Random.value)]);
+                    }
                 }
                 break;
         }
@@ -183,14 +194,14 @@ public class PlayerController : Body
     {
         float total = collectedBonuses == null ? value : (value * collectedBonuses.scoreMult);
 
-        for (int i = scoreRating; i< thing.Length; i++)
+        for (int i = scoreRating; i< Alerts.Length; i++)
         {
-            if (Score+ total > thing[i].Item1)
+            if (Score+ total > Alerts[i].Item1)
             {
                 scoreRating = i+1;
 
                 if (NotificationWidget.instance != null)
-                    NotificationWidget.instance.DisplayNotification(thing[i].Item2, true);
+                    NotificationWidget.instance.DisplayNotification(Alerts[i].Item2,4,true);
 
                 break;
             }
@@ -205,12 +216,20 @@ public class PlayerController : Body
     {
         Level.main.TextEffect("-0:0"+damage, transform.position, Color.red); 
         Level.main.ExtendPenaltyTime(damage);
+        if (audioSource != null && hurtClips != null && hurtClips.Length > 0)
+        {
+            audioSource.PlayOneShot(hurtClips[Mathf.FloorToInt(hurtClips.Length * Random.value)]);
+        }
     }
     public override void Die()
     {
         if (fireState < FireState.fired)
             fartParticle.Play();
         if (NotificationWidget.instance != null)
-            NotificationWidget.instance.DisplayNotification("YOU FAILED!",true);
+            NotificationWidget.instance.DisplayNotification("YOU FAILED!");
+        if (audioSource != null && fartSoundFail != null)
+        {
+            audioSource.PlayOneShot(fartSoundFail);
+        }
     }
 }

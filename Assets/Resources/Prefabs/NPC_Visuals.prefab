@@ -16,9 +16,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Visuals
       objectReference: {fileID: 0}
+    - target: {fileID: -8155785785729309981, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8155785785729309981, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8155785785729309981, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
+      objectReference: {fileID: 0}
     - target: {fileID: -8027668250313659494, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_Name
       value: NPC_Face
+      objectReference: {fileID: 0}
+    - target: {fileID: -7984386453270865766, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7701741967593564910, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7701741967593564910, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7701741967593564910, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_LocalScale.x
@@ -84,6 +112,18 @@ PrefabInstance:
       propertyPath: m_BoneTransforms.Array.data[0]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: -5672940634195140658, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5672940634195140658, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5672940634195140658, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
+      objectReference: {fileID: 0}
     - target: {fileID: -5056787652437589372, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_Name
       value: NPC_Right_Hand
@@ -92,9 +132,33 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6968017864702121161, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+    - target: {fileID: -3941912101380133894, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3941912101380133894, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3941912101380133894, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
+      objectReference: {fileID: 0}
     - target: {fileID: -1421377457802251327, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_Name
       value: NPC_Left_Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 143034448847913374, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143034448847913374, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 143034448847913374, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
       objectReference: {fileID: 0}
     - target: {fileID: 1871591042115998596, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_Name
@@ -104,6 +168,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Head
       objectReference: {fileID: 0}
+    - target: {fileID: 3095963020164712498, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714214160873385097, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714214160873385097, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714214160873385097, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4060275654329844111, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284943518555993187, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284943518555993187, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284943518555993187, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
+      objectReference: {fileID: 0}
     - target: {fileID: 5023585460574960352, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_Name
       value: NPC_Left_Leg
@@ -112,9 +208,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC_Right_Leg
       objectReference: {fileID: 0}
+    - target: {fileID: 5565835449762618990, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668350864209495896, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668350864209495896, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668350864209495896, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911211903558262451, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911211903558262451, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911211903558262451, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1313448645
+      objectReference: {fileID: 0}
     - target: {fileID: 7714427274392072136, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_Name
       value: NPC_Hair
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016467532281713415, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -345,6 +473,7 @@ MonoBehaviour:
   _headSpriteResolver: {fileID: 1410929482758190341}
   _bodySpriteResolver: {fileID: 3215335257052746615}
   _tieSpriteResolver: {fileID: 3595258468843703716}
+  _spriteLibraryAsset: {fileID: 7108339969198208228, guid: cb5e56ab9d173124aa74eef87181eaf9, type: 3}
 --- !u!1 &8982050770167880137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9014132604763102254, guid: a000423f5ddab034c959ea1972736c1e, type: 3}

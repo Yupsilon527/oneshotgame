@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Projectiles Powerup
   m_EditorClassIdentifier: 
   pickupText: +1 Projectile
+  powerupSprite: {fileID: 1903206521832501333, guid: a5876042be02a5943a7aa63d0767257e, type: 3}
   bonuses:
   - bonus: 5
     amount: 1

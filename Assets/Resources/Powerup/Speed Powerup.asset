@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Speed Powerup
   m_EditorClassIdentifier: 
   pickupText: ++Projectile Speed
+  powerupSprite: {fileID: 4418723944846912107, guid: a5876042be02a5943a7aa63d0767257e, type: 3}
   bonuses:
   - bonus: 2
     amount: 1.5

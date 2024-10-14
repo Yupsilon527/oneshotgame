@@ -5,6 +5,7 @@ public class Enemy : Body
 {
     public float NextUpdateTime = 0f;
     EnemyData data;
+    public AudioClip attackSound;
     public static Enemy FromData(EnemyData eData)
     {
         Enemy e = EnemyController.main.enemypool.PoolItem(eData.enemyPrefab).GetComponent<Enemy>();
@@ -135,6 +136,9 @@ public class Enemy : Body
     {
         PlayerController.main.IncreaseScore(damage);
         Level.main.TextEffect("+" + damage, transform.position, Color.green, scale:0.06f, animation: "Hover Up");
+        if (audioSource != null && hurtClips!=null && hurtClips.Length >0) {
+            audioSource.PlayOneShot(hurtClips[Mathf.FloorToInt(hurtClips.Length * Random.value)]);
+        }
     }
     public override void Die()
     {

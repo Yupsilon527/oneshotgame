@@ -1,12 +1,22 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 public abstract class Body : Mob
 {
 
     bool LeftHip = false;
+    
+    public AudioSource audioSource;
+    public AudioClip[] hurtClips;
+
     protected WeaponData[] weapons;
     protected float[] FireTimes;
+    public override void Awake()
+    {
+        base.Awake();
+        audioSource = GetComponent<AudioSource>();
+    }
     public void FireWeapon(int weaponID, Vector3 point)
     {
         if (CanFireWeapon(weaponID)) 
