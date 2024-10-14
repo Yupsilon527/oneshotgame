@@ -113,7 +113,7 @@ public class Projectile : Mob
     {
         base.FixedUpdate();
 
-        if (GetTimeRemaining() <= 0)
+        if (!dead && GetTimeRemaining() <= 0)
         {
             HandleBehavior(data.expireBehavior);
             Debug.Log("STOP " + name);

@@ -4,6 +4,15 @@ public class PlayerController : Body
 {
     public static PlayerController main;
     public WeaponData startingWeapon;
+    (int, string)[] thing = new(int, string)[] {
+        (0, "Fart!"),
+        (100, "Gross!"),
+        (150, "Eww!"),
+        (200, "Disgusting!"),
+        (250, "EWWW!!!"),
+        (300, "RampFART!"),
+        (350, "FARTMAGEDDON!!"),
+    };
     private void Awake()
     {
         main = this;
@@ -45,6 +54,7 @@ public class PlayerController : Body
             Score = 0;
         }
         IncreaseScore(0);
+        scoreRating = 0;
         lastRoundScore = Score;
     }
     private void Update()
@@ -95,7 +105,6 @@ public class PlayerController : Body
                     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     FireWeapon(0, mousePos);
                     fireState = FireState.fired;
-                    Level.main.TextEffect("FART!", transform.position, Color.green, scale: 0.2f, animation: "Splash");
                     Level.main.RoundProgress(false);
                 }
                 break;
@@ -167,11 +176,25 @@ public class PlayerController : Body
         public int pHits = 0;
         public int pProjectiles = 0;
     }
+    int scoreRating = 0;
     public float Score = 0;
     public float lastRoundScore = 0;
     public float IncreaseScore(float value)
     {
         float total = collectedBonuses == null ? value : (value * collectedBonuses.scoreMult);
+
+        for (int i = scoreRating; i< thing.Length; i++)
+        {
+            if (Score+ total > thing[i].Item1)
+            {
+                scoreRating = i+1;
+
+                if (NotificationWidget.instance != null)
+                    NotificationWidget.instance.DisplayNotification(thing[i].Item2, true);
+
+                break;
+            }
+        }
 
         Score += total;
         ScoreCounter.main.SetScore(Score);
@@ -185,7 +208,9 @@ public class PlayerController : Body
     }
     public override void Die()
     {
-        if (CanFireWeapon(0))
+        if (fireState < FireState.fired)
             fartParticle.Play();
+        if (NotificationWidget.instance != null)
+            NotificationWidget.instance.DisplayNotification("YOU FAILED!",true);
     }
 }

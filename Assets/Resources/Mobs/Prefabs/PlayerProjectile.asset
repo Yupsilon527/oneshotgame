@@ -16,7 +16,7 @@ MonoBehaviour:
   directionAligned: 0
   ForwardSpeed: 12
   RightSpeed: 0
-  LifeTime: 12
+  LifeTime: 6
   Scale: 0.25
   Damage: 10
   Behavior: 0

@@ -47,6 +47,7 @@ public partial class Level : MonoBehaviour
     #region Rounds
     void RoundBegin()
     {
+        EnemyController.main.ClearEnemies();
         state = GameState.running;
         roundBeginTime = Time.time;
 
@@ -58,6 +59,10 @@ public partial class Level : MonoBehaviour
 
         ScoreCounter.main.StartCountdown(secondsPerRound - GetRoundTime());
         ScoreCounter.main.SetTimerVisible(true);
+        ScoreCounter.main.SetHelperVisible(false);
+
+        if (NotificationWidget.instance != null)
+            NotificationWidget.instance.DisplayNotification("Round "+(currentRound+1), true);
     }
     public float GetRoundTime()
     {
@@ -82,6 +87,9 @@ public partial class Level : MonoBehaviour
         StartCoroutine(SmoothMoveCamera(cam.transform.position, executiveSpawnArea.transform.position, cameraDefaultSize, cameraZoomedinSize, 0));
         roundBeginTime = Time.time + 3;
         UpdateLevelBounds();
+
+        ScoreCounter.main.SetTimerVisible(false);
+        ScoreCounter.main.SetHelperVisible(false);
     }
     public void RoundProgress(bool triggeredByEvent)
     {
@@ -89,6 +97,7 @@ public partial class Level : MonoBehaviour
 
         ScoreCounter.main.StopCountdown();
         ScoreCounter.main.SetTimerVisible(false);
+        ScoreCounter.main.SetHelperVisible(true);
 
         if (triggeredByEvent)
         {
@@ -198,9 +207,13 @@ public partial class Level : MonoBehaviour
         Vector2 area = executiveSpawnArea.transform.lossyScale / 2;
         EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, area * 2), GetNumExecutives());
     }
+    public int GetMaxExecutives()
+    {
+        return Mathf.Max(maxExecutives, PlayerController.main.startingWeapon.ProjectileCount + PlayerController.main.collectedBonuses.pProjectiles);
+    }
     public int GetNumExecutives()
     {
-        return Mathf.FloorToInt((Time.time - roundBeginTime) / secondsPerRound * maxExecutives);
+        return Mathf.FloorToInt((Time.time - roundBeginTime) / secondsPerRound * GetMaxExecutives());
     }
 
     #endregion

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupText: +1 Projectile
   bonuses:
-  - bonus: 2
+  - bonus: 5
     amount: 1

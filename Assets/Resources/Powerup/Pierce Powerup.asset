@@ -16,5 +16,3 @@ MonoBehaviour:
   bonuses:
   - bonus: 4
     amount: 1
-  - bonus: 1
-    amount: 2

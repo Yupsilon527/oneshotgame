@@ -4838,6 +4838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1644290579052993136, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5020805929509114621, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
       propertyPath: m_Name
       value: Fart Bullet

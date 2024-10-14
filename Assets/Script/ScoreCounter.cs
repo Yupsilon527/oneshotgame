@@ -44,7 +44,11 @@ public class ScoreCounter : MonoBehaviour
     {
         countdownTimer.gameObject.SetActive(visible);
         executiveCount.gameObject.SetActive(visible);
-        fartAssistant.gameObject.SetActive(!visible);
+    }
+    public void SetHelperVisible(bool visible)
+    {
+
+        fartAssistant.gameObject.SetActive(visible);
     }
     public void SetScore(float v)
     {
