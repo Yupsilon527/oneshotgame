@@ -266,7 +266,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: John
+  m_Name: NPC
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsMoving
@@ -545,10 +545,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3171557079843176078}
-    m_Position: {x: 310, y: 220, z: 0}
+    m_Position: {x: 440, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6190396688859231885}
-    m_Position: {x: 300, y: 110, z: 0}
+    m_Position: {x: 450, y: 90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
