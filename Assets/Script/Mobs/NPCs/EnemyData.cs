@@ -10,6 +10,7 @@ public class EnemyData : ScriptableObject
         diagonal,
         passive
     }
+    public bool dieOfScreen = true;
     public bool moveWhileFiring = false;
     public bool kamikaze = false;
     public GameObject enemyPrefab;

@@ -11,6 +11,7 @@ public class PlayerController : Body
     public void Start()
     {
         main = this;
+        IncreaseScore(0);
         weapons = new WeaponData[]{
             startingWeapon
         };
@@ -31,7 +32,7 @@ public class PlayerController : Body
     public ParticleSystem dashParticle;
     public ParticleSystem fartParticle;
 
-    public void Restart()
+    public void Restart(bool hard)
     {
         dashing = false;
         fireState = FireState.notFired;
@@ -39,8 +40,12 @@ public class PlayerController : Body
         transform.position = Level.main.levelStartPosition.transform.position;
         dashParticle.Stop();
 
-        Score = 0;
+        if (hard)
+        {
+            Score = 0;
+        }
         IncreaseScore(0);
+        lastRoundScore = Score;
     }
     private void Update()
     {
@@ -163,9 +168,10 @@ public class PlayerController : Body
         public int pProjectiles = 0;
     }
     public float Score = 0;
+    public float lastRoundScore = 0;
     public float IncreaseScore(float value)
     {
-        float total = value * collectedBonuses.scoreMult;
+        float total = collectedBonuses == null ? value : (value * collectedBonuses.scoreMult);
 
         Score += total;
         ScoreCounter.main.SetScore(Score);
@@ -179,6 +185,7 @@ public class PlayerController : Body
     }
     public override void Die()
     {
-        fartParticle.Play();
+        if (CanFireWeapon(0))
+            fartParticle.Play();
     }
 }

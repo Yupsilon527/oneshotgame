@@ -18,7 +18,7 @@ MonoBehaviour:
   ProjectileArc: 33
   ProjectileDistance: 0
   BarrelAccuracy: 0
-  ProjectileAccuracy: 0
+  ProjectileAccuracy: 33
   FireSlowDown: 1
   clusterData: {fileID: 0}
   clusterAmount: 0

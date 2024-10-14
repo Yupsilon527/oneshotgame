@@ -36,7 +36,7 @@ public partial class Level : MonoBehaviour
     }
     private void Start()
     {
-        var player = Instantiate(playerPrefab);
+        Instantiate(playerPrefab);
         PreRound();
     }
     private void Update()
@@ -49,7 +49,8 @@ public partial class Level : MonoBehaviour
     {
         state = GameState.running;
         roundBeginTime = Time.time;
-        PlayerController.main.Restart();
+
+        PlayerController.main.Restart(false);
         cam.transform.position = Vector3.zero;
         cam.orthographicSize = cameraDefaultSize;
         UpdateLevelBounds();
@@ -65,7 +66,14 @@ public partial class Level : MonoBehaviour
     void RoundEnd()
     {
         currentRound++;
-        PreRound();
+        if (currentRound > 0 &&  PlayerController.main.Score == PlayerController.main.lastRoundScore)
+        {
+            GameEnded();
+        }
+        else
+        {
+            PreRound();
+        }
     }
     void PreRound()
     {
@@ -187,8 +195,8 @@ public partial class Level : MonoBehaviour
 
     void SpawnExecs()
     {
-        Vector2 area = executiveSpawnArea.transform.localScale / 2;
-        EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, (Vector2)executiveSpawnArea.transform.localPosition + area * 2), GetNumExecutives());
+        Vector2 area = executiveSpawnArea.transform.lossyScale / 2;
+        EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, area * 2), GetNumExecutives());
     }
     public int GetNumExecutives()
     {

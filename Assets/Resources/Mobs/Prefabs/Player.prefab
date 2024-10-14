@@ -5007,6 +5007,7 @@ MonoBehaviour:
   fartParticle: {fileID: 3138953233380936419}
   fireState: 0
   Score: 0
+  lastRoundScore: 0
 --- !u!50 &7536566452384453673
 Rigidbody2D:
   serializedVersion: 4
@@ -5066,9 +5067,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.2}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.15
 --- !u!1 &6936588824184394699
 GameObject:
   m_ObjectHideFlags: 0
