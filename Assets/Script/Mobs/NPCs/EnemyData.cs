@@ -17,6 +17,7 @@ public class EnemyData : ScriptableObject
     public Behavior AI;
     public float SightRange;
     public float Scale;
+    public float Score;
     public float Speed;
     public float ThinkInterval;
     public WeaponData HarassWeapon;

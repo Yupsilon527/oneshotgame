@@ -5,7 +5,6 @@ using VikingParty;
 
 public partial class Level : MonoBehaviour
 {
-    public AudioSource musicSource;
     public AudioClip elevatorMusic;
     public AudioClip actionMusic;
     public AudioClip roundBegin;
@@ -31,6 +30,7 @@ public partial class Level : MonoBehaviour
     public float cameraDefaultSize = 5f;
     public float cameraZoomedinSize = 1.5f;
     public GameObject levelStartPosition;
+    public GameObject bossIndicator;
 
     #region Unity Calls
     public static Level main;
@@ -43,12 +43,15 @@ public partial class Level : MonoBehaviour
         Instantiate(playerPrefab);
         PlayerController.main.transform.position = executiveSpawnArea.transform.position;
         PreRound();
+        ScoreCounter.main.SetLeaderboardVisible(false);
         if (NotificationWidget.instance != null)
             NotificationWidget.instance.DisplayNotification("NOW HURRY!");
     }
     private void Update()
     {
         HandleState();
+        if (bossIndicator != null)
+            bossIndicator.SetActive(HasBoss());
     }
     #endregion
     #region Rounds
@@ -67,16 +70,13 @@ public partial class Level : MonoBehaviour
         ScoreCounter.main.StartCountdown(secondsPerRound - GetRoundTime());
         ScoreCounter.main.SetTimerVisible(true);
         ScoreCounter.main.SetHelperVisible(false);
+        ScoreCounter.main.SetLeaderboardVisible(false);
 
         if (NotificationWidget.instance != null)
-            NotificationWidget.instance.DisplayNotification("Round "+(currentRound+1));
-        if (musicSource!=null)
-        {
-            if (roundBegin!=null)
-                PlayerController.main.audioSource.PlayOneShot(roundBegin);
-            musicSource.clip = actionMusic;
-            musicSource.Play();
-        }
+            NotificationWidget.instance.DisplayNotification("Round " + (currentRound + 1));
+        if (roundBegin != null)
+            PlayerController.main.audioSource.PlayOneShot(roundBegin);
+        MusicManager.instance.ChangeMusic(actionMusic);
     }
     public float GetRoundTime()
     {
@@ -85,7 +85,7 @@ public partial class Level : MonoBehaviour
     void RoundEnd()
     {
         currentRound++;
-        if (currentRound > 0 &&  PlayerController.main.Score == PlayerController.main.lastRoundScore)
+        if (currentRound > 0 && PlayerController.main.Score == PlayerController.main.lastRoundScore)
         {
             GameEnded();
         }
@@ -112,11 +112,8 @@ public partial class Level : MonoBehaviour
         ScoreCounter.main.SetTimerVisible(false);
         ScoreCounter.main.SetHelperVisible(true);
 
-        if (musicSource != null)
-        {
-            musicSource.clip = elevatorMusic;
-            musicSource.Play();
-        }
+        MusicManager.instance.ChangeMusic(elevatorMusic);
+        MusicManager.instance.ChangeMusic(elevatorMusic);
 
         if (triggeredByEvent)
         {
@@ -132,6 +129,7 @@ public partial class Level : MonoBehaviour
         {
             state = GameState.defeated;
             PlayerController.main.Die();
+            roundBeginTime = Time.time + 2;
         }
     }
     void HandleState()
@@ -155,6 +153,10 @@ public partial class Level : MonoBehaviour
                 {
                     RoundEnd();
                 }
+                break;
+            case GameState.defeated:
+                if (Time.time > roundBeginTime)
+                    ScoreCounter.main.SetLeaderboardVisible(true);
                 break;
         }
     }
@@ -221,10 +223,18 @@ public partial class Level : MonoBehaviour
 
     public GameObject executiveSpawnArea;
 
+    bool HasBoss()
+    {
+        return (state == GameState.running || state == GameState.victorious) && Time.time - roundBeginTime > 30;
+    }
     void SpawnExecs()
     {
         Vector2 area = executiveSpawnArea.transform.lossyScale / 2;
-        EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, area * 2), GetNumExecutives());
+        if (HasBoss())
+        {
+            EnemyController.main.SpawBossInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, area * 2));
+        }
+        EnemyController.main.SpawnEnemiesInArea(new Rect((Vector2)executiveSpawnArea.transform.localPosition - area, area * 2), GetNumExecutives() - (HasBoss() ? 1 : 0));
     }
     public int GetMaxExecutives()
     {

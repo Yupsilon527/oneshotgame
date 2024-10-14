@@ -136,8 +136,9 @@ public class Enemy : Body
     public NPCAnimationRandomiser npcAnimationRandomiser;
     public override void TakeDamage(float damage)
     {
-        PlayerController.main.IncreaseScore(damage);
-        Level.main.TextEffect("+" + damage, transform.position, Color.green, scale:0.06f, animation: "Hover Up");
+        float score = damage * data.Score;
+        PlayerController.main.IncreaseScore(score);
+        Level.main.TextEffect("+" + score, transform.position, Color.green, scale:0.06f, animation: "Hover Up");
         if (audioSource != null && hurtClips!=null && hurtClips.Length >0) {
             audioSource.PlayOneShot(hurtClips[Mathf.FloorToInt(hurtClips.Length * Random.value)]);
             npcAnimationRandomiser.NpcCough();

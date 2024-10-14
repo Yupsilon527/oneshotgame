@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86356c65269e24441b830d0ca9ce5360, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  accessToken: 
-  appName: 
-  appDescription: 
-  appUrl: 
+  accessToken: user_at_2aAw4FkbBcV5zJ05HjwwPgK2jWwbu75Gjg6X2zz8bPWa0DXPiXlyA58SKvhotrdU
+  appName: One shot at making your boss smell your fart
+  appDescription: Vampire survivors meets smelly farts
+  appUrl: oneshotatmakingyourbosssmellyourfart
   timeoutHours: 24
   splashHasSignInButton: 1
   currentApp:
     id: 
     secretKey: 
-    name: 
+    name: One Shot at making your boss smell your fart
     description: 
     redirectUris: []
     url: 
     iconImageAsset:
-      id: 
-      cdnUrl: 
+      id: e7a26ec5-7ed7-412d-aacf-a9ff5dd01d0b
+      cdnUrl: https://assets.hyplay.com/bbcb756b-1bd9-4d79-8989-1fb4ba14a30a/6de2434d8824dea582854051d3f71811-1728924618796.png
     backgroundImageAsset:
-      id: 
-      cdnUrl: 
+      id: e7a26ec5-7ed7-412d-aacf-a9ff5dd01d0b
+      cdnUrl: https://assets.hyplay.com/bbcb756b-1bd9-4d79-8989-1fb4ba14a30a/6de2434d8824dea582854051d3f71811-1728924618796.png

@@ -111,7 +111,7 @@ public class PlayerController : Body
                     FireWeapon(0, mousePos);
                     fireState = FireState.fired;
                     //Level.main.RoundProgress(false);
-                    Level.main.musicSource.Stop();
+                    MusicManager.instance.audioSource.Stop();
 
                     if (audioSource != null && fartSounds != null && fartSounds.Length > 0)
                     {

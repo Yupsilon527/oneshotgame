@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
 
     public EnemyData[] enemiesSpawned;
     public EnemyData[] executivesSpawned;
+    public EnemyData bossSpawned;
     private void Update()
     {
         if (Level.main.state == Level.GameState.running)
@@ -49,6 +50,10 @@ public class EnemyController : MonoBehaviour
     {
         if (enemypool.activeObjs.childCount < 5 + Level.main.currentRound)
             Enemy.FromData(data);
+    }
+    public void SpawBossInArea(Rect area)
+    {
+        SpawnEnemiesInArea(area, 1, bossSpawned);
     }
     public void SpawnEnemiesInArea(Rect area, int count)
     {

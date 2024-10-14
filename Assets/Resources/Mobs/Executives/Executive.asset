@@ -16,9 +16,10 @@ MonoBehaviour:
   moveWhileFiring: 0
   kamikaze: 0
   enemyPrefab: {fileID: 2158328114290720274, guid: 403bf752080cc7f45a10cbf29d7896a6, type: 3}
-  AI: 0
+  AI: 4
   SightRange: 3
   Scale: 2
+  Score: 1
   Speed: 0.5
   ThinkInterval: 5
   HarassWeapon: {fileID: 0}
