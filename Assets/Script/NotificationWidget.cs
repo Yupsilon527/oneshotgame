@@ -14,14 +14,14 @@ public class NotificationWidget : MonoBehaviour
     public TMPro.TextMeshProUGUI notificationText;
 
     bool forced = false;
-    public void DisplayNotification(string notificationData, bool force = true)
+    public void DisplayNotification(string notificationData, float duration = -1, bool force = true)
     {
         if (force || !forced)
         {
             gameObject.SetActive(true);
             notificationText.text = notificationData;
             forced = force;
-            StartPopinAnimation(DefaultNotificationDuration);
+            StartPopinAnimation(duration< 0 ? DefaultNotificationDuration : duration);
         }
     }
     Coroutine animatioCoroutine;

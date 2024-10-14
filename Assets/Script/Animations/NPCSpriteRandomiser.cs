@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
@@ -31,7 +32,10 @@ public class NPCSpriteRandomiser : MonoBehaviour
     {
         RandomiseNpcVisuals();
     }
-
+    private void Update()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+    }
     private void RandomiseNpcVisuals()
     {
         RandomiseHairStyle(_hairSpriteResolver, HAIR);

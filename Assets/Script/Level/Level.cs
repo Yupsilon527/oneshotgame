@@ -5,6 +5,10 @@ using VikingParty;
 
 public partial class Level : MonoBehaviour
 {
+    public AudioSource musicSource;
+    public AudioClip elevatorMusic;
+    public AudioClip actionMusic;
+    public AudioClip roundBegin;
     public enum GameState
     {
         pregame,
@@ -37,7 +41,10 @@ public partial class Level : MonoBehaviour
     private void Start()
     {
         Instantiate(playerPrefab);
+        PlayerController.main.transform.position = executiveSpawnArea.transform.position;
         PreRound();
+        if (NotificationWidget.instance != null)
+            NotificationWidget.instance.DisplayNotification("NOW HURRY!");
     }
     private void Update()
     {
@@ -62,7 +69,14 @@ public partial class Level : MonoBehaviour
         ScoreCounter.main.SetHelperVisible(false);
 
         if (NotificationWidget.instance != null)
-            NotificationWidget.instance.DisplayNotification("Round "+(currentRound+1), true);
+            NotificationWidget.instance.DisplayNotification("Round "+(currentRound+1));
+        if (musicSource!=null)
+        {
+            if (roundBegin!=null)
+                PlayerController.main.audioSource.PlayOneShot(roundBegin);
+            musicSource.clip = actionMusic;
+            musicSource.Play();
+        }
     }
     public float GetRoundTime()
     {
@@ -83,7 +97,6 @@ public partial class Level : MonoBehaviour
     void PreRound()
     {
         state = GameState.waiting;
-        PlayerController.main.transform.position = executiveSpawnArea.transform.position;
         StartCoroutine(SmoothMoveCamera(cam.transform.position, executiveSpawnArea.transform.position, cameraDefaultSize, cameraZoomedinSize, 0));
         roundBeginTime = Time.time + 3;
         UpdateLevelBounds();
@@ -98,6 +111,12 @@ public partial class Level : MonoBehaviour
         ScoreCounter.main.StopCountdown();
         ScoreCounter.main.SetTimerVisible(false);
         ScoreCounter.main.SetHelperVisible(true);
+
+        if (musicSource != null)
+        {
+            musicSource.clip = elevatorMusic;
+            musicSource.Play();
+        }
 
         if (triggeredByEvent)
         {

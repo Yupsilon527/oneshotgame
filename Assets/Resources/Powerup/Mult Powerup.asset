@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Mult Powerup
   m_EditorClassIdentifier: 
   pickupText: +10% Mult
+  powerupSprite: {fileID: -3754063234901517719, guid: a5876042be02a5943a7aa63d0767257e, type: 3}
   bonuses:
   - bonus: 0
     amount: 0.1
