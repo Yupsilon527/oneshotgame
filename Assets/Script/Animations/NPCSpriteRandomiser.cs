@@ -36,6 +36,28 @@ public class NPCSpriteRandomiser : MonoBehaviour
     {
         RandomiseHairStyle(_hairSpriteResolver, HAIR);
         RandomiseSkin();
+        RandomiseBody();
+    }
+
+    private void RandomiseBody()
+    {
+        int gender = UnityEngine.Random.Range(0, 2);
+        if (gender == 0)
+        {
+            _tieSpriteResolver.SetCategoryAndLabel(TIE, _spriteLibraryAsset.GetCategoryLabelNames(TIE).ToList()[_spriteLibraryAsset.GetCategoryLabelNames(TIE).ToList().Count - 1]);
+        
+            int randomIndex = UnityEngine.Random.Range(0, 3);
+            
+            _bodySpriteResolver.SetCategoryAndLabel(SHIRT, _spriteLibraryAsset.GetCategoryLabelNames(SHIRT).ToList()[randomIndex]);
+        }
+        else
+        {
+            var tiesList = _spriteLibraryAsset.GetCategoryLabelNames(TIE).ToList();
+            int tieRandomIndex = UnityEngine.Random.Range(0, tiesList.Count);
+            _tieSpriteResolver.SetCategoryAndLabel(TIE, tiesList[tieRandomIndex]);
+            int maleBodyRandomIndex = UnityEngine.Random.Range(3, _spriteLibraryAsset.GetCategoryLabelNames(SHIRT).ToList().Count);
+            _bodySpriteResolver.SetCategoryAndLabel(SHIRT, _spriteLibraryAsset.GetCategoryLabelNames(SHIRT).ToList()[maleBodyRandomIndex]);
+        }
     }
 
     private void RandomiseSkin()
@@ -44,8 +66,7 @@ public class NPCSpriteRandomiser : MonoBehaviour
         int randomIndex = UnityEngine.Random.Range(0, labelsList.Count);
         _rightHandSpriteResolver.SetCategoryAndLabel(RIGHT_HAND, _spriteLibraryAsset.GetCategoryLabelNames(RIGHT_HAND).ToList()[randomIndex]);
         _leftHandSpriteResolver.SetCategoryAndLabel(LEFT_HAND, _spriteLibraryAsset.GetCategoryLabelNames(LEFT_HAND).ToList()[randomIndex]);
-        _headSpriteResolver.SetCategoryAndLabel(HEAD, labelsList[randomIndex]);
-       
+        _headSpriteResolver.SetCategoryAndLabel(HEAD, labelsList[randomIndex]);       
     }
 
     private void RandomiseHairStyle(SpriteResolver hairSpriteResolver, string hair)
