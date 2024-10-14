@@ -8,15 +8,17 @@ public partial class Level : MonoBehaviour
     public enum GameState
     {
         pregame,
+        waiting,
         running,
         victorious,
         defeated
     }
     public GameState state = GameState.pregame;
-    int cRound = 0;
+    public int currentRound = 0;
     public int secondsPerRound = 60;
     public int maxExecutives = 20;
     float roundBeginTime = 0;
+    float penaltyTime;
 
     public ObjectPool bulletpool;
     public GameObject bulletPrefab;
@@ -24,6 +26,7 @@ public partial class Level : MonoBehaviour
     public GameObject playerPrefab;
     public float cameraDefaultSize = 5f;
     public float cameraZoomedinSize = 1.5f;
+    public GameObject levelStartPosition;
 
     #region Unity Calls
     public static Level main;
@@ -33,8 +36,8 @@ public partial class Level : MonoBehaviour
     }
     private void Start()
     {
-        Instantiate(playerPrefab);
-        RoundBegin();
+        var player = Instantiate(playerPrefab);
+        PreRound();
     }
     private void Update()
     {
@@ -50,15 +53,27 @@ public partial class Level : MonoBehaviour
         cam.transform.position = Vector3.zero;
         cam.orthographicSize = cameraDefaultSize;
         UpdateLevelBounds();
+        ResetPenaltyTime();
 
-        ScoreCounter.main.StartCountdown(secondsPerRound);
+        ScoreCounter.main.StartCountdown(secondsPerRound - GetRoundTime());
         ScoreCounter.main.SetTimerVisible(true);
+    }
+    public float GetRoundTime()
+    {
+        return Time.time - roundBeginTime + penaltyTime;
     }
     void RoundEnd()
     {
-        cRound++;
-
-        state = GameState.pregame;
+        currentRound++;
+        PreRound();
+    }
+    void PreRound()
+    {
+        state = GameState.waiting;
+        PlayerController.main.transform.position = executiveSpawnArea.transform.position;
+        StartCoroutine(SmoothMoveCamera(cam.transform.position, executiveSpawnArea.transform.position, cameraDefaultSize, cameraZoomedinSize, 0));
+        roundBeginTime = Time.time + 3;
+        UpdateLevelBounds();
     }
     public void RoundProgress(bool triggeredByEvent)
     {
@@ -77,17 +92,24 @@ public partial class Level : MonoBehaviour
     }
     void GameEnded()
     {
-        state = GameState.defeated;
+        if (state != GameState.defeated)
+        {
+            state = GameState.defeated;
+            PlayerController.main.Die();
+        }
     }
     void HandleState()
     {
         switch (state)
         {
-            case GameState.pregame:
-                RoundBegin();
+            case GameState.waiting:
+                if (Time.time > roundBeginTime)
+                {
+                    RoundBegin();
+                }
                 break;
             case GameState.running:
-                if (Time.time - roundBeginTime > secondsPerRound)
+                if (GetRoundTime() > secondsPerRound)
                 {
                     GameEnded();
                 }
@@ -148,12 +170,15 @@ public partial class Level : MonoBehaviour
 
     IEnumerator SmoothMoveCamera(Vector3 start, Vector3 end, float startSize, float endSize, float time)
     {
-        for (float t = 0; t < time; t += Time.fixedDeltaTime / time)
-        {
-            cam.transform.position = Vector3.Lerp(start, end, t);
-            cam.orthographicSize = startSize + (endSize - startSize) * t;
-            yield return new WaitForEndOfFrame();
-        }
+        if (time > 0)
+            for (float t = 0; t < time; t += Time.fixedDeltaTime / time)
+            {
+                cam.transform.position = Vector3.Lerp(start, end, t);
+                cam.orthographicSize = startSize + (endSize - startSize) * t;
+                yield return new WaitForEndOfFrame();
+            }
+        cam.transform.position = end;
+        cam.orthographicSize = endSize;
     }
     #endregion
     #region Executive Area
@@ -172,7 +197,7 @@ public partial class Level : MonoBehaviour
 
     #endregion
 
-    public TextEffectController TextEffect( string text, Vector3 position, Color color, float delay = 0, float scale = .1f, string animation = "Float Up")
+    public TextEffectController TextEffect(string text, Vector3 position, Color color, float delay = 0, float scale = .1f, string animation = "Float Up")
     {
         GameObject effect = bulletpool.PoolItem(textPrefab);
 
@@ -187,5 +212,15 @@ public partial class Level : MonoBehaviour
             return tefX;
         }
         return null;
+    }
+
+    public void ExtendPenaltyTime(float time)
+    {
+        penaltyTime += time;
+        ScoreCounter.main.StartCountdown(secondsPerRound - GetRoundTime());
+    }
+    public void ResetPenaltyTime()
+    {
+        penaltyTime = 0;
     }
 }

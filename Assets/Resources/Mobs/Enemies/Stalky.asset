@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cf7eb93a23da5a45b6c73d8424a83c5, type: 3}
-  m_Name: Executive
+  m_Name: Stalky
   m_EditorClassIdentifier: 
   moveWhileFiring: 0
   kamikaze: 0
-  enemyPrefab: {fileID: 2158328114290720274, guid: 403bf752080cc7f45a10cbf29d7896a6, type: 3}
-  AI: 0
-  SightRange: 3
-  Scale: 2
-  Speed: 0.5
-  ThinkInterval: 5
+  enemyPrefab: {fileID: 4819750900406402002, guid: bf44b1481c64be34aa20749ccc9938f4, type: 3}
+  AI: 1
+  SightRange: 2
+  Scale: 0.33333334
+  Speed: 1
+  ThinkInterval: 0.5
   HarassWeapon: {fileID: 0}
-  AttackWeapon: {fileID: 0}
+  AttackWeapon: {fileID: 11400000, guid: 5bfdda49363cbab4990ab02923239d87, type: 2}
   SuicideWeapon: {fileID: 0}

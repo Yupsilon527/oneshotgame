@@ -8,18 +8,24 @@ public class EnemyController : MonoBehaviour
         main = this;
     }
     public float lastSpawn = 3f;
+    public float EnemySpawnRange = 10;
     public ObjectPool enemypool;
 
     public EnemyData[] enemiesSpawned;
     public EnemyData[] executivesSpawned;
     private void Update()
     {
-
-        if (Level.main.state == Level.GameState.running && lastSpawn < Time.time)
+        if (Level.main.state == Level.GameState.running)
         {
-            lastSpawn += .33f;
-            SpawnWave(enemiesSpawned[Mathf.FloorToInt(Random.value * enemiesSpawned.Length)], 10);
-            //Bullet.FireBullet(new Vector2(UnityEngine.Random.Range(CameraBounds.xMin, CameraBounds.xMax),CameraBounds.yMax), Vector2.down, 10, 4, .25f, 0);
+            if (lastSpawn < Time.time)
+            {
+                lastSpawn += 5 * 5 / (5 + Level.main.currentRound);
+                SpawnEnemy(enemiesSpawned[Mathf.FloorToInt(Random.value * enemiesSpawned.Length)]);
+            }
+        }
+        else
+        {
+            lastSpawn = Time.time + 1;
         }
     }
     #region Spawn Enemies
@@ -41,7 +47,7 @@ public class EnemyController : MonoBehaviour
     }
     public void SpawnEnemy(EnemyData data)
     {
-        if (enemypool.activeObjs.childCount < 50)
+        if (enemypool.activeObjs.childCount < 5 + Level.main.currentRound)
             Enemy.FromData(data);
     }
     public void SpawnEnemiesInArea(Rect area, int count)
@@ -53,7 +59,7 @@ public class EnemyController : MonoBehaviour
         for (int I = 0; I < count; I++)
         {
             var e = Enemy.FromData(data);
-            e.transform.position = new Vector3(area.xMin + Random.value * area.width, area.yMin + Random.value * area.height);
+            e.transform.position = new Vector3(area.xMin + Random.value * area.width, area.yMin + Random.value * area.height) ;
         }
     }
     #endregion

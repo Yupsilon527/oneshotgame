@@ -9,11 +9,7 @@ public abstract class Body : Mob
     protected float[] FireTimes;
     public void FireWeapon(int weaponID, Vector3 point)
     {
-        if (weaponID >= weapons.Length || weapons[weaponID] == null)
-        {
-            return;
-        }
-        if (FireTimes[weaponID] < Time.time)
+        if (CanFireWeapon(weaponID)) 
         {
             //FacePoint(point);
             WeaponData w = weapons[weaponID];
@@ -29,6 +25,14 @@ public abstract class Body : Mob
 
             FireTimes[weaponID] = Time.time + weapons[weaponID].FireInterval;
         }
+    }
+    protected bool HasWeapon(int weaponID)
+    {
+        return weaponID < weapons.Length && weapons[weaponID] != null;
+    }
+    protected bool CanFireWeapon(int weaponID)
+    {
+        return (HasWeapon(weaponID) && FireTimes[weaponID] < Time.time);
     }
     protected virtual void ShootWeapon(WeaponData w, Vector3 center, Vector2 firedir)
     {
