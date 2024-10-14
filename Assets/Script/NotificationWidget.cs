@@ -32,7 +32,7 @@ public class NotificationWidget : MonoBehaviour
             StopCoroutine(animatioCoroutine);
         }
 
-        bool hasIntro = gameObject.activeSelf;
+        bool hasIntro = !gameObject.activeSelf;
         gameObject.SetActive(true);
         StartCoroutine(DisplayNotificationCoroutine(hasIntro, duration));
     }
@@ -44,6 +44,7 @@ public class NotificationWidget : MonoBehaviour
                 yield return PopOutCoroutine();
             yield return PopInCoroutine();
         }
+        notificationText.color = new Color(notificationText.color.r, notificationText.color.g, notificationText.color.b,1);
         yield return new WaitForSeconds(duration);
         yield return PopOutCoroutine();
     }

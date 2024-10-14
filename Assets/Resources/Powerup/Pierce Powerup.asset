@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca1835b4005bf6429405740511e636a, type: 3}
   m_Name: Pierce Powerup
   m_EditorClassIdentifier: 
-  pickupText: +1 Pierce
+  pickupText: +3 Pierce
   bonuses:
   - bonus: 4
-    amount: 1
+    amount: 3

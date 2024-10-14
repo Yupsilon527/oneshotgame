@@ -21,8 +21,8 @@ MonoBehaviour:
   Damage: 10
   Behavior: 0
   prefab: {fileID: 7059377193983400039, guid: 45255d723f876074f917a4dfd81f2929, type: 3}
-  bounces: 1
-  targets: 3
+  bounces: 3
+  targets: 2
   bounceBehavior: 1
   contactBehavior: 2
   expireBehavior: 2
