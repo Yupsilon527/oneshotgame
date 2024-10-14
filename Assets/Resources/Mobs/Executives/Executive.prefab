@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 6807129886614323600}
   rigidbody: {fileID: 4116353662555244496}
+  spriteRenderer: {fileID: 0}
   scale: 1
   snaptobounds: 0
   NextUpdateTime: 0
@@ -164,9 +165,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.25}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.2
 --- !u!1001 &7474190705528665377
 PrefabInstance:
   m_ObjectHideFlags: 0

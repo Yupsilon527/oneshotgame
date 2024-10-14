@@ -48,6 +48,6 @@ public class ScoreCounter : MonoBehaviour
     }
     public void SetScore(float v)
     {
-        scoreKeeper.text = "Score: " + v;
+        scoreKeeper.text = "Score: " + Mathf.Floor(v);
     }
 }

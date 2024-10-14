@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf7eb93a23da5a45b6c73d8424a83c5, type: 3}
   m_Name: Executive
   m_EditorClassIdentifier: 
+  dieOfScreen: 0
   moveWhileFiring: 0
   kamikaze: 0
   enemyPrefab: {fileID: 2158328114290720274, guid: 403bf752080cc7f45a10cbf29d7896a6, type: 3}

@@ -3,7 +3,6 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : Body
 {
-    protected bool DieOffscreen = true;
     public float NextUpdateTime = 0f;
     EnemyData data;
     public static Enemy FromData(EnemyData eData)
@@ -11,7 +10,6 @@ public class Enemy : Body
         Enemy e = EnemyController.main.enemypool.PoolItem(eData.enemyPrefab).GetComponent<Enemy>();
         e.data = eData;
         e.gameObject.SetActive(true);
-        e.Respawn();
         e.weapons = new WeaponData[]
         {
             eData.HarassWeapon,
@@ -22,6 +20,7 @@ public class Enemy : Body
         {
             0,0,0
         };
+        e.Respawn();
         return e;
     }
     public void Respawn()
@@ -34,7 +33,7 @@ public class Enemy : Body
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        if (DieOffscreen && transform.position.sqrMagnitude > EnemyController.main.EnemySpawnRange * EnemyController.main.EnemySpawnRange + 10)
+        if (data.dieOfScreen && transform.position.sqrMagnitude > EnemyController.main.EnemySpawnRange * EnemyController.main.EnemySpawnRange + 10)
         {
             Die();
         }
