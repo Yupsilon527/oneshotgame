@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.1693068, g: 0.7283019, b: 0, a: 1}
   directionAligned: 0
-  ForwardSpeed: 6
+  ForwardSpeed: 9
   RightSpeed: 0
-  LifeTime: 12
+  LifeTime: 9
   Scale: 0.25
   Damage: 10
   Behavior: 0
