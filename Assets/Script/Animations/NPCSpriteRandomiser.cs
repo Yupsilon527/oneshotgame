@@ -42,10 +42,10 @@ public class NPCSpriteRandomiser : MonoBehaviour
     {
         var labelsList = _spriteLibraryAsset.GetCategoryLabelNames(HEAD).ToList();
         int randomIndex = UnityEngine.Random.Range(0, labelsList.Count);
-        _rightHandSpriteResolver.SetCategoryAndLabel(RIGHT_HAND, labelsList[randomIndex]);
-        _leftHandSpriteResolver.SetCategoryAndLabel(LEFT_HAND, labelsList[randomIndex]);
+        _rightHandSpriteResolver.SetCategoryAndLabel(RIGHT_HAND, _spriteLibraryAsset.GetCategoryLabelNames(RIGHT_HAND).ToList()[randomIndex]);
+        _leftHandSpriteResolver.SetCategoryAndLabel(LEFT_HAND, _spriteLibraryAsset.GetCategoryLabelNames(LEFT_HAND).ToList()[randomIndex]);
         _headSpriteResolver.SetCategoryAndLabel(HEAD, labelsList[randomIndex]);
-        Debug.LogWarning("Randomised skin: " + labelsList[randomIndex]);
+       
     }
 
     private void RandomiseHairStyle(SpriteResolver hairSpriteResolver, string hair)
@@ -56,7 +56,7 @@ public class NPCSpriteRandomiser : MonoBehaviour
 
         hairSpriteResolver.SetCategoryAndLabel(hair, labelsList[randomIndex]);
 
-        Debug.Log("Randomised hair style: " + labelsList[randomIndex]);
+       
     }
 
     
