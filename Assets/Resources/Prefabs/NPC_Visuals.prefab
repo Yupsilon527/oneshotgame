@@ -111,7 +111,7 @@ PrefabInstance:
     - target: {fileID: -6528468435777738809, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_BoneTransforms.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6104321737495458345}
     - target: {fileID: -5672940634195140658, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -379,6 +379,11 @@ MonoBehaviour:
   m_labelHash: 0.000000078515875
   m_SpriteKey: 0
   m_SpriteHash: 467551220
+--- !u!4 &6104321737495458345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3095963020164712498, guid: a000423f5ddab034c959ea1972736c1e, type: 3}
+  m_PrefabInstance: {fileID: 9097827263029017115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7223136315537375157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1908476775527171502, guid: a000423f5ddab034c959ea1972736c1e, type: 3}

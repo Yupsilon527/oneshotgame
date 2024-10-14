@@ -15,7 +15,7 @@ public class NPCAnimationRandomiser : MonoBehaviour
         {
             Animator.StringToHash("Base Layer.NPC_HeadScratch_0"),
             Animator.StringToHash("Base Layer.NPC_Tired_0"),
-            // Add other states here
+
         };
         StartCoroutine(PlayRandomAnimation());
     }
@@ -23,16 +23,22 @@ public class NPCAnimationRandomiser : MonoBehaviour
     {
         while (true)
         {
-            // Randomly choose an animation state
             int randomIndex = Random.Range(0, _animationHashes.Length);
             int selectedAnimationHash = _animationHashes[randomIndex];
 
-            // Play the randomly selected animation
             _npcAnimator.Play(selectedAnimationHash);
 
-            // Wait for a random time before playing the next animation
             float waitTime = Random.Range(_minimumWaitTime, _maximumWaitTime);
             yield return new WaitForSeconds(waitTime);
+        }
+    }
+
+    public void NpcCough()
+    { 
+        StopCoroutine(PlayRandomAnimation());
+        if(_npcAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash != Animator.StringToHash("Base Layer.NPC_Cough_0"))
+        {
+            _npcAnimator.Play(Animator.StringToHash("Base Layer.NPC_Cough_0"));
         }
     }
 }

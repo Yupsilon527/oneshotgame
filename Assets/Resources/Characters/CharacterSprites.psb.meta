@@ -3036,15 +3036,15 @@ ScriptedImporter:
       height: 533
     spriteID: ef9663f127c49c2449bc064198eb77f3
     spriteBone:
-    - name: John_Tie_0
-      guid: 819ba77a7448adb49905658e47f20467
-      position: {x: 97.28296, y: 504.1958, z: 0}
-      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
-      length: 176.01924
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 95.904785, y: 540.647, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
       parentId: -1
       color:
         serializedVersion: 2
-        rgba: 4286643968
+        rgba: 4294901888
     spriteOutline: []
     vertices:
     - position: {x: 0, y: 0}
@@ -3110,15 +3110,15 @@ ScriptedImporter:
       height: 533
     spriteID: a76c36ad50c39dc4a8eb11542ec88671
     spriteBone:
-    - name: John_Tie_0
-      guid: 819ba77a7448adb49905658e47f20467
-      position: {x: 97.28296, y: 504.1958, z: 0}
-      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
-      length: 176.01924
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 95.904785, y: 540.647, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
       parentId: -1
       color:
         serializedVersion: 2
-        rgba: 4286643968
+        rgba: 4294901888
     spriteOutline: []
     vertices:
     - position: {x: 0, y: 0}
@@ -3184,15 +3184,15 @@ ScriptedImporter:
       height: 533
     spriteID: 0a6ea06f0d44d374b96d8dc6f4103ee0
     spriteBone:
-    - name: John_Tie_0
-      guid: 819ba77a7448adb49905658e47f20467
-      position: {x: 97.28296, y: 504.1958, z: 0}
-      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
-      length: 176.01924
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 95.904785, y: 540.647, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
       parentId: -1
       color:
         serializedVersion: 2
-        rgba: 4286643968
+        rgba: 4294901888
     spriteOutline: []
     vertices:
     - position: {x: 0, y: 0}
@@ -3258,15 +3258,15 @@ ScriptedImporter:
       height: 533
     spriteID: 6b5860da8a688c34eb0a836fc1ebf25a
     spriteBone:
-    - name: John_Tie_0
-      guid: 819ba77a7448adb49905658e47f20467
-      position: {x: 97.28296, y: 504.1958, z: 0}
-      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
-      length: 176.01924
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 95.904785, y: 540.647, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
       parentId: -1
       color:
         serializedVersion: 2
-        rgba: 4286643968
+        rgba: 4294901888
     spriteOutline: []
     vertices:
     - position: {x: 0, y: 0}
@@ -3332,15 +3332,15 @@ ScriptedImporter:
       height: 533
     spriteID: 301c148d670983945b86f7ff4cdb626e
     spriteBone:
-    - name: John_Tie_0
-      guid: 819ba77a7448adb49905658e47f20467
-      position: {x: 97.28296, y: 504.1958, z: 0}
-      rotation: {x: 0, y: 0, z: -0.63733864, w: 0.7705839}
-      length: 176.01924
+    - name: John_Head
+      guid: eec8931d4339a254fae991fa03a45458
+      position: {x: 95.904785, y: 540.647, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7658744, w: 0.6429903}
+      length: 481.70752
       parentId: -1
       color:
         serializedVersion: 2
-        rgba: 4286643968
+        rgba: 4294901888
     spriteOutline: []
     vertices:
     - position: {x: 0, y: 0}
@@ -4540,7 +4540,7 @@ ScriptedImporter:
         width: 292
         height: 533
       spriteId: ef9663f127c49c2449bc064198eb77f3
-      bones: 08000000
+      bones: 0a000000
       parentGroup: 0
       order: 0
     - spritePosition:
@@ -4549,7 +4549,7 @@ ScriptedImporter:
         width: 292
         height: 533
       spriteId: a76c36ad50c39dc4a8eb11542ec88671
-      bones: 08000000
+      bones: 0a000000
       parentGroup: 0
       order: 0
     - spritePosition:
@@ -4558,7 +4558,7 @@ ScriptedImporter:
         width: 292
         height: 533
       spriteId: 0a6ea06f0d44d374b96d8dc6f4103ee0
-      bones: 08000000
+      bones: 0a000000
       parentGroup: 0
       order: 0
     - spritePosition:
@@ -4567,7 +4567,7 @@ ScriptedImporter:
         width: 292
         height: 533
       spriteId: 6b5860da8a688c34eb0a836fc1ebf25a
-      bones: 08000000
+      bones: 0a000000
       parentGroup: 0
       order: 0
     - spritePosition:
@@ -4576,7 +4576,7 @@ ScriptedImporter:
         width: 292
         height: 533
       spriteId: 301c148d670983945b86f7ff4cdb626e
-      bones: 08000000
+      bones: 0a000000
       parentGroup: 0
       order: 0
     - spritePosition:
