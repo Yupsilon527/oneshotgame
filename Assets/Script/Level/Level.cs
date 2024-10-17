@@ -40,7 +40,7 @@ public partial class Level : MonoBehaviour
     }
     private void Start()
     {
-        Instantiate(playerPrefab);
+        Instantiate(playerPrefab,transform);
         PlayerController.main.transform.position = executiveSpawnArea.transform.position;
         PreRound();
         ScoreCounter.main.SetLeaderboardVisible(false);
@@ -76,7 +76,7 @@ public partial class Level : MonoBehaviour
             NotificationWidget.instance.DisplayNotification("Round " + (currentRound + 1));
         if (roundBegin != null)
             PlayerController.main.audioSource.PlayOneShot(roundBegin);
-        MusicManager.instance.ChangeMusic(actionMusic);
+        MusicManager.instance.ChangeMusic(actionMusic,.33f);
     }
     public float GetRoundTime()
     {
@@ -112,8 +112,7 @@ public partial class Level : MonoBehaviour
         ScoreCounter.main.SetTimerVisible(false);
         ScoreCounter.main.SetHelperVisible(true);
 
-        MusicManager.instance.ChangeMusic(elevatorMusic);
-        MusicManager.instance.ChangeMusic(elevatorMusic);
+        MusicManager.instance.ChangeMusic(elevatorMusic,.33f);
 
         if (triggeredByEvent)
         {

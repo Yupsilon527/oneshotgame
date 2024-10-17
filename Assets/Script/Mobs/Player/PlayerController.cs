@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerController : Body
 {
 
     public static PlayerController main;
     public WeaponData startingWeapon;
-    (int, string)[] Alerts = new(int, string)[] {
+    (int, string)[] Alerts = new (int, string)[] {
         (0, "Fart!"),
         (200, "Gross!"),
         (300, "Eww!"),
@@ -70,11 +71,11 @@ public class PlayerController : Body
         {
             HandleFire();
         }
-        }
+    }
     public void HandleMovement()
     {
         //float realSpeed = (dashing ? DashSpeed : (fireState == FireState.notFired ? Speed : SprintSpeed)) ;
-        float realSpeed = (dashing ? DashSpeed : Speed) ;
+        float realSpeed = (dashing ? DashSpeed : Speed);
 
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
@@ -83,7 +84,7 @@ public class PlayerController : Body
 
         if (!dashing || direction.sqrMagnitude > 0)
         {
-            rigidbody.velocity = direction * realSpeed;        
+            rigidbody.velocity = direction * realSpeed;
         }
     }
     public enum FireState
@@ -111,6 +112,7 @@ public class PlayerController : Body
                     FireWeapon(0, mousePos);
                     fireState = FireState.fired;
                     //Level.main.RoundProgress(false);
+                    MusicManager.instance.StopMusic();
                     MusicManager.instance.audioSource.Stop();
 
                     if (audioSource != null && fartSounds != null && fartSounds.Length > 0)
@@ -193,28 +195,29 @@ public class PlayerController : Body
     public float IncreaseScore(float value)
     {
         float total = collectedBonuses == null ? value : (value * collectedBonuses.scoreMult);
-
-        for (int i = scoreRating; i< Alerts.Length; i++)
+        if (total != 0)
         {
-            if (Score+ total > Alerts[i].Item1)
+            for (int i = scoreRating; i < Alerts.Length; i++)
             {
-                scoreRating = i+1;
+                if (Score + total > Alerts[i].Item1)
+                {
+                    scoreRating = i + 1;
 
-                if (NotificationWidget.instance != null)
-                    NotificationWidget.instance.DisplayNotification(Alerts[i].Item2,4,true);
+                    if (NotificationWidget.instance != null)
+                        NotificationWidget.instance.DisplayNotification(Alerts[i].Item2, 4, true);
 
-                break;
+                    break;
+                }
             }
+            Score += total;
         }
-
-        Score += total;
         ScoreCounter.main.SetScore(Score);
-        
+
         return total;
     }
     public override void TakeDamage(float damage)
     {
-        Level.main.TextEffect("-0:0"+damage, transform.position, Color.red); 
+        Level.main.TextEffect("-0:0" + damage, transform.position, Color.red);
         Level.main.ExtendPenaltyTime(damage);
         if (audioSource != null && hurtClips != null && hurtClips.Length > 0)
         {

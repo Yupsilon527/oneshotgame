@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5430e3f481ef42cf94d3577880d201f2, type: 3}
+  m_Name: leaderboard-dc2982fa-a6b4-47ac-8be6-cb187b87f44b
+  m_EditorClassIdentifier: 
+  id: dc2982fa-a6b4-47ac-8be6-cb187b87f44b
+  name: Fartscores
+  description: fartscores
+  secretKey: leaderboard_lX2VEoH8nFZ1Qc_nQOVZP7wadgKsGZl_njxL1IPXF0wtNdxaEWAYt7i9BIqULZil
+  scoreType: 0

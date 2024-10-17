@@ -7,6 +7,7 @@ public class Leaderboard : MonoBehaviour
 {
     public HyplayLeaderboard leaderboard;
     public ScoreContainer[] containers;
+    public TMPro.TextMeshProUGUI mijnScore;
 
     public void Awake()
     {
@@ -27,7 +28,11 @@ public class Leaderboard : MonoBehaviour
 
     public async void SubmitScore()
     {
-        if (leaderboard == null) return;
+        if (mijnScore! != null)
+            mijnScore.text = GetScore() + "";
+            if (leaderboard == null) return;
+
+
         var res = await leaderboard.PostScore(Mathf.RoundToInt(GetScore()));
         if (res.Success)
             Debug.Log($"Successfully posted score {res.Data.score}");
@@ -38,10 +43,11 @@ public class Leaderboard : MonoBehaviour
     }
     public async void LoadScores()
     {
-        if (leaderboard == null) return;
 
         foreach (var text in containers)
             text.gameObject.SetActive(false);
+
+        if (leaderboard == null) return;
 
         var scores = await leaderboard.GetScores( HyplayLeaderboard.OrderBy.descending, 0, containers.Length);
         if (!scores.Success)

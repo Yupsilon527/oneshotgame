@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7979924848373616909, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
+      propertyPath: m_Radius
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8466949329989109497, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -90,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8466949329989109497, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8466949329989109497, guid: a37ae20d0520a61499e2d20e8bdd4b24, type: 3}
       propertyPath: m_SortingLayerID

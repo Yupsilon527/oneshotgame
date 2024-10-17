@@ -137,10 +137,11 @@ public class Enemy : Body
     public override void TakeDamage(float damage)
     {
         float score = damage * data.Score;
-        PlayerController.main.IncreaseScore(score);
-        Level.main.TextEffect("+" + score, transform.position, Color.green, scale:0.06f, animation: "Hover Up");
+        float total = PlayerController.main.IncreaseScore(score);
+        Level.main.TextEffect("+" + total, transform.position, Color.green, scale: 0.06f, animation: "Hover Up");
         if (audioSource != null && hurtClips!=null && hurtClips.Length >0) {
             audioSource.PlayOneShot(hurtClips[Mathf.FloorToInt(hurtClips.Length * Random.value)]);
+            if (npcAnimationRandomiser!=null)
             npcAnimationRandomiser.NpcCough();
         }
 

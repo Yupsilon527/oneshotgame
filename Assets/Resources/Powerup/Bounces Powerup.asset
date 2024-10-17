@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca1835b4005bf6429405740511e636a, type: 3}
   m_Name: Bounces Powerup
   m_EditorClassIdentifier: 
-  pickupText: +1 Bounce
+  pickupText: +2 Bounces
   powerupSprite: {fileID: 1903206521832501333, guid: a5876042be02a5943a7aa63d0767257e, type: 3}
   bonuses:
   - bonus: 3

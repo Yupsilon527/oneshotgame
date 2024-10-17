@@ -12,22 +12,33 @@ public class MusicManager : MonoBehaviour
     {
         instance = this;
     }
-    public void ChangeMusic(AudioClip clip) { 
-    StartCoroutine(FadeMusic(clip));
-}
-    IEnumerator FadeMusic (AudioClip nMusic, float dur = 1)
+    Coroutine musicC;
+    public void StopMusic()
+    {
+
+        if (musicC != null)
+        {
+            StopCoroutine(musicC);
+        }
+    }
+    public void ChangeMusic(AudioClip clip, float dur = 1)
+    {
+        StopMusic();
+        musicC = StartCoroutine(FadeMusic(clip, dur));
+    }
+    IEnumerator FadeMusic(AudioClip nMusic, float dur = 1)
     {
         float volume = audioSource.volume;
         while (audioSource.volume > 0)
         {
-            audioSource.volume -= Time.deltaTime * .5f * dur;
+            audioSource.volume -= Time.deltaTime * .5f / dur;
             yield return null;
         }
         audioSource.clip = nMusic;
         audioSource.Play();
         while (audioSource.volume < volume)
         {
-            audioSource.volume += Time.deltaTime * .5f * dur;
+            audioSource.volume += Time.deltaTime * .5f / dur;
             yield return null;
         }
         audioSource.volume = volume;

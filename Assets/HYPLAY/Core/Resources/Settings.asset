@@ -15,19 +15,22 @@ MonoBehaviour:
   accessToken: user_at_2aAw4FkbBcV5zJ05HjwwPgK2jWwbu75Gjg6X2zz8bPWa0DXPiXlyA58SKvhotrdU
   appName: One shot at making your boss smell your fart
   appDescription: Vampire survivors meets smelly farts
-  appUrl: oneshotatmakingyourbosssmellyourfart
+  appUrl: https://ypsilon.itch.io/one-shot-at-making-your-boss-smell-your-fart
   timeoutHours: 24
   splashHasSignInButton: 1
   currentApp:
-    id: 
-    secretKey: 
-    name: One Shot at making your boss smell your fart
-    description: 
-    redirectUris: []
-    url: 
+    id: d523864d-646d-47d2-9550-01bcd0ff888c
+    secretKey: app_sk_zTCl1oaqH_U3J8ZDcGr8jgDHhY-2EEMRUrh3qYyBoIddA3YCebbDYbB8bA61Pee6
+    name: One shot at making your boss smell your fart
+    description: Vampire survivors meets smelly farts
+    redirectUris:
+    - https://ypsilon.itch.io/one-shot-at-making-your-boss-smell-your-fart/
+    - https://html-classic.itch.zone/html/
+    - http://localhost
+    url: https://ypsilon.itch.io/one-shot-at-making-your-boss-smell-your-fart
     iconImageAsset:
-      id: e7a26ec5-7ed7-412d-aacf-a9ff5dd01d0b
-      cdnUrl: https://assets.hyplay.com/bbcb756b-1bd9-4d79-8989-1fb4ba14a30a/6de2434d8824dea582854051d3f71811-1728924618796.png
+      id: 3c00a103-8b29-4c78-b9b4-c48c3b16c072
+      cdnUrl: https://assets.hyplay.com/bbcb756b-1bd9-4d79-8989-1fb4ba14a30a/08b174937bbfd5eda839f2bd4eaeff4d-1728924638069.png
     backgroundImageAsset:
-      id: e7a26ec5-7ed7-412d-aacf-a9ff5dd01d0b
-      cdnUrl: https://assets.hyplay.com/bbcb756b-1bd9-4d79-8989-1fb4ba14a30a/6de2434d8824dea582854051d3f71811-1728924618796.png
+      id: 3c00a103-8b29-4c78-b9b4-c48c3b16c072
+      cdnUrl: https://assets.hyplay.com/bbcb756b-1bd9-4d79-8989-1fb4ba14a30a/08b174937bbfd5eda839f2bd4eaeff4d-1728924638069.png

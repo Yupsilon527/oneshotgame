@@ -16,7 +16,7 @@ MonoBehaviour:
   moveWhileFiring: 0
   kamikaze: 0
   enemyPrefab: {fileID: 2158328114290720274, guid: 748c0f7e141f9dd4eb675b193966622b, type: 3}
-  AI: 0
+  AI: 4
   SightRange: 3
   Scale: 2
   Score: 2
